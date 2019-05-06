@@ -1,0 +1,11 @@
+result-view {
+  match {
+    FullQuestion (this)
+  }
+
+  render {
+    layout-macro (full-question-macro) {
+      param (fullQuestion) {expression (this)}
+    }
+  }
+}

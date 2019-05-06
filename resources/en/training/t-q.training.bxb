@@ -1,0 +1,5 @@
+train (t-q9e2qxbih2hwxo8uemf6u909g) {
+  utterance ("[g:GetQuestion] trivia (video games)[v:Categories:videoGames]")
+  plan (Y2BmkCgszazKLNFLSc3N13MrzckJLE0tLsnMz2MQR5ZxTy2BS4ghSzgnlqSm5xdlphYzMDEwAjEDkGRkAAEoHwA=)
+  last-modified (1557156514765)
+}

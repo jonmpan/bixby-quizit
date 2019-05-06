@@ -1,0 +1,99 @@
+layout-macro-def(answer-and-question-macro) {
+  params {
+    param (answerAndQuestion) {
+      type (AnswerAndQuestion)
+      min (Required)
+      max (One)
+    }
+  }
+  content {
+    section {
+      content {
+        paragraph {
+          value {
+            template ("#{value(answerAndQuestion.fullQuestion.question)}")
+          }
+          style (Title_XS)
+        }
+        for-each (answerAndQuestion.fullQuestion.answers){
+          as (answer){
+            if(answer.correct == true){
+              cell-card {
+                slot2 {
+                  content {
+                    order (PrimarySecondary)
+                    primary ("#{value(answer.letter)}. #{value(answer.text)}")
+                  }
+                }
+              }
+            } else {
+              cell-card {
+                slot2 {
+                  content {
+                    order (PrimarySecondary)
+                    secondary ("#{value(answer.letter)}. #{value(answer.text)}")
+                  }
+                }
+              }
+            }
+
+          }
+        }
+        hbox {
+          content {
+            vbox {
+              content {
+                single-line {
+                  text {
+                    value ("Category:")
+                    style(Title_XS)
+                  }
+                }
+              }
+            }
+            vbox {
+              content {
+                single-line {
+                  text {
+                    value ("Difficulty:")
+                    style(Title_XS)
+                  }
+                }
+              }
+            }
+          }
+        }
+        hbox {
+          content {
+            vbox {
+              content {
+                single-line {
+                  text {
+                    value ("#{title(answerAndQuestion.fullQuestion.category)}")
+                    style(Detail_M_Soft)
+                  }
+                }
+              }
+            }
+            vbox {
+              content {
+                single-line {
+                  text {
+                    value ("#{title(answerAndQuestion.fullQuestion.difficulty)}")
+                    style(Detail_M_Soft)
+                  }
+                }
+              }
+            }
+          }
+        }
+        single-line{
+          text{
+            value("You Chose: #{value(answerAndQuestion.userAnswer)}")
+            style(Detail_L)
+          }
+        }
+      }
+    }
+  }
+}

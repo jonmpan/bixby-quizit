@@ -1,0 +1,15 @@
+structure (Answer) {
+  description (__DESCRIPTION__)
+  property (correct) {
+    type (AnswerCorrect)
+    min (Required) max (One)
+  }
+  property (letter) {
+    type (AnswerLetter)
+    min (Required) max (One)
+  }
+  property (text) {
+    type (AnswerText)
+    min (Required) max (One)
+  }
+}

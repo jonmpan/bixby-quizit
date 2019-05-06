@@ -1,0 +1,30 @@
+vocab(Categories){
+  "general" {"general" "general knowledge"}
+  "books" {"books"}
+  "film" {"film" "movies" "movie"}
+  "music" {"music"}
+  "musicals" {"musicals"}
+  "theatre" {"theatre"}
+  "television" {"television" "tv"}
+  "videoGames" {"videoGames" "video games" "games"}
+  "boardGames" {"boardGames" "board games"}
+  "science" {"science" "technology"}
+  "nature" {"nature"}
+  "computers" {"computers"}
+  "mathematics" {"mathematics"}
+  "mythology" {"mythology"}
+  "sports" {"sports"}
+  "geography" {"geography"}
+  "history" {"history"}
+  "politics" {"politics"}
+  "art" {"art"}
+  "celebrities" {"celebrities" "gossip" "hollywood"}
+  "animals" {"animals"}
+  "vehicles" {"vehicles" "cars"}
+  "comics" {"comics"}
+  "gadgets" {"gadgets"}
+  "anime" {"anime"}
+  "manga" {"manga"}
+  "cartoon" {"cartoon" "cartoons"}
+  "animation" {"animation"}
+}

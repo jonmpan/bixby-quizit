@@ -1,0 +1,6 @@
+dialog (Result) {
+  match: AnswerAndQuestion (this) {
+    from-output: CheckAnswer (action)
+  }
+  template("#{title(this.bixbyResponse)}")
+}

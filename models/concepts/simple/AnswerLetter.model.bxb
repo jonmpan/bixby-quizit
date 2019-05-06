@@ -1,0 +1,7 @@
+enum (AnswerLetter) {
+  description (__DESCRIPTION__)
+  symbol ("A")
+  symbol ("B")
+  symbol ("C")
+  symbol ("D")
+}

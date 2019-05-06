@@ -1,0 +1,5 @@
+train (t-z9je9etowdws32yelhnqeid59) {
+  utterance ("[g:GetQuestion] quiz it (science)[v:Categories:science]")
+  plan (Y2BmkCgszazKLNFLSc3N13MrzckJLE0tLsnMz2MQR5ZxTy2BS4ghSzgnlqSm5xdlphYzMDEwAjEDkGRkAAEoHwA=)
+  last-modified (1557156794698)
+}

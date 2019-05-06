@@ -1,0 +1,11 @@
+action (GetQuestion) {
+  type (Search)
+  description (Get a Trivia Question.)
+  collect {
+    input (category) {
+      type (Categories)
+      min (Optional) max (One)
+    }
+  }
+  output (FullQuestion)
+}

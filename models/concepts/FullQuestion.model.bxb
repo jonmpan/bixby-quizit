@@ -1,0 +1,23 @@
+structure (FullQuestion) {
+  description (__DESCRIPTION__)
+  property (question) {
+    type (Question)
+    min (Required) max (One)
+  }
+  property (answers) {
+    type (Answer)
+    min (Required) max (Many)
+  }
+  property (category) {
+    type (Category)
+    min (Required) max (One)
+  }
+  property (difficulty){
+    type(Difficulty)
+    min (Required) max (One)
+  }
+  property (UserAnswer){
+    type(UserAnswer)
+    min(Optional) max (One)
+  }
+}

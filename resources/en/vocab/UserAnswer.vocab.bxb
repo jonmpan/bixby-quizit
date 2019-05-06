@@ -1,0 +1,6 @@
+vocab(UserAnswer){
+  "A" {"A"}
+  "B" {"B" "bee" "P" "pee"}
+  "C" {"C" "see" "sea" "See"}
+  "D" {"D" "t"}
+}

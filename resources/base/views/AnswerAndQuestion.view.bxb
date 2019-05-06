@@ -1,0 +1,11 @@
+result-view {
+  match {
+    AnswerAndQuestion (this)
+  }
+
+  render {
+    layout-macro (answer-and-question-macro) {
+      param (answerAndQuestion) {expression (this)}
+    }
+  }
+}

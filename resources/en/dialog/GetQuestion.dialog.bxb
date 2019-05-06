@@ -1,0 +1,6 @@
+dialog (Result) {
+  match: FullQuestion (this) {
+    from-output: GetQuestion (action)
+  }
+    template("#{title(this.question)}")
+}

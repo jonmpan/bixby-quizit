@@ -1,0 +1,16 @@
+endpoints {
+  action-endpoints {
+    action-endpoint (GetQuestion) {
+      accepted-inputs (category, $vivContext)
+      local-endpoint (GetQuestion.js)
+    }
+    action-endpoint (CheckAnswer) {
+      accepted-inputs (answerAndQuestion, $vivContext)
+      local-endpoint (CheckAnswer.js)
+    }
+    action-endpoint (CheckAnswerVoice) {
+      accepted-inputs (fullQuestion, userAnswer)
+      local-endpoint (CheckAnswerVoice.js)
+    }
+  }
+}

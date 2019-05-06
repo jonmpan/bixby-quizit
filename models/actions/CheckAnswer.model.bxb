@@ -1,0 +1,11 @@
+action (CheckAnswer) {
+  type (Search)
+  description (Check your answer.)
+  collect {
+    input (answerAndQuestion) {
+      type (AnswerAndQuestion)
+      min (Required) max (One)
+    }
+  }
+  output (AnswerAndQuestion)
+}

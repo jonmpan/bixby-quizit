@@ -1,0 +1,5 @@
+train (t-nr72aff4qeguv6ar96xfk8zjl) {
+  utterance ("[g:GetQuestion] trivia (anime)[v:Categories:anime]")
+  plan (Y2BmkCgszazKLNFLSc3N13MrzckJLE0tLsnMz2MQR5ZxTy2BS4ghSzgnlqSm5xdlphYzMDEwAjEDkGRkAAEoHwA=)
+  last-modified (1557156082562)
+}
