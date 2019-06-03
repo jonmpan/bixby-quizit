@@ -12,5 +12,9 @@ endpoints {
       accepted-inputs (fullQuestion, userAnswer)
       local-endpoint (CheckAnswerVoice.js)
     }
+    action-endpoint (Countdown) {
+      accepted-inputs (fullQuestion)
+      local-endpoint (Countdown.js)
+    }
   }
 }

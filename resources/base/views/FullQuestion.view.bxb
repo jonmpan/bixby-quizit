@@ -3,9 +3,24 @@ result-view {
     FullQuestion (this)
   }
 
+  refresh{
+    if(this.timer > 0){
+      spec{
+        delay-seconds (1)
+        with-request {
+          intent {
+            goal {Countdown}
+            value {$expr(this)}
+          }
+        }
+      }
+    }
+  }
+
   render {
     layout-macro (full-question-macro) {
       param (fullQuestion) {expression (this)}
     }
   }
+
 }

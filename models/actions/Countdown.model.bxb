@@ -1,0 +1,10 @@
+action (Countdown) {
+  type(Search)
+  collect {
+    input (fullQuestion) {
+      type (FullQuestion)
+      min (Required) max (One)
+    }
+  }
+  output (FullQuestion)
+}

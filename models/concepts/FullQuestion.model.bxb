@@ -20,4 +20,8 @@ structure (FullQuestion) {
     type(UserAnswer)
     min(Optional) max (One)
   }
+  property (timer){
+    type(Timer)
+    min (Optional) max (One)
+  }
 }

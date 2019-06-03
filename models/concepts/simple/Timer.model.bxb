@@ -1,0 +1,3 @@
+integer (Timer) {
+  description (__DESCRIPTION__)
+}

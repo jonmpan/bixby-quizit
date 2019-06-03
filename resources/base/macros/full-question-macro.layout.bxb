@@ -10,6 +10,9 @@ layout-macro-def(full-question-macro) {
   content {
     section {
       content {
+        single-line{
+          text("#{value(fullQuestion.timer)}")
+        }
         for-each (fullQuestion.answers){
           as (answer){
             cell-card {

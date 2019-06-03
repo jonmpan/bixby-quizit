@@ -78,6 +78,7 @@ const formatQuestion = response => {
     question.answers[i].letter = alphabet.charAt(i);
   }
   question.answers;
+  question.timer = 10;
   return question;
 };
 
