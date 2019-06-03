@@ -22,5 +22,4 @@ result-view {
       param (fullQuestion) {expression (this)}
     }
   }
-
 }

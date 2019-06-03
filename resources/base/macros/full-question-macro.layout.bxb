@@ -6,7 +6,7 @@ layout-macro-def(full-question-macro) {
       max (One)
     }
   }
-  
+
   content {
     section {
       content {
