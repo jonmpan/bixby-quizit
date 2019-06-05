@@ -1,10 +1,5 @@
-train (t-7kmt457mqi0dswz7ii42b1li9) {
-  utterance ([g:GetQuestion] trivia)
-  plan (Y2BikCgszazKLNFLSc3N13MrzckJLE0tLsnMz2MQR5ZxTy2BSzACIQMUA0kA)
-  last-modified (1556999101698)
-}
-train (t-7yky538g9d2bxzuhjtf7blv1w) {
-  utterance ("[g:CheckAnswerVoice:continue:GetQuestion] (A)[v:UserAnswer:A]")
-  plan (Y2BmkC0szazKLNFLSc3N13PMKy5PLXLMSwksTS0uyczPY5BBlnbOSE3OhqgJy89MTmUQQ5YNLQZpBUkyMDEwAjEDkGRkAAEoHwA=)
-  last-modified (1557107307775)
+train (t-7bzvxia8nyemcp6wpkkmfcvh5) {
+  utterance ("[g:AnswerQuestion:continue:NextQuestion] (A)[v:UserAnswer:A]")
+  plan (Y2BhECgszazKLNFLSc3N1wsEshmkkEUc84rLU4sCS1OLSzLz87CoFkMWCS1OLYLoYGBmYGRgApIMQBoEIYAJyAKKAQA=)
+  last-modified (1559767337374)
 }

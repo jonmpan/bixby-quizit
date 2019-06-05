@@ -1,0 +1,10 @@
+dialog (Result) {
+  match: Quiz (this)
+  if($handsFree){
+    template("#{title(this.template)}"){
+      speech ("#{title(this.speech)}")
+    }
+  } else {
+    template("#{title(this.template)}")
+  }
+}

@@ -4,4 +4,5 @@ enum (UserAnswer) {
   symbol ("B")
   symbol ("C")
   symbol ("D")
+  symbol ("Skip")
 }

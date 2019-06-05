@@ -1,0 +1,25 @@
+layout-macro-def(tutorial) {
+  params {
+    param (quiz) {
+      type (Quiz)
+      min (Required)
+      max (One)
+    }
+  }
+
+  content {
+    section {
+      content {
+        image{
+          url(/images/quizit-logo-white.png)
+          object-fit (Contain)
+          aspect-ratio(21:9)
+        }
+        paragraph{
+          value(There are 5 questions for this current build. Say Start to start the game!)
+          style(Title_XS)
+        }
+      }
+    }
+  }
+}

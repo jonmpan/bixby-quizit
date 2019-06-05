@@ -1,0 +1,19 @@
+input-view {
+  match: Category (categories) {
+    to-input: GetQuiz (action)
+  }
+
+  message ("Please Select a Category")
+
+  render {
+    selection-of (categories) {
+      where-each (category) {
+        layout-macro (category-box) {
+          param (category) { 
+            expression (category)
+          }
+        }
+      }
+    }
+  }
+}

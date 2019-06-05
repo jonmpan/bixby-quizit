@@ -1,0 +1,25 @@
+layout-macro-def(difficulty-box) {
+  params {
+    param (difficulty) {
+      type (Difficulty)
+      min (Required)
+      max (One)
+    }
+  }
+  content {
+    cell-card {
+      slot1 {
+      }
+      slot2 {
+        content {
+          primary {
+            template ("#{title(difficulty)}")
+          }
+          secondary {
+            template ("")
+          }
+        }
+      }
+    }
+  }
+}

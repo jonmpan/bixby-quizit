@@ -1,7 +1,3 @@
-var console = require('console');
-var http = require('http');
-// var config = require('config');
-
 const categories = {
   "general":9,
   "books":10,
@@ -49,7 +45,7 @@ const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const removeHtmlStuff = text => {
   // &oacute;
   // &ouml;
-  return text.replace(/&quot;/g, '\"').replace(/&#039;/g, "\'");
+  return text.replace(/&quot;/g, '\"').replace(/&#039;/g, "\'").replace(/&amp;/g, "&");
 }
 
 const formatQuestion = response => {
@@ -67,7 +63,7 @@ const formatQuestion = response => {
       correct: false,
     });
   }
-  
+
   question.answers.push({
     text: removeHtmlStuff(result.correct_answer),
     correct: true,
@@ -81,12 +77,39 @@ const formatQuestion = response => {
   return question;
 };
 
-module.exports.function = function getQuestion (category, $vivContext) {
-  let url = 'https://opentdb.com/api.php?amount=1&type=multiple';
-  if(categories[category]){
-    url += '&category=' + categories[category];
-  }
-  var response = http.getUrl(url, { format: 'json'});
-  const question = formatQuestion(response);
-  return question;
+const formatQuestions = results => {
+  return results.map( result => {
+    const questionFormatted = removeHtmlStuff(result.question)
+    const question = {
+      question: questionFormatted,
+      answers: [],
+      category: result.category,
+      difficulty: result.difficulty,
+      correct: false,
+    };
+    for (var i = 0; i < result.incorrect_answers.length; i++) {
+      question.answers.push({
+        text: removeHtmlStuff(result.incorrect_answers[i]),
+        correct: false,
+      });
+    }
+
+    question.answers.push({
+      text: removeHtmlStuff(result.correct_answer),
+      correct: true,
+    });
+    shuffle(question.answers);
+
+    for (var i = 0; i < question.answers.length; i++) {
+      question.answers[i].letter = alphabet.charAt(i);
+    }
+    question.answers;
+    return question;
+  })
+};
+
+module.exports = {
+  categories:categories,
+  formatQuestion:formatQuestion,
+  formatQuestions:formatQuestions,
 }

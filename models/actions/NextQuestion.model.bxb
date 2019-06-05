@@ -1,0 +1,11 @@
+action (NextQuestion) {
+  description (__DESCRIPTION__)
+  type(Search)
+  collect {
+    input (quiz) {
+      type (Quiz)
+      min (Required) max (One)
+    }
+  }
+  output (Quiz)
+}

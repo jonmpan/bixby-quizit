@@ -1,42 +1,40 @@
-layout-macro-def(answer-and-question-macro) {
+layout-macro-def(question) {
   params {
-    param (answerAndQuestion) {
-      type (AnswerAndQuestion)
+    param (quiz) {
+      type (Quiz)
       min (Required)
       max (One)
     }
   }
+
   content {
     section {
       content {
-        paragraph {
-          value {
-            template ("#{value(answerAndQuestion.fullQuestion.question)}")
-          }
-          style (Title_XS)
-        }
-        for-each (answerAndQuestion.fullQuestion.answers){
+        for-each (quiz.questions[quiz.currentQuestion].answers){
           as (answer){
-            if(answer.correct == true){
-              cell-card {
-                slot2 {
-                  content {
-                    order (PrimarySecondary)
-                    primary ("#{value(answer.letter)}. #{value(answer.text)}")
-                  }
+            cell-card {
+              slot2 {
+                content {
+                  order (PrimarySecondary)
+                  primary ("#{value(answer.letter)}. #{value(answer.text)}")
                 }
               }
-            } else {
-              cell-card {
-                slot2 {
-                  content {
-                    order (PrimarySecondary)
-                    secondary ("#{value(answer.letter)}. #{value(answer.text)}")
+              on-click{
+                intent{
+                  goal:AnswerQuestion
+                  value:Quiz{
+                    currentQuestion:$expr(quiz.currentQuestion)
+                    questionCount:$expr(quiz.questionCount)
+                    questions:$expr(quiz.questions)
+                    score:$expr(quiz.score)
+                    speech:$expr(quiz.speech)
+                    status:$expr(quiz.status)
+                    template:$expr(quiz.template)
+                    currentUserAnswer:$expr(answer.letter)
                   }
-                }
+                }                
               }
             }
-
           }
         }
         hbox {
@@ -69,7 +67,7 @@ layout-macro-def(answer-and-question-macro) {
               content {
                 single-line {
                   text {
-                    value ("#{title(answerAndQuestion.fullQuestion.category)}")
+                    value ("#{title(quiz.questions[quiz.currentQuestion].category)}")
                     style(Detail_M_Soft)
                   }
                 }
@@ -79,18 +77,12 @@ layout-macro-def(answer-and-question-macro) {
               content {
                 single-line {
                   text {
-                    value ("#{title(answerAndQuestion.fullQuestion.difficulty)}")
+                    value ("#{title(quiz.questions[quiz.currentQuestion].difficulty)}")
                     style(Detail_M_Soft)
                   }
                 }
               }
             }
-          }
-        }
-        single-line{
-          text{
-            value("You Chose: #{value(answerAndQuestion.userAnswer)}")
-            style(Detail_L)
           }
         }
       }

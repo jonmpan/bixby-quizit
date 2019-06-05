@@ -9,15 +9,19 @@ structure (FullQuestion) {
     min (Required) max (Many)
   }
   property (category) {
-    type (Category)
+    type (CategoryResponse)
     min (Required) max (One)
   }
   property (difficulty){
     type(Difficulty)
     min (Required) max (One)
   }
-  property (UserAnswer){
-    type(UserAnswer)
+  property (userAnswer){
+    type (UserAnswer)
     min(Optional) max (One)
+  }
+  property (correct){
+    type (Correct)
+    min (Required) max (One)
   }
 }

@@ -1,0 +1,6 @@
+vocab(Difficulty){
+  "any" {"any" "all" "anything"}
+  "easy" {"easy"}
+  "medium" {"medium" "normal"}
+  "hard" {"hard" "difficult" "tough"}
+}

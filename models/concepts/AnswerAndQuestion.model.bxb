@@ -11,5 +11,5 @@ structure (AnswerAndQuestion) {
   property (bixbyResponse) {
     type (BixbyResponse)
     min (Required) max (One)
-  }  
- }
+  }
+}

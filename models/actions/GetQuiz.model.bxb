@@ -1,0 +1,26 @@
+action (GetQuiz) {
+  type (Search)
+  description (__DESCRIPTION__)
+  collect {
+    input (category) {
+      type (Category)
+      min (Required) max (One)
+      default-init {
+        intent {
+          goal: GetCategories
+        }
+      }
+    }
+    input (difficulty) {
+      type (Difficulty)
+      min (Required) max (One)
+      default-init {
+        intent {
+          goal: GetDifficulties
+        }
+      }
+    }
+  }
+
+  output (Quiz)
+}
