@@ -11,7 +11,7 @@ layout-macro-def(tutorial) {
     section {
       content {
         image{
-          url(/images/quizit-logo-white.png)
+          url(/images/quizit-logo-white-min.png)
           object-fit (Contain)
           aspect-ratio(21:9)
         }

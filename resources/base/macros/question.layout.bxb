@@ -25,13 +25,13 @@ layout-macro-def(question) {
                   value:Quiz{
                     currentQuestion:$expr(quiz.currentQuestion)
                     questionCount:$expr(quiz.questionCount)
-                    questions:$expr(quiz.questions)
-                    score:$expr(quiz.score)
-                    speech:$expr(quiz.speech)
-                    status:$expr(quiz.status)
-                    template:$expr(quiz.template)
-                    currentUserAnswer:$expr(answer.letter)
-                  }
+                      questions:$expr(quiz.questions)
+                      score:$expr(quiz.score)
+                      speech:$expr(quiz.speech)
+                      status:$expr(quiz.status)
+                      template:$expr(quiz.template)
+                      currentUserAnswer:$expr(answer.letter)
+                    }
                 }                
               }
             }

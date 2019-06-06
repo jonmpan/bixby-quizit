@@ -52,7 +52,7 @@ result-view {
     }
     if(this.status == 'completed'){
       conversation-driver{
-        template (Play Again)   
+        template (Play Again)
       }
     }
   }

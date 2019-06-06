@@ -1,0 +1,29 @@
+description {
+  displayName (QuizIt Trivia)
+  companyName (jonmpan)
+  iconUrl (/images/quizit-icon.png)
+  description (Open Source Trivia Game where you can select your category and difficulty)
+  websiteUrl (https://www.jonmpan.com)
+  search-keywords {
+    keyword (trivia)
+    keyword (QuizIt)
+    keyword (learning)
+    keyword (educational)
+    keyword (Quiz)
+    keyword (Open Source)
+    keyword (Anime)
+    keyword (Video Games)
+    keyword (books)
+    keyword (music)
+  }
+  dispatch-name (Quiz it)
+  dispatch-aliases {
+    alias (Trivia game)
+    alias (Quiz game)
+    alias (Quiz it game)
+    alias (Trivia)
+    alias (Quiz)
+  }
+  actionBgColor (#BF2519)
+  actionFgColor (#FFFFFF)
+}

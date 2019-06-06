@@ -1,0 +1,9 @@
+hints {
+  uncategorized {
+    utterance (quiz)
+    utterance (quiz it)
+    utterance (start quiz game)
+    utterance (quiz easy games)
+    utterance (quiz it anime hard)
+  }
+}

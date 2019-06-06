@@ -1,3 +1,8 @@
+train (t-77k8m2iyqf6b5313x7xhns2su) {
+  utterance ([g:GetQuiz] start quiz it game)
+  plan (Y2BhECgszazKLNFLSc3N1wsEshmEkUXcU0vAgiLIgs6JJanp+UWVDGLIoi6ZaWmZyaU5JZUMzAyMDExAkgFIgyAEgFkA)
+  last-modified (1559778088791)
+}
 train (t-7bzvxia8nyemcp6wpkkmfcvh5) {
   utterance ("[g:AnswerQuestion:continue:NextQuestion] (A)[v:UserAnswer:A]")
   plan (Y2BhECgszazKLNFLSc3N1wsEshmkkEUc84rLU4sCS1OLSzLz87CoFkMWCS1OLYLoYGBmYGRgApIMQBoEIYAJyAKKAQA=)

@@ -1,6 +1,6 @@
 vocab(UserAnswer){
   "A" {"A"}
-  "B" {"B" "bee" "P" "pee"}
+  "B" {"B" "bee" "P" "pee" "be"}
   "C" {"C" "see" "sea" "See"}
-  "D" {"D" "t"}
+  "D" {"D" "t" "dee" "P"}
 }
