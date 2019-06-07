@@ -45,13 +45,13 @@ layout-macro-def(completed) {
             if(question.userAnswer != null && question.correct){
               paragraph{
                 value("Correct! You chose #{value(question.userAnswer)}")
-                style(Detail_L)
+                style(Detail_L_Soft)
               }
             }
             if(question.userAnswer != null && !question.correct){
               paragraph{
                 value("Incorrect. You chose #{value(question.userAnswer)}")
-                style(Detail_L)
+                style(Detail_L_Soft)
               }
             }
           }

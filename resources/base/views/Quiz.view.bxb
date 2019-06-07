@@ -2,6 +2,30 @@ result-view {
   match {
     Quiz (this)
   }
+  refresh {
+    if (this.status == 'tutorial') {
+      spec {
+        delay-seconds (12)
+        with-request {
+          intent {
+            goal {NextQuestion}
+            value {$expr(this)}
+          }
+        }
+      }         
+    }
+    if (this.status == 'answer') {
+      spec {
+        delay-seconds (6)
+        with-request {
+          intent {
+            goal {NextQuestion}
+            value {$expr(this)}
+          }
+        }
+      }         
+    }
+  }
 
   render {
     if (this.status == 'tutorial'){
@@ -28,7 +52,7 @@ result-view {
   conversation-drivers{
     if(this.status == 'tutorial'){
       conversation-driver{
-        template (Start)   
+        template (Start Now)
       }
     }
     if(this.status == 'question'){

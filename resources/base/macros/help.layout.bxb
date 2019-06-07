@@ -1,0 +1,98 @@
+layout-macro-def (help) {
+
+  content {
+    section {
+      content {
+        image{
+          url(/images/quizit-logo-white-min.png)
+          object-fit (Contain)
+          aspect-ratio(21:9)
+        }
+        cell-card {
+          slot2 {
+            content {
+              primary ("What is QuizIt?") // Fields of America for Fall
+            }
+          }
+        }
+        paragraph{
+          value(QuizIt is a trivia game based on Open Trivia DB. There are thousands of questions across many categories and 3 difficulties. You answer one question at a time and QuizIt will provide you a summary of your performance.)
+          style(Detail_L_Soft)
+        }
+        cell-card {
+          slot2 {
+            content {
+              primary ("What are the rules?")
+            }
+          }
+        }
+        partitioned {
+          content {
+            paragraph{
+              value ("QuizIt will automatically move you past the intro screen and the answer screens.")
+              style (Detail_L_Soft)
+            }
+            paragraph{
+              value ("There are 5 questions per quiz.")
+              style (Detail_L_Soft)
+            }
+            paragraph{
+              value ("You can wake Bixby up to submit your answer.")
+              style (Detail_L_Soft)
+            }
+            paragraph{
+              value ("Bixby only recognizes A B C D as valid answers")
+              style (Detail_L_Soft)
+            }
+            paragraph{
+              value ("You can also click on the answer to select it")
+              style (Detail_L_Soft)
+            }
+          }
+        }
+        cell-card {
+          slot2 {
+            content {
+              primary ("Say one of the following to start:")
+            }
+          }
+        }
+        partitioned {
+          content {
+            paragraph{
+              value ("\"Start\"")
+              style (Detail_L_Soft)
+            }
+            paragraph{
+              value ("\"New Game\"")
+              style (Detail_L_Soft)
+            }
+            paragraph{
+              value ("\"Trivia books easy\"")
+              style (Detail_L_Soft)
+            }
+          }
+        }
+        cell-card {
+          slot2 {
+            content {
+              primary ("Additional info:")
+            }
+          }
+        }
+        partitioned {
+          content {
+            paragraph{
+              value ("You can have QuizIt repeat a question by saying \"repeat\"")
+              style (Detail_L_Soft)
+            }
+            paragraph{
+              value ("Show this screen by saying \"help\"")
+              style (Detail_L_Soft)
+            }
+          }
+        }
+      }
+    }
+  }
+}

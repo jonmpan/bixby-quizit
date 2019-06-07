@@ -1,5 +1,9 @@
 endpoints {
   action-endpoints {
+    action-endpoint (Help) {
+      accepted-inputs ()
+      local-endpoint (Help.js)
+    }
     action-endpoint (GetQuiz) {
       accepted-inputs (category, difficulty)
       local-endpoint (GetQuiz.js)
@@ -17,6 +21,10 @@ endpoints {
     action-endpoint (AnswerQuestion) {
       accepted-inputs (quiz, userAnswer)
       local-endpoint (AnswerQuestion.js)
+    }
+    action-endpoint (RepeatQuestion) {
+      accepted-inputs (quiz)
+      local-endpoint (RepeatQuestion.js)
     }
   }
 }

@@ -1,3 +1,18 @@
+train (t-y6ptaoydh906dsggtjfixgx62) {
+  utterance ([g:RepeatQuestion:continue:NextQuestion] can you repeat the question)
+  plan (Y2BmECgszazKLNFLSc3N1wsEshmkkEWCUgtSE0sCS1OLSzLz87CoZmJgBGIGIMnIwACjAQ==)
+  last-modified (1559939764804)
+}
+train (t-yk49pbwunmzyc3lcjhlnfkg96) {
+  utterance ([g:RepeatQuestion:continue:NextQuestion] could you repeat the question)
+  plan (Y2BmECgszazKLNFLSc3N1wsEshmkkEWCUgtSE0sCS1OLSzLz87CoZmJgBGIGIMnIwACjAQ==)
+  last-modified (1559939838678)
+}
+train (t-yp0dkjtykvy5ycfkm672f1eax) {
+  utterance ("[g:GetQuiz] (video games)[v:Category:videoGames] (really easy)[v:Difficulty:easy]")
+  plan (Y2BhECgszazKLNFLSc3N1wsEshmEkUXcU0vAgiLIgs6JJanp+UWVDGLIoi6ZaWmZyaU5JZUMzAyMDExAkgFIgyAEwEUB)
+  last-modified (1559932675253)
+}
 train (t-yyphsvr4a87q77cpp5hakx0pj) {
   utterance ([g:GetQuiz] Play Again)
   plan (Y2BhECgszazKLNFLSc3N1wsEshmEkUXcU0vAgiLIgs6JJanp+UWVDGLIoi6ZaWmZyaU5JZUMzAyMDExAkgFIgyAEgFkA)

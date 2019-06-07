@@ -15,9 +15,65 @@ layout-macro-def(tutorial) {
           object-fit (Contain)
           aspect-ratio(21:9)
         }
+        hbox {
+          content {
+            vbox {
+              content {
+                single-line {
+                  text {
+                    value ("Category:")
+                    style(Title_XS)
+                  }
+                }
+              }
+            }
+            vbox {
+              content {
+                single-line {
+                  text {
+                    value ("Difficulty:")
+                    style(Title_XS)
+                  }
+                }
+              }
+            }
+          }
+        }
+        hbox {
+          content {
+            vbox {
+              content {
+                single-line {
+                  text {
+                    value ("#{title(quiz.category)}")
+                    style(Detail_M_Soft)
+                  }
+                }
+              }
+            }
+            vbox {
+              content {
+                single-line {
+                  text {
+                    value ("#{title(quiz.difficulty)}")
+                    style(Detail_M_Soft)
+                  }
+                }
+              }
+            }
+          }
+        }
         paragraph{
-          value(There are 5 questions for this current build. Say Start to start the game!)
-          style(Title_XS)
+          value("QuizIt will automatically move you past this tutorial screen and the answer screens.")
+          style(Detail_L)
+        }
+        paragraph{
+          value("Say \"Help\" for help!")
+          style(Detail_L)
+        }
+        paragraph{
+          value("You need to wake up Bixby to submit your answer. For example, say \"Hi Bixby, A\" to submit your answer as A.")
+          style(Detail_L)
         }
       }
     }

@@ -1,0 +1,15 @@
+result-view {
+  match: ShowHelp (help)
+
+  message ("Welcome to QuizIt's help screen! Please read the following to learn more about the game.")
+
+  render {
+    layout-macro (help)
+  }
+  
+  conversation-drivers{
+    conversation-driver{ 
+      template (New Game)
+    }
+  }
+}

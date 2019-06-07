@@ -1,0 +1,5 @@
+train (t-4av9eqfpnqw6bzambm8p6fmj9) {
+  utterance ("[g:GetQuiz] new game (anime)[v:Category:anime] (any)[v:Difficulty:any]")
+  plan (Y2BhECgszazKLNFLSc3N1wsEshmEkUXcU0vAgiLIgs6JJanp+UWVDGLIoi6ZaWmZyaU5JZUMzAyMDExAkgFIgyAEwEUB)
+  last-modified (1559931516739)
+}

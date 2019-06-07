@@ -26,8 +26,6 @@ module.exports.function = function getCategories () {
     "vehicles",
     "comics",
     "gadgets",
-    "manga",
     "cartoon",
-    "animation"
   ]
 }

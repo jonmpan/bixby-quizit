@@ -1,7 +1,7 @@
 structure (Answer) {
   description (__DESCRIPTION__)
   property (correct) {
-    type (AnswerCorrect)
+    type (Correct)
     min (Required) max (One)
   }
   property (letter) {

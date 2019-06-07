@@ -1,6 +1,6 @@
 vocab(Difficulty){
-  "any" {"any" "all" "anything"}
-  "easy" {"easy"}
+  "any" {"any" "all" "anything" "any difficulty" "all difficulties"}
+  "easy" {"easy" "super easy" "really easy"}
   "medium" {"medium" "normal"}
-  "hard" {"hard" "difficult" "tough"}
+  "hard" {"hard" "difficult" "tough" "really hard" "really difficult" "super hard" "super difficult"}
 }

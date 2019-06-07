@@ -5,6 +5,8 @@ dialog (Result) {
       speech ("#{title(this.speech)}")
     }
   } else {
-    template("#{title(this.template)}")
+    template("#{title(this.template)}"){
+      speech ("#{title(this.speech)}")
+    }
   }
 }

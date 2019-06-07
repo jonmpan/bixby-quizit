@@ -2,7 +2,7 @@ description {
   displayName (QuizIt Trivia)
   companyName (jonmpan)
   iconUrl (/images/quizit-icon.png)
-  description (Open Source Trivia Game where you can select your category and difficulty)
+  description (Open Source Trivia Game where you can select your category and difficulty. Powered by Open Trivia DB.)
   websiteUrl (https://www.jonmpan.com)
   search-keywords {
     keyword (trivia)

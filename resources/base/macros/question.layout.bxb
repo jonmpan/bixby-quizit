@@ -30,6 +30,8 @@ layout-macro-def(question) {
                       speech:$expr(quiz.speech)
                       status:$expr(quiz.status)
                       template:$expr(quiz.template)
+                      category:$expr(quiz.category)
+                      difficulty:$expr(quiz.difficulty)
                       currentUserAnswer:$expr(answer.letter)
                     }
                 }                
