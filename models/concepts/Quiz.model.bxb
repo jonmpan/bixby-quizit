@@ -1,0 +1,43 @@
+structure (Quiz) {
+  description (__DESCRIPTION__)
+  property (questions) {
+    type (FullQuestion)
+    min (Required) max (Many)
+  }
+  property (currentQuestion) {
+    type (CurrentQuestion)
+    min (Required) max (One)
+  }
+  property (status){
+    type (Status)
+    min (Required) max (One)
+  }
+  property (template) {
+    type (Template)
+    min (Required) max (One)
+  }
+  property (speech) {
+    type (Speech)
+    min (Required) max (One)
+  }
+  property (score) {
+    type (Score)
+    min (Required) max (One)
+  }
+  property (questionCount) {
+    type (QuestionCount)
+    min (Required) max (One)
+  }
+  property (currentUserAnswer) {
+    type (UserAnswer)
+    min (Required) max (One)
+  }
+  property (category) {
+    type (Category)
+    min (Required) max (One)
+  }
+  property (difficulty) {
+    type (Difficulty)
+    min (Required) max (One)
+  }
+}

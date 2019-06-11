@@ -1,5 +1,5 @@
-train (t-vw5gwv3newq69spxpfzqp3ix1) {
-  utterance ("[g:CheckAnswerVoice:continue:GetQuestion] (See)[v:UserAnswer:C]")
-  plan (Y2BmkC0szazKLNFLSc3N13PMKy5PLXLMSwksTS0uyczPY5BBlnbOSE3OhqgJy89MTmUQQ5YNLQZpBUkyMDEwAjEDkGRkAAEoHwA=)
-  last-modified (1557157030651)
+train (t-vtbzjz4j6zt5c3eafwyidu4kk) {
+  utterance ([g:GetQuiz] Start Trivia Game)
+  plan (Y2BhECgszazKLNFLSc3N1wsEshmEkUXcU0vAgiLIgs6JJanp+UWVDGLIoi6ZaWmZyaU5JZUMzAyMDExAkgFIgyAEgFkA)
+  last-modified (1559778018100)
 }

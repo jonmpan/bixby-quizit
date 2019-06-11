@@ -1,0 +1,83 @@
+result-view {
+  match {
+    Quiz (this)
+  }
+  refresh {
+    if (this.status == 'tutorial') {
+      spec {
+        delay-seconds (12)
+        with-request {
+          intent {
+            goal {NextQuestion}
+            value {$expr(this)}
+          }
+        }
+      }         
+    }
+    if (this.status == 'answer') {
+      spec {
+        delay-seconds (6)
+        with-request {
+          intent {
+            goal {NextQuestion}
+            value {$expr(this)}
+          }
+        }
+      }         
+    }
+  }
+
+  render {
+    if (this.status == 'tutorial'){
+      layout-macro (tutorial) {
+        param (quiz) {expression (this)}
+      }
+    }
+    if (this.status == 'question'){
+      layout-macro (question) {
+        param (quiz) {expression (this)}
+      }
+    }
+    if (this.status == 'answer'){
+      layout-macro (answer) {
+        param (quiz) {expression (this)}
+      }
+    }
+    if (this.status == 'completed'){
+      layout-macro (completed) {
+        param (quiz) {expression (this)}
+      }
+    }
+  }
+  conversation-drivers{
+    // if(this.status == 'tutorial'){
+    //   conversation-driver{
+    //     template (Start Now)
+    //   }
+    // }
+    if(this.status == 'question'){
+      conversation-driver{
+        template (A)   
+      }
+      conversation-driver{
+        template (B)   
+      }
+      conversation-driver{
+        template (C)   
+      }
+      conversation-driver{
+        template (D)   
+      }
+    }
+    // if(this.status == 'answer'){
+    //   conversation-driver{
+    //     template (Continue)   
+    //   }
+    // }
+    if(this.status == 'completed'){
+      conversation-driver{
+        template (Play Again)
+      }
+    }
+  }
+}

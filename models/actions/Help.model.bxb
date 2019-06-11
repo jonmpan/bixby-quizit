@@ -1,0 +1,5 @@
+action (Help) {
+  type (Search)
+  description (__DESCRIPTION__)
+  output (ShowHelp)
+}

@@ -1,5 +1,5 @@
-train (t-z9je9etowdws32yelhnqeid59) {
-  utterance ("[g:GetQuestion] quiz it (science)[v:Categories:science]")
-  plan (Y2BmkCgszazKLNFLSc3N13MrzckJLE0tLsnMz2MQR5ZxTy2BS4ghSzgnlqSm5xdlphYzMDEwAjEDkGRkAAEoHwA=)
-  last-modified (1557156794698)
+train (t-z29ok2hhora436t9u8iwnnm24) {
+  utterance ("[g:Category:prompt] (Any)[v:Category:any]")
+  plan (Y2BiECkszazKLNFLSc3N13NOLElNzy+qxCHKCIQMDDxAzATEQDYA)
+  last-modified (1559945872152)
 }

@@ -1,0 +1,3 @@
+boolean (ShowHelp) {
+  description (__DESCRIPTION__)
+}

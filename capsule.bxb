@@ -1,11 +1,18 @@
 capsule {
   id (quizit.demo)
-  version (0.1.0)
+  version (1.0.5)
   format (3)
   targets {
     target (bixby-mobile-en-US)
   }
+  capsule-imports {
+  }
   runtime-flags {
+    concepts-inherit-super-type-features
+    modern-prompt-rejection
     support-halt-effect-in-computed-inputs
+  }
+  store-sections {
+    section (GamesAndFun)
   }
 }

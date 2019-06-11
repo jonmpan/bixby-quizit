@@ -1,0 +1,19 @@
+input-view {
+  match: Difficulty (difficulties) {
+    to-input: GetQuiz (action)
+  }
+
+  message ("Please Select a Difficulty")
+
+  render {
+    selection-of (difficulties) {
+      where-each (difficulty) {
+        layout-macro (difficulty-box) {
+          param (difficulty) { 
+            expression (difficulty)
+          }
+        }
+      }
+    }
+  }
+}

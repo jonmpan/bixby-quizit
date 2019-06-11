@@ -1,3 +1,7 @@
-text (Difficulty) {
+enum (Difficulty) {
   description (__DESCRIPTION__)
+  symbol ("any")
+  symbol ("easy")
+  symbol ("medium")
+  symbol ("hard")
 }

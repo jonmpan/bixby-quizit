@@ -1,0 +1,63 @@
+layout-macro-def(completed) {
+  params {
+    param (quiz) {
+      type (Quiz)
+      min (Required)
+      max (One)
+    }
+  }
+
+  content {
+    section {
+      content {
+        for-each (quiz.questions){
+          as (question){
+            divider
+            paragraph {
+              value {
+                template ("#{value(question.question)}")
+              }
+              style (Title_XS)
+            }
+            for-each (question.answers){
+              as (answer){
+                if(answer.correct == true){
+                  cell-card {
+                    slot2 {
+                      content {
+                        order (PrimarySecondary)
+                        primary ("#{value(answer.letter)}. #{value(answer.text)}")
+                      }
+                    }
+                  }
+                } else {
+                  cell-card {
+                    slot2 {
+                      content {
+                        order (PrimarySecondary)
+                        secondary ("#{value(answer.letter)}. #{value(answer.text)}")
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            if(question.userAnswer != null && question.correct){
+              paragraph{
+                value("Correct! You chose #{value(question.userAnswer)}")
+                style(Detail_L_Soft)
+              }
+            }
+            if(question.userAnswer != null && !question.correct){
+              paragraph{
+                value("Incorrect. You chose #{value(question.userAnswer)}")
+                style(Detail_L_Soft)
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
