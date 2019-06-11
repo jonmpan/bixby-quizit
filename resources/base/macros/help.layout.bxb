@@ -29,7 +29,7 @@ layout-macro-def (help) {
         partitioned {
           content {
             paragraph{
-              value ("QuizIt will automatically move you past the intro screen and the answer screens.")
+              value ("QuizIt will automatically move you past the tutorial screen and the answer screens.")
               style (Detail_L_Soft)
             }
             paragraph{
@@ -45,7 +45,7 @@ layout-macro-def (help) {
               style (Detail_L_Soft)
             }
             paragraph{
-              value ("You can also click on the answer to select it")
+              value ("You can also tap on the answer to select it")
               style (Detail_L_Soft)
             }
           }

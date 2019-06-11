@@ -50,11 +50,11 @@ result-view {
     }
   }
   conversation-drivers{
-    if(this.status == 'tutorial'){
-      conversation-driver{
-        template (Start Now)
-      }
-    }
+    // if(this.status == 'tutorial'){
+    //   conversation-driver{
+    //     template (Start Now)
+    //   }
+    // }
     if(this.status == 'question'){
       conversation-driver{
         template (A)   
@@ -69,11 +69,11 @@ result-view {
         template (D)   
       }
     }
-    if(this.status == 'answer'){
-      conversation-driver{
-        template (Continue)   
-      }
-    }
+    // if(this.status == 'answer'){
+    //   conversation-driver{
+    //     template (Continue)   
+    //   }
+    // }
     if(this.status == 'completed'){
       conversation-driver{
         template (Play Again)

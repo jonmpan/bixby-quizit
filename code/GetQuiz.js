@@ -24,7 +24,7 @@ module.exports.function = function getQuiz (category, difficulty) {
     currentUserAnswer: 'Skip',
     status:'tutorial',
     template: 'QuizIt is a trivia game with crowdsourced questions. The questions are multiple choice. You must say A, B, C, or D, to select your answer.',
-    speech: 'QuizIt is a trivia game with crowdsourced questions. The questions are multiple choice. You must say A, B, C, or D, to select your answer.',
+    speech: 'QuizIt is a trivia game with crowdsourced questions. The questions are multiple choice. You must say A... B... C... or D... to select your answer.',
     // speech: 'Poop'
   }
 }
