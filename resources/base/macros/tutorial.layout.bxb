@@ -64,7 +64,11 @@ layout-macro-def(tutorial) {
           }
         }
         paragraph{
-          value("QuizIt will automatically move you past this tutorial screen and the answer screens.")
+          value("Your game will automatically start in 12 seconds.")
+          style(Detail_L)
+        }
+        paragraph{
+          value("QuizIt automatically moves you past this tutorial screen and the answer screens.")
           style(Detail_L)
         }
         paragraph{

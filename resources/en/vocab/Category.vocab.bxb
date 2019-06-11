@@ -1,6 +1,6 @@
 vocab(Category){
   "any" {"any" "all" "all of them" "any category" "Any"}
-  "general" {"general" "general knowledge"}
+  "general" {"general" "general knowledge" "channel"}
   "books" {"books"}
   "film" {"film" "movies" "movie"}
   "music" {"music"}
