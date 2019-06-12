@@ -1,4 +1,4 @@
-action (AnswerQuestion) {
+action (CheckAnswer) {
   type(Search)
   description (__DESCRIPTION__)
   collect {

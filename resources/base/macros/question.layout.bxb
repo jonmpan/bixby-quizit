@@ -21,7 +21,7 @@ layout-macro-def(question) {
               }
               on-click{
                 intent{
-                  goal:AnswerQuestion
+                  goal:CheckAnswer
                   value:Quiz{
                     currentQuestion:$expr(quiz.currentQuestion)
                     questionCount:$expr(quiz.questionCount)

@@ -1,6 +1,6 @@
 capsule {
-  id (quizit.demo)
-  version (1.0.5)
+  id (jonmpan.quizIt)
+  version (1.0.50)
   format (3)
   targets {
     target (bixby-mobile-en-US)
@@ -8,6 +8,7 @@ capsule {
   capsule-imports {
   }
   runtime-flags {
+    allow-dialogs-on-detail-pages
     concepts-inherit-super-type-features
     modern-prompt-rejection
     support-halt-effect-in-computed-inputs

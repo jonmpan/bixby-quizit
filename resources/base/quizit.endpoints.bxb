@@ -18,9 +18,9 @@ endpoints {
       accepted-inputs (quiz)
       local-endpoint (NextQuestion.js)
     }
-    action-endpoint (AnswerQuestion) {
+    action-endpoint (CheckAnswer) {
       accepted-inputs (quiz, userAnswer)
-      local-endpoint (AnswerQuestion.js)
+      local-endpoint (CheckAnswer.js)
     }
     action-endpoint (RepeatQuestion) {
       accepted-inputs (quiz)

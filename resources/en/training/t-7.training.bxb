@@ -4,7 +4,7 @@ train (t-77k8m2iyqf6b5313x7xhns2su) {
   last-modified (1559778088791)
 }
 train (t-7bzvxia8nyemcp6wpkkmfcvh5) {
-  utterance ("[g:AnswerQuestion:continue:NextQuestion] (A)[v:UserAnswer:A]")
-  plan (Y2BhECgszazKLNFLSc3N1wsEshmkkEUc84rLU4sCS1OLSzLz87CoFkMWCS1OLYLoYGBmYGRgApIMQBoEIYAJyAKKAQA=)
-  last-modified (1559767337374)
+  utterance ("[g:CheckAnswer:continue:NextQuestion] (A)[v:UserAnswer:A]")
+  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxSaILOGanJ2Y55xeWpRdg1SKIJhhanFkHVMzMwMjABSQYgDYIQwARkAcUA)
+  last-modified (1560283356204)
 }

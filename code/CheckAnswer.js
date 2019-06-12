@@ -1,4 +1,4 @@
-module.exports.function = function answerQuestion (quiz, userAnswer) {
+module.exports.function = function checkAnswer (quiz, userAnswer) {
   let correctAnswer = '';
   let correctString = '';
   let bixbyResponse = '';

@@ -1,5 +1,5 @@
 train (t-tanorsqykfqhntahl0g683afn) {
-  utterance ([g:NextQuestion:continue:AnswerQuestion] continue)
-  plan (Y2BmECgszazKLNFLSc3N1wsEshkkkEX8UitKAktTi0sy8/OwqGViYARiBiDJyMAAowE=)
-  last-modified (1559768164045)
+  utterance ([g:NextQuestion:continue:CheckAnswer] continue)
+  plan (Y2BmEM7Kz8stSMzTKyzNrPIs0QsEUgzSaIJ+qRUlgaWpxSWZ+XnYdTAxMAIxA5BkZGCA0QA=)
+  last-modified (1560283374324)
 }
