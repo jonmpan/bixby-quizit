@@ -4,7 +4,7 @@ train (t-9hrsf69l4nkizq9r1szyky73t) {
   last-modified (1559777994308)
 }
 train (t-9uiesr431vybm0flf7q1qrgfb) {
-  utterance ("[g:Category:prompt] (video games)[v:Category:videoGames]")
-  plan (Y2BiECkszazKLNFLSc3N13NOLElNzy+qxCHKCIQMDDxAzATEQDYA)
-  last-modified (1559931790570)
+  utterance ("[g:Category:prompt] (video games)[v:Category:'video games']")
+  plan (Y2BiEM/Kz8stSMzTKyzNrPIs0XNOLElNzy+qxC3BCIQMDDxAzATEQDYA)
+  last-modified (1561491103830)
 }

@@ -5,4 +5,7 @@ enum (UserAnswer) {
   symbol ("C")
   symbol ("D")
   symbol ("Skip")
+  features{
+    transient
+  }
 }

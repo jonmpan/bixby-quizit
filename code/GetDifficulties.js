@@ -1,3 +1,3 @@
 module.exports.function = function getDifficulties () {
-  return ["any", "easy", "medium", "hard"];
+  return ["all difficulties", "easy", "medium", "hard"];
 }

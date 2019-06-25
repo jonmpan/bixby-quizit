@@ -1,3 +1,6 @@
 text (UserAnswerString) {
   description (__DESCRIPTION__)
+  features{
+    transient
+  }
 }

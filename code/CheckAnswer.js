@@ -1,4 +1,5 @@
 const { levenshteinQuestion } = require('./utils/index.js');
+var console = require('console');
 
 module.exports.function = function checkAnswer (quiz, userAnswer, userAnswerString) {
   let correctAnswer = '';
@@ -28,6 +29,7 @@ module.exports.function = function checkAnswer (quiz, userAnswer, userAnswerStri
     }
   } else if(userAnswerString) {
     const comparedAnswer = levenshteinQuestion(userAnswerString.toString(), quiz.questions[quiz.currentQuestion]);
+    console.log(comparedAnswer);
     userAnswer = comparedAnswer.answer;
     if(comparedAnswer.correct){
       quiz.score++;

@@ -1,0 +1,6 @@
+dialog (Elicitation) {
+  match: Quiz
+  template("Say \"New Game\" to start playing"){
+    speech ("Say, New Game, to start playing")
+  }
+}

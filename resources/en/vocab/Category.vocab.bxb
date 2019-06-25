@@ -1,5 +1,5 @@
 vocab(Category){
-  "any" {"any" "all" "all of them" "any category" "Any"}
+  "all categories" {"all categories" "all" "any" "all of them" "any category"}
   "general" {"general" "general knowledge" "channel"}
   "books" {"books"}
   "film" {"film" "movies" "movie"}
@@ -7,8 +7,8 @@ vocab(Category){
   "musicals" {"musicals"}
   "theatre" {"theatre"}
   "television" {"television" "tv"}
-  "videoGames" {"videoGames" "video games" "games" "game"}
-  "boardGames" {"boardGames" "board games" "boring games" "boring"}
+  "video games" {"video games" "videoGames" "games" "game"}
+  "board games" {"board games" "boardGames" "boring games" "bored games" "boring"}
   "science" {"science" "technology"}
   "nature" {"nature"}
   "computers" {"computers"}

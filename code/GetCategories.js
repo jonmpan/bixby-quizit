@@ -1,31 +1,5 @@
-module.exports.function = function getCategories () {
-  return [
-    "any",
-    "general",
-    "videoGames",
-    "science",
-    "geography",
-    "history",
-    "anime",
-    "books",
-    "film",
-    "music",
-    "musicals",
-    "theatre",
-    "television",
-    "boardGames",
-    "nature",
-    "computers",
-    "mathematics",
-    "mythology",
-    "sports",
-    "politics",
-    "art",
-    "celebrities",
-    "animals",
-    "vehicles",
-    "comics",
-    "gadgets",
-    "cartoon",
-  ]
-}
+const { categoriesArray, categoriesInfo } = require('./utils/index.js');
+
+module.exports.function = function getCategories() {
+  return categoriesArray;
+};

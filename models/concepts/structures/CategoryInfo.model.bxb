@@ -1,0 +1,22 @@
+structure (CategoryInfo) {
+  description (__DESCRIPTION__)
+  property (category) {
+    type (Category)
+    min (Required) max (One)
+  }
+  property (text) {
+    type (viv.core.Text)
+    min (Required) max (One)
+    visibility (Private)
+  }
+  property (description) {
+    type (viv.core.Text)
+    min (Optional) max (One)
+    visibility (Private)
+  }
+  property (image) {
+    type (viv.core.Text)
+    min (Optional) max (One)
+    visibility (Private)
+  }
+}

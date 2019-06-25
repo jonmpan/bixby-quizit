@@ -1,5 +1,5 @@
 input-view {
-  match: Category (categories)
+  match: CategoryInfo (categories)
 
   message ("Alright, let's start a quiz! Select a category.")
 
@@ -8,11 +8,18 @@ input-view {
       where-each (category) {
         cell-card {
           slot1 {
+            image{
+              shape (Square)
+              url ("[#{value(category.image)}]")
+            }
           }
           slot2 {
             content {
               primary {
-                template ("#{title(category)}")
+                template ("#{title(category.text)}")
+              }
+              secondary {
+                template ("[#{value(category.description)}]")
               }
             }
           }

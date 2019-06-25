@@ -6,17 +6,21 @@ capsule-info {
   website-url ()
   search-keywords {
     keyword (trivia)
-    keyword (game)
     keyword (trivia game)
     keyword (QuizIt)
+    keyword (QuizIt trivia)
     keyword (Quiz it)
+    keyword (Quiz it trivia)
     keyword (educational)
     keyword (quiz)
-    keyword (quiz game)
+    keyword (games)
+    keyword (music trivia)
   }
   dispatch-name (Quiz it)
   dispatch-aliases {
+    alias (Quiz it trivia)
     alias (Quiz it game)
+    alias (QuizIt)
   }
   action-bg-color (#BF2519)
   action-fg-color (#FFFFFF)

@@ -1,6 +1,6 @@
 enum (Category) {
   description (__DESCRIPTION__)
-  symbol ("any")
+  symbol ("all categories")
   symbol ("general")
   symbol ("books")
   symbol ("film")
@@ -8,8 +8,8 @@ enum (Category) {
   symbol ("musicals")
   symbol ("theatre")
   symbol ("television")
-  symbol ("videoGames")
-  symbol ("boardGames")
+  symbol ("video games")
+  symbol ("board games")
   symbol ("science")
   symbol ("nature")
   symbol ("computers")
@@ -29,4 +29,7 @@ enum (Category) {
   symbol ("manga")
   symbol ("cartoon")
   symbol ("animation")
+  features{
+    transient
+  }
 }

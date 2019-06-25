@@ -1,10 +1,8 @@
 hints {
   uncategorized {
-    utterance (start)
-    utterance (quiz)
-    utterance (trivia)
-    utterance (start video games easy)
-    utterance (quiz science hard)
+    utterance (new game)
+    utterance (new game video games easy)
+    utterance (trivia science hard)
     utterance (new game anime medium)
     utterance (help)
   }

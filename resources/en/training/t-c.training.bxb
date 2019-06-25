@@ -1,5 +1,5 @@
 train (t-cqxgzg6oacydsuxe7s5pt5b3r) {
-  utterance ("[g:GetQuiz] new game (video games)[v:Category:videoGames] (easy)[v:Difficulty:easy]")
-  plan (Y2BhECgszazKLNFLSc3N1wsEshmEkUXcU0vAgiLIgs6JJanp+UWVDGLIoi6ZaWmZyaU5JZUMzAyMDExAkgFIgyAEwEUB)
-  last-modified (1559938871850)
+  utterance ("[g:GetQuiz] new game (video games)[v:Category:'video games'] (easy)[v:Difficulty:easy]")
+  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
+  last-modified (1561491137314)
 }

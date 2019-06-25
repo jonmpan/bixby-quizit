@@ -6,8 +6,8 @@ const categories = {
   "musicals":13,
   "theatre":13,
   "television":14,
-  "videoGames":15,
-  "boardGames":16,
+  "videogames":15,
+  "boardgames":16,
   "science":17,
   "nature":17,
   "computers":18,
@@ -29,6 +29,174 @@ const categories = {
   "animation":33,
 }
 
+const categoriesArray = ["all categories", "general", "music", "video games", "anime", "computers", "geography", "animals", "books", "sports", "science", "history", "film", "musicals", "theatre", "television", "board games", "nature", "mathematics", "mythology", "politics", "art", "celebrities", "vehicles", "comics", "gadgets", "cartoon"]
+
+
+const categoriesInfo = [
+  {
+    category: "any",
+    text: "Any Category",
+    description: "Questions from all the categories!",
+    // image: "/images/quizit-icon.png",
+  },
+  {
+    category: "general",
+    text: "General",
+    description: "Test your general knowledge!",
+    // image: "/images/quizit-icon.png",
+  },
+  {
+    category: "music",
+    text: "Music",
+    description: "How well do you know obscure bands?",
+    // image: "/images/quizit-icon.png",
+  },
+  {
+    category: "videoGames",
+    text: "Video Games",
+    description: "1337",
+    // image: "/images/quizit-icon.png",
+  },
+  {
+    category: "anime",
+    text: "Anime",
+    description: "I'm sorry this exists... in the best possible way.",
+    // image: "/images/quizit-icon.png",
+  },
+  {
+    category: "computers",
+    text: "Computers",
+    description: "0b10100111001",
+    // image: "/images/quizit-icon.png",
+  },
+  {
+    category: "geography",
+    text: "Geography",
+    description: "Do you know where Timbucktoo is?",
+    // image: "/images/quizit-icon.png",
+  },
+  {
+    category: "animals",
+    text: "Animals",
+    description: "Why are cats so cute?",
+    // image: "/images/quizit-icon.png",
+  },
+  {
+    category: "books",
+    text: "Books",
+    description: "I can't put this book on antigravity down!",
+    // image: "/images/quizit-icon.png",
+  },
+  {
+    category: "sports",
+    text: "Sports",
+    description: "Go 49ers!",
+    // image: "/images/quizit-icon.png",
+  },
+  {
+    category: "science",
+    text: "Science",
+    description: "Is this category a hypothesis or a theory?",
+    // image: "/images/quizit-icon.png",
+  },
+  {
+    category: "history",
+    text: "History",
+    description: "A category as old as human history.",
+    // image: "/images/quizit-icon.png",
+  },
+  {
+    category: "film",
+    text: "Film",
+    description: "Are you a cinephile?",
+    // image: "/images/quizit-icon.png",
+  },
+  {
+    category: "musicals",
+    text: "Musicals",
+    description: "Take me for who I am, who I was meant to be!",
+    // image: "/images/quizit-icon.png",
+  },
+  {
+    category: "theatre",
+    text: "Theatre",
+    description: "We're actors. We're the opposite of people!",
+    // image: "/images/quizit-icon.png",
+  },
+  {
+    category: "television",
+    text: "Television",
+    description: "Making potatoes out of humans since 1927.",
+    // image: "/images/quizit-icon.png",
+  },
+  {
+    category: "boardGames",
+    text: "Board Games",
+    description: "Come here to roll your 13 sided dice.",
+    // image: "/images/quizit-icon.png",
+  },
+  {
+    category: "nature",
+    text: "Nature",
+    description: "Adopt the pace of nature: her secret is patience.",
+    // image: "/images/quizit-icon.png",
+  },
+  {
+    category: "mathematics",
+    text: "Mathematics",
+    description: "This one is as easy as 3.14.",
+    // image: "/images/quizit-icon.png",
+  },
+  {
+    category: "mythology",
+    text: "Mythology",
+    description: "Mythology is a subjective truth.",
+    // image: "/images/quizit-icon.png",
+  },
+  {
+    category: "politics",
+    text: "Politics",
+    description: "Do you know your Presidents?",
+    // image: "/images/quizit-icon.png",
+  },
+  {
+    category: "art",
+    text: "Art",
+    description: "Every artist was first an amateur.",
+    // image: "/images/quizit-icon.png",
+  },
+  {
+    category: "celebrities",
+    text: "Celebrities",
+    description: "Are you famous? You might be in this quiz.",
+    // image: "/images/quizit-icon.png",
+  },
+  {
+    category: "vehicles",
+    text: "Vehicles",
+    description: "What has 4 wheels and transports humans? A stroller.",
+    // image: "/images/quizit-icon.png",
+  },
+  {
+    category: "comics",
+    text: "Comics",
+    description: "You can't hurry love or pizza. Especially pizza.",
+    // image: "/images/quizit-icon.png",
+  },
+  {
+    category: "gadgets",
+    text: "Gadgets",
+    description: "Someone call the inspector!",
+    // image: "/images/quizit-icon.png",
+  },
+  {
+    category: "cartoon",
+    text: "Cartoons",
+    description: "Non-Anime cartoons are here.",
+    // image: "/images/quizit-icon.png",
+  },
+];
+
 function shuffle(a) {
   var j, x, i;
   for (i = a.length - 1; i > 0; i--) {
@@ -49,113 +217,113 @@ const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 // }
 
 const foreignCharacters = {
-"nbsp":" ",
-"amp":"&",
-"quot":"\"",
-"lt":"<",
-"gt":">",
-"apos":"\'",
-'Aacute':'Á',
-'aacute':'á',
-'Agrave':'À',
-'Acirc':'Â',
-'agrave':'à',
-'Acirc':'Â',
-'acirc':'â',
-'Auml':'Ä',
-'auml':'ä',
-'Atilde':'Ã',
-'atilde':'ã',
-'Aring':'Å',
-'aring':'å',
-'Aelig':'Æ',
-'aelig':'æ',
-'Ccedil':'Ç',
-'ccedil':'ç',
-'Eth':'Ð',
-'eth':'ð',
-'Eacute':'É',
-'eacute':'é',
-'Egrave':'È',
-'egrave':'è',
-'Ecirc':'Ê',
-'ecirc':'ê',
-'Euml':'Ë',
-'euml':'ë',
-'Iacute':'Í',
-'iacute':'í',
-'Igrave':'Ì',
-'igrave':'ì',
-'Icirc':'Î',
-'icirc':'î',
-'Iuml':'Ï',
-'iuml':'ï',
-'Ntilde':'Ñ',
-'ntilde':'ñ',
-'Oacute':'Ó',
-'oacute':'ó',
-'Ograve':'Ò',
-'ograve':'ò',
-'Ocirc':'Ô',
-'ocirc':'ô',
-'Ouml':'Ö',
-'ouml':'ö',
-'Otilde':'Õ',
-'otilde':'õ',
-'Oslash':'Ø',
-'oslash':'ø',
-'szlig':'ß',
-'Thorn':'Þ',
-'thorn':'þ',
-'Uacute':'Ú',
-'uacute':'ú',
-'Ugrave':'Ù',
-'ugrave':'ù',
-'Ucirc':'Û',
-'ucirc':'û',
-'Uuml':'Ü',
-'uuml':'ü',
-'Yacute':'Ý',
-'yacute':'ý',
-'yuml':'ÿ',
-'copy':'©',
-'reg':'®',
-'trade' :'™',
-'lt':'<',
-'gt':'>',
-'euro':'€',
-'cent':'¢',
-'pound':'£',
-'quot':'"',
-'lsquo':'‘',
-'rsquo':'’',
-'ldquo':'“',
-'rdquo':'”',
-'laquo':'«',
-'raquo':'»',
-'mdash':'—',
-'ndash':'–',
-'deg':'°',
-'plusmn':'±',
-'frac14':'¼',
-'frac12':'½',
-'frac34':'¾',
-'times':'×',
-'divide':'÷',
-'alpha':'α',
-'beta':'β',
-'infin':'∞',
-'&hellip':'…'
+  "nbsp":" ",
+  "amp":"&",
+  "quot":"\"",
+  "lt":"<",
+  "gt":">",
+  "apos":"\'",
+  'Aacute':'Á',
+  'aacute':'á',
+  'Agrave':'À',
+  'Acirc':'Â',
+  'agrave':'à',
+  'Acirc':'Â',
+  'acirc':'â',
+  'Auml':'Ä',
+  'auml':'ä',
+  'Atilde':'Ã',
+  'atilde':'ã',
+  'Aring':'Å',
+  'aring':'å',
+  'Aelig':'Æ',
+  'aelig':'æ',
+  'Ccedil':'Ç',
+  'ccedil':'ç',
+  'Eth':'Ð',
+  'eth':'ð',
+  'Eacute':'É',
+  'eacute':'é',
+  'Egrave':'È',
+  'egrave':'è',
+  'Ecirc':'Ê',
+  'ecirc':'ê',
+  'Euml':'Ë',
+  'euml':'ë',
+  'Iacute':'Í',
+  'iacute':'í',
+  'Igrave':'Ì',
+  'igrave':'ì',
+  'Icirc':'Î',
+  'icirc':'î',
+  'Iuml':'Ï',
+  'iuml':'ï',
+  'Ntilde':'Ñ',
+  'ntilde':'ñ',
+  'Oacute':'Ó',
+  'oacute':'ó',
+  'Ograve':'Ò',
+  'ograve':'ò',
+  'Ocirc':'Ô',
+  'ocirc':'ô',
+  'Ouml':'Ö',
+  'ouml':'ö',
+  'Otilde':'Õ',
+  'otilde':'õ',
+  'Oslash':'Ø',
+  'oslash':'ø',
+  'szlig':'ß',
+  'Thorn':'Þ',
+  'thorn':'þ',
+  'Uacute':'Ú',
+  'uacute':'ú',
+  'Ugrave':'Ù',
+  'ugrave':'ù',
+  'Ucirc':'Û',
+  'ucirc':'û',
+  'Uuml':'Ü',
+  'uuml':'ü',
+  'Yacute':'Ý',
+  'yacute':'ý',
+  'yuml':'ÿ',
+  'copy':'©',
+  'reg':'®',
+  'trade' :'™',
+  'lt':'<',
+  'gt':'>',
+  'euro':'€',
+  'cent':'¢',
+  'pound':'£',
+  'quot':'"',
+  'lsquo':'‘',
+  'rsquo':'’',
+  'ldquo':'“',
+  'rdquo':'”',
+  'laquo':'«',
+  'raquo':'»',
+  'mdash':'—',
+  'ndash':'–',
+  'deg':'°',
+  'plusmn':'±',
+  'frac14':'¼',
+  'frac12':'½',
+  'frac34':'¾',
+  'times':'×',
+  'divide':'÷',
+  'alpha':'α',
+  'beta':'β',
+  'infin':'∞',
+  '&hellip':'…'
 }
 
 function removeHtmlStuff(encodedString) {
   var translate_re = /&(nbsp|amp|quot|lt|gt|apos|Aacute|aacute|Agrave|Acirc|agrave|Acirc|acirc|Auml|auml|Atilde|atilde|Aring|aring|Aelig|aelig|Ccedil|ccedil|Eth|eth|Eacute|eacute|Egrave|egrave|Ecirc|ecirc|Euml|euml|Iacute|iacute|Igrave|igrave|Icirc|icirc|Iuml|iuml|Ntilde|ntilde|Oacute|oacute|Ograve|ograve|Ocirc|ocirc|Ouml|ouml|Otilde|otilde|Oslash|oslash|szlig|Thorn|thorn|Uacute|uacute|Ugrave|ugrave|Ucirc|ucirc|Uuml|uuml|Yacute|yacute|yuml|copy|reg|trade|lt|gt|euro|cent|pound|quot|lsquo|rsquo|ldquo|rdquo|laquo|raquo|mdash|ndash|deg|plusmn|frac14|frac12|frac34|times|divide|alpha|beta|infin|hellip);/g;
   var translate = foreignCharacters;
   return encodedString.replace(translate_re, function(match, entity) {
-      return translate[entity];
+    return translate[entity];
   }).replace(/&#(\d+);/gi, function(match, numStr) {
-      var num = parseInt(numStr, 10);
-      return String.fromCharCode(num);
+    var num = parseInt(numStr, 10);
+    return String.fromCharCode(num);
   });
 }
 
@@ -281,7 +449,11 @@ const levenshteinQuestion = (answer, question) => {
   const levNums = [];
   const answers = question.answers;
   answers.map(o => {
-    levNums.push(levDist(answer, o.text));
+    if (answer == o.text) {
+      levNums.push(0);
+    } else {
+      levNums.push(levDist(answer, o.text));
+    }
   });
   const i = indexOfSmallest(levNums);
   const userAnswer = answers[i].text;
@@ -290,18 +462,22 @@ const levenshteinQuestion = (answer, question) => {
       answer: answers[i].letter,
       userAnswer: userAnswer,
       correct: true,
+      userInputString: answer
     };
   } else {
     return {
       answer: answers[i].letter,
       userAnswer: userAnswer,
       correct: false,
+      userInputString: answer
     };
   }  
 };
 
 module.exports = {
   categories:categories,
+  categoriesArray:categoriesArray,
+  categoriesInfo:categoriesInfo,
   formatQuestion:formatQuestion,
   formatQuestions:formatQuestions,
   levenshteinQuestion:levenshteinQuestion
