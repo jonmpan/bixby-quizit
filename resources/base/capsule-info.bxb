@@ -1,0 +1,23 @@
+capsule-info {
+  display-name (QuizIt Trivia)
+  developer-name (jonmpan)
+  icon-asset (/images/quizit-icon.png)
+  description (QuizIt is a free trivia game with thousands of questions and over 20 categories, Categories include; Video Games, Science, Anime, Music, Books, Geography, Computers, Science, Movies, and many more. Powered by Open Trivia DB.)
+  website-url ()
+  search-keywords {
+    keyword (trivia)
+    keyword (game)
+    keyword (trivia game)
+    keyword (QuizIt)
+    keyword (Quiz it)
+    keyword (educational)
+    keyword (quiz)
+    keyword (quiz game)
+  }
+  dispatch-name (Quiz it)
+  dispatch-aliases {
+    alias (Quiz it game)
+  }
+  action-bg-color (#BF2519)
+  action-fg-color (#FFFFFF)
+}

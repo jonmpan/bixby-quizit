@@ -3,7 +3,7 @@ input-view {
     to-input: GetQuiz (action)
   }
 
-  message ("Please Select a Category")
+  message ("Alright, let's start a quiz! Select a category.")
 
   render {
     selection-of (categories) {

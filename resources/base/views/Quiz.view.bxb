@@ -26,7 +26,7 @@ result-view {
       }         
     }
   }
-
+  followup{}
   render {
     if (this.status == 'tutorial'){
       layout-macro (tutorial) {
@@ -50,11 +50,14 @@ result-view {
     }
   }
   conversation-drivers{
-    // if(this.status == 'tutorial'){
-    //   conversation-driver{
-    //     template (Start Now)
-    //   }
-    // }
+    if(this.status == 'tutorial'){
+      conversation-driver{
+        template (Start Now)
+      }
+      conversation-driver{
+        template (Help)
+      }
+    }
     if(this.status == 'question'){
       conversation-driver{
         template (A)   
@@ -71,7 +74,7 @@ result-view {
     }
     // if(this.status == 'answer'){
     //   conversation-driver{
-    //     template (Continue)   
+    //     template (Continue)
     //   }
     // }
     if(this.status == 'completed'){

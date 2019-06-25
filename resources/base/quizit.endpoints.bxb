@@ -19,7 +19,7 @@ endpoints {
       local-endpoint (NextQuestion.js)
     }
     action-endpoint (CheckAnswer) {
-      accepted-inputs (quiz, userAnswer)
+      accepted-inputs (quiz, userAnswer, userAnswerString)
       local-endpoint (CheckAnswer.js)
     }
     action-endpoint (RepeatQuestion) {

@@ -8,3 +8,8 @@ train (t-ni8uvgyzc8rnhy9kkdc2mn6k9) {
   plan (Y2BiECkszazKLNFLSc3N13NOLElNzy+qxCHKCIQMDDxAzATEQDYA)
   last-modified (1559757295391)
 }
+train (t-nn0bgnsrp2vz9urslps12wdqh) {
+  utterance ("[g:CheckAnswer:continue:NextQuestion] (bee)[v:UserAnswer:B] (foo bar herp derp)[v:UserAnswerString]")
+  plan (Y2BlEM7Kz8stSMzTKyzNrPIs0QsEUgxSaILOGanJ2Y55xeWpRdg1SKIJhhanFkHVy+OUCi4pysxLZ2BhYGRgYmAG0gxAFgTCADOQDZYBAA==)
+  last-modified (1561480526859)
+}

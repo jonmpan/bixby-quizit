@@ -63,23 +63,25 @@ layout-macro-def(tutorial) {
             }
           }
         }
-        paragraph{
-          value("Your game will automatically start in 12 seconds.")
-          style(Detail_L)
+        partitioned {
+          content {
+            paragraph{
+              value("Your game will automatically start in 12 seconds.")
+              style(Detail_L)
+            }
+            paragraph{
+              value("QuizIt automatically moves you past this tutorial screen and the answer screens.")
+              style(Detail_L)
+            }
+            paragraph{
+              value("Say \"Help\" for help!")
+              style(Detail_L)
+            }
+          }
         }
-        paragraph{
-          value("QuizIt automatically moves you past this tutorial screen and the answer screens.")
-          style(Detail_L)
-        }
-        paragraph{
-          value("Say \"Help\" for help!")
-          style(Detail_L)
-        }
-        paragraph{
-          value("You need to wake up Bixby to submit your answer. For example, say \"Hi Bixby, A\" to submit your answer as A.")
-          style(Detail_L)
-        }
+
       }
     }
   }
+
 }

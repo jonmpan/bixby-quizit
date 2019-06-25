@@ -8,7 +8,11 @@ action (CheckAnswer) {
     }
     input (userAnswer) {
       type (UserAnswer)
-      min (Required) max (One)
+      min (Optional) max (Many)
+    }
+    input (userAnswerString) {
+      type (UserAnswerString)
+      min (Optional) max (One)
     }
   }
   output (Quiz)

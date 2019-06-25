@@ -1,3 +1,8 @@
+train (t-mhs3jjhd3rq5bspcfdvikjzah) {
+  utterance ("[g:NextQuestion:continue:CheckAnswer] (foo bar herp derp)[v:UserAnswerString]")
+  plan (Y2BjEM7Kz8stSMzTKyzNrPIs0QsEUgzSaIJ+qRUlgaWpxSWZ+XnYdUihCTpnpCZnO+YVl6cWYdcgjyYYWpxaBFEfXFKUmZfOwMrAyMDEwMzAAmQxQNnMQJoBjEGACcgCygEA)
+  last-modified (1561480142434)
+}
 train (t-mlofitz8o1r21scyyr72o196i) {
   utterance ([g:GetQuiz] Start Game)
   plan (Y2BhECgszazKLNFLSc3N1wsEshmEkUXcU0vAgiLIgs6JJanp+UWVDGLIoi6ZaWmZyaU5JZUMzAyMDExAkgFIgyAEgFkA)

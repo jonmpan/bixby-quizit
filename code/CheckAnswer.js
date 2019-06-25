@@ -1,4 +1,6 @@
-module.exports.function = function checkAnswer (quiz, userAnswer) {
+const { levenshteinQuestion } = require('./utils/index.js');
+
+module.exports.function = function checkAnswer (quiz, userAnswer, userAnswerString) {
   let correctAnswer = '';
   let correctString = '';
   let bixbyResponse = '';
@@ -11,7 +13,9 @@ module.exports.function = function checkAnswer (quiz, userAnswer) {
       correctString = answer.text;
     }
   }
-
+  if(userAnswer instanceof Array){
+    userAnswer = userAnswer[0];
+  }
   if(userAnswer){
     if(correctAnswer.toString() === userAnswer.toString()){
       quiz.score++;
@@ -21,6 +25,18 @@ module.exports.function = function checkAnswer (quiz, userAnswer) {
     } else {
       quiz.template = 'Wrong. The answer is ' + correctString;
       quiz.speech = 'Wrong. The answer is ' + correctString;
+    }
+  } else if(userAnswerString) {
+    const comparedAnswer = levenshteinQuestion(userAnswerString.toString(), quiz.questions[quiz.currentQuestion]);
+    userAnswer = comparedAnswer.answer;
+    if(comparedAnswer.correct){
+      quiz.score++;
+      currentQuestion.correct = true;
+      quiz.template = 'Correct. The answer is ' + correctString;
+      quiz.speech = 'Correct. The answer is ' + correctString;
+    } else {
+      quiz.template = 'Wrong. The answer is ' + correctString;
+      quiz.speech = 'Wrong. The answer is ' + correctString;      
     }
   } else {
     if(correctAnswer.toString() === quiz.currentUserAnswer.toString()){
@@ -33,7 +49,6 @@ module.exports.function = function checkAnswer (quiz, userAnswer) {
       quiz.speech = 'Wrong. The answer is ' + correctString;
     }
   }
-
   quiz.questions[quiz.currentQuestion].userAnswer = userAnswer;
   quiz.status = 'answer';
   return quiz;
