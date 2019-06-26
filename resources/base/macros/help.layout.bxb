@@ -87,10 +87,6 @@ layout-macro-def (help) {
         partitioned {
           content {
             paragraph{
-              value ("You can have QuizIt repeat a question by saying \"repeat\"")
-              style (Detail_L_Soft)
-            }
-            paragraph{
               value ("Show this screen by saying \"help\"")
               style (Detail_L_Soft)
             }

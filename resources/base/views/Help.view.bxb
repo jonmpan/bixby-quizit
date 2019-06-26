@@ -2,7 +2,21 @@ result-view {
   match: ShowHelp (help)
 
   message ("Welcome to QuizIt's help screen! Please read the following to learn more about the game.")
-
+  followup{
+    prompt {
+      dialog(" ")
+      on-confirm{
+        message{
+          template ("Welcome to QuizIt's help screen! Please read the following to learn more about the game.")
+        }
+      }
+      on-deny{
+        message{
+          template ("Welcome to QuizIt's help screen! Please read the following to learn more about the game.")
+        }
+      }
+    }
+  }
   render {
     layout-macro (help)
   }

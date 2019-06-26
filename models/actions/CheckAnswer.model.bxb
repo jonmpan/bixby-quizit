@@ -6,14 +6,20 @@ action (CheckAnswer) {
       type (Quiz)
       min (Required) max (One)
     }
-    input (userAnswer) {
-      type (UserAnswer)
-      min (Optional) max (Many)
+    input-group (answer){
+      requires (OneOf)
+      collect{
+        input (userAnswer) {
+          type (UserAnswer)
+          min (Optional) max (Many)
+        }
+        input (userAnswerString) {
+          type (UserAnswerString)
+          min (Optional) max (One)
+        }
+      }
     }
-    input (userAnswerString) {
-      type (UserAnswerString)
-      min (Optional) max (One)
-    }
+
   }
   output (Quiz)
 }

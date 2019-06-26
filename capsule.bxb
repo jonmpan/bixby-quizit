@@ -1,6 +1,6 @@
 capsule {
   id (jonmpan.quizIt)
-  version (1.0.53)
+  version (1.0.54)
   format (3)
   targets {
     target (bixby-mobile-en-US)

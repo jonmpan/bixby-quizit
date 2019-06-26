@@ -7,18 +7,28 @@ module.exports.function = function nextQuestion (quiz) {
     quiz.template = "Question " +questionCounter+ " out of " +quiz.questionCount+ ". " +currentQuestion.question;
     quiz.speech = 
       "Question "
-      +questionCounter+
-      " out of " +quiz.questionCount+
-      "... "
-      +currentQuestion.question+
-      "... A... "
-      +currentQuestion.answers[0].text+
-      "... B... "
-      +currentQuestion.answers[1].text+
-      "... C... "
-      +currentQuestion.answers[2].text+
-      "... D... "
-      +currentQuestion.answers[3].text;
+      + questionCounter
+      // + " out of " +quiz.questionCount
+      + "... "
+      + currentQuestion.question
+      + "... A... "
+      + currentQuestion.answers[0].text
+      + "... B... "
+      + currentQuestion.answers[1].text
+      + "... C... "
+      + currentQuestion.answers[2].text
+      + "... D... "
+      + currentQuestion.answers[3].text;
+    // quiz.template = currentQuestion.question;
+    // quiz.speech = currentQuestion.question+
+    //   "... A... "
+    //   +currentQuestion.answers[0].text+
+    //   "... B... "
+    //   +currentQuestion.answers[1].text+
+    //   "... C... "
+    //   +currentQuestion.answers[2].text+
+    //   "... D... "
+    //   +currentQuestion.answers[3].text;
   }
   else {
     quiz.status = 'completed';
@@ -39,3 +49,4 @@ module.exports.function = function nextQuestion (quiz) {
   }
   return quiz;
 }
+

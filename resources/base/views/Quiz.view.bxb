@@ -5,7 +5,7 @@ result-view {
   refresh {
     if (this.status == 'tutorial') {
       spec {
-        delay-seconds (6)
+        delay-seconds (8)
         with-request {
           intent {
             goal {NextQuestion}
