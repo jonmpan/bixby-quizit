@@ -27,7 +27,6 @@ action (CheckAnswer) {
         }
       }
     }
-
   }
   output (Quiz)
 }

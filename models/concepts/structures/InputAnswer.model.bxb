@@ -1,0 +1,15 @@
+structure (InputAnswer) {
+  description (__DESCRIPTION__)
+  property (quiz) {
+    type (Quiz)
+    min (Required) max (One)
+  }
+  property (userAnswer) {
+    type (UserAnswer)
+    min (Optional) max (One)
+  }
+  property (userAnswerString) {
+    type (UserAnswerString)
+    min (Optional) max (One)
+  }
+}

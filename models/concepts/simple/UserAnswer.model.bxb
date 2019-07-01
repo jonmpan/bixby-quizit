@@ -5,6 +5,7 @@ enum (UserAnswer) {
   symbol ("C")
   symbol ("D")
   symbol ("Skip")
+  symbol ("No match")
   features{
     transient
   }

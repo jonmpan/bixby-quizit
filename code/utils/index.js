@@ -456,23 +456,35 @@ const levenshteinQuestion = (answer, question) => {
       levNums.push(levDist(answer, o.text));
     }
   });
+  const correctAnswer = answers.find(o=>{
+    return o.correct === true;
+  }).text;
   const i = indexOfSmallest(levNums);
-  const userAnswer = answers[i].text;
-  if (answers[i].correct) {
-    return {
-      answer: answers[i].letter,
-      userAnswer: userAnswer,
-      correct: true,
-      userInputString: answer
-    };
+  if(levNums[i] < correctAnswer.length / 2 && levNums[i] < 5 || correctAnswer.length === 1){
+    const userAnswer = answers[i].text;
+    if (answers[i].correct) {
+      return {
+        answer: answers[i].letter,
+        userAnswer: userAnswer,
+        correct: true,
+        userInputString: answer
+      };
+    } else {
+      return {
+        answer: answers[i].letter,
+        userAnswer: userAnswer,
+        correct: false,
+        userInputString: answer
+      };
+    }
   } else {
     return {
-      answer: answers[i].letter,
-      userAnswer: userAnswer,
+      answer: 'No match',
+      userAnswer: 'No match',
       correct: false,
       userInputString: answer
     };
-  }  
+  }
 };
 
 module.exports = {

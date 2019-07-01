@@ -14,8 +14,12 @@ action (GetQuiz) {
     input (difficulty) {
       type (Difficulty)
       min (Required) max (One)
+      default-init {
+        intent {
+          goal: GetDifficulties
+        }
+      }
     }
   }
-
   output (Quiz)
 }

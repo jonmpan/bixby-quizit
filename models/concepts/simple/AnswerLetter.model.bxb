@@ -4,4 +4,6 @@ enum (AnswerLetter) {
   symbol ("B")
   symbol ("C")
   symbol ("D")
+  symbol ("Skip")
+  symbol ("No match")
 }

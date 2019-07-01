@@ -6,22 +6,33 @@ module.exports.function = function checkAnswer (quiz, userAnswer, userAnswerStri
   console.log(category);
   console.log("difficulty");
   console.log(difficulty);
-  console.log("userAnswer");
-  console.log(userAnswer);
-  console.log("userAnswerString");
-  console.log(userAnswerString);
-  console.log("difficulty");
-  console.log(difficulty);
-  
+  console.log("userAnswer: "+userAnswer);
+  console.log("userAnswerString: "+userAnswerString);
+  console.log("difficulty: "+difficulty);
+  if(category.length > 0){
+    let categoryString = "";
+    category.map( o => {
+      categoryString += o;
+    })
+    userAnswerString += " " + category;
+  }
+  if(difficulty.length > 0){
+    let difficultyString = "";
+    difficulty.map( o => {
+      difficultyString += o;
+    })
+    userAnswerString += " " + difficulty;
+  }
   let correctAnswer = '';
   let correctString = '';
   let bixbyResponse = '';
   const currentQuestion = quiz.questions[quiz.currentQuestion]
   const answers = currentQuestion.answers;
-  if(userAnswer && userAnswerString){
+  if(userAnswer && userAnswerString){ 
+    userAnswerString = userAnswer[0] + " " + userAnswerString;
     console.log('inside if user answer and answer string');
-    console.log(userAnswer[0] + " " + userAnswerString);
   }
+  console.log(userAnswerString);
   for(var i = 0; i < answers.length; i++){
     let answer = answers[i]
     if(answer.correct){

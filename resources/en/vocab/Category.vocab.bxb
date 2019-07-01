@@ -1,14 +1,14 @@
 vocab(Category){
-  "all categories" {"all categories" "all" "any" "all of them" "any category"}
-  "general" {"general" "general knowledge" "channel"}
+  "all categories" {"all categories" "all category" "any category"}
+  "general" {"general" "general knowledge"}
   "books" {"books"}
   "film" {"film" "movies" "movie"}
   "music" {"music"}
   "musicals" {"musicals"}
   "theatre" {"theatre"}
   "television" {"television" "tv"}
-  "video games" {"video games" "videoGames" "games" "game"}
-  "board games" {"board games" "boardGames" "boring games" "bored games" "boring"}
+  "video games" {"video games" "videoGames" "games"}
+  "board games" {"board games" "boardGames" "boring games" "bored games"}
   "science" {"science" "technology"}
   "nature" {"nature"}
   "computers" {"computers"}
@@ -19,7 +19,7 @@ vocab(Category){
   "history" {"history"}
   "politics" {"politics"}
   "art" {"art"}
-  "celebrities" {"celebrities" "gossip" "hollywood"}
+  "celebrities" {"celebrities" "hollywood"}
   "animals" {"animals"}
   "vehicles" {"vehicles" "cars"}
   "comics" {"comics"}

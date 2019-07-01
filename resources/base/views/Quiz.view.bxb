@@ -26,25 +26,25 @@ result-view {
   //     }
   //   }
   // }
-  // followup{
-  //   prompt {
-  //     dialog(" ")
-  //     on-confirm{
-  //       message{
-  //         template ("#{title(this.template)}"){
-  //           speech ("#{title(this.speech)}")
-  //         }
-  //       }
-  //     }
-  //     on-deny{
-  //       message{
-  //         template ("#{title(this.template)}"){
-  //           speech ("#{title(this.speech)}")
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
+  followup{
+    prompt {
+      dialog(" ")
+      on-confirm{
+        message{
+          template ("#{title(this.template)}"){
+            speech ("#{title(this.speech)}")
+          }
+        }
+      }
+      on-deny{
+        message{
+          template ("#{title(this.template)}"){
+            speech ("#{title(this.speech)}")
+          }
+        }
+      }
+    }
+  }
   render {
     if (this.status == 'tutorial'){
       layout-macro (tutorial) {

@@ -3,4 +3,6 @@ vocab(AnswerLetter){
   "B" {"B" "bee"}
   "C" {"C" "see" "sea" "See"}
   "D" {"D" "t"}
+  "Skip" {"Skip"}
+  "No match" {"No match"}
 }
