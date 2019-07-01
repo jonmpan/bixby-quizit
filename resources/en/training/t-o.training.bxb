@@ -1,5 +1,5 @@
 train (t-o2f5kc0jmvk1bzuazckveltas) {
   utterance ("[g:CheckAnswer:continue:NextQuestion] (foo bar herp derp)[v:UserAnswerString]")
-  plan (Y2BlEM7Kz8stSMzTKyzNrPIs0QsEUgxSaILOGanJ2Y55xeWpRdg1SKIJhhanFkHVy+OUCi4pysxLZ2BhYGRgYmAG0gxAFgTCABOQDRQHAA==)
-  last-modified (1561478178307)
+  plan (Y2BlEM7Kz8stSMzTKyzNrPIs0QsEUgxSaILOGanJ2Y55xeWpRQyKuOXqEiFKsJopjyYYWpxaBNEWXFKUmZfOwMLAyMDEwAykGYAsEJuRAQZAbKA4AA==)
+  last-modified (1562004207700)
 }

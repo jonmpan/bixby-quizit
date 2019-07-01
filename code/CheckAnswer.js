@@ -1,12 +1,27 @@
 const { levenshteinQuestion } = require('./utils/index.js');
 var console = require('console');
 
-module.exports.function = function checkAnswer (quiz, userAnswer, userAnswerString) {
+module.exports.function = function checkAnswer (quiz, userAnswer, userAnswerString, category, difficulty) {
+  console.log("category");
+  console.log(category);
+  console.log("difficulty");
+  console.log(difficulty);
+  console.log("userAnswer");
+  console.log(userAnswer);
+  console.log("userAnswerString");
+  console.log(userAnswerString);
+  console.log("difficulty");
+  console.log(difficulty);
+  
   let correctAnswer = '';
   let correctString = '';
   let bixbyResponse = '';
   const currentQuestion = quiz.questions[quiz.currentQuestion]
   const answers = currentQuestion.answers;
+  if(userAnswer && userAnswerString){
+    console.log('inside if user answer and answer string');
+    console.log(userAnswer[0] + " " + userAnswerString);
+  }
   for(var i = 0; i < answers.length; i++){
     let answer = answers[i]
     if(answer.correct){
@@ -18,7 +33,7 @@ module.exports.function = function checkAnswer (quiz, userAnswer, userAnswerStri
     userAnswer = userAnswer[0];
   }
   if(userAnswer){
-    if(correctAnswer.toString() === userAnswer.toString()){
+    if(correctAnswer.toString() == userAnswer.toString()){
       quiz.score++;
       currentQuestion.correct = true;
       quiz.template = 'Correct. The answer is ' + correctString;
@@ -41,7 +56,7 @@ module.exports.function = function checkAnswer (quiz, userAnswer, userAnswerStri
       quiz.speech = 'Wrong. The answer is ' + correctString;      
     }
   } else {
-    if(correctAnswer.toString() === quiz.currentUserAnswer.toString()){
+    if(correctAnswer.toString() == quiz.currentUserAnswer.toString()){
       quiz.score++;
       currentQuestion.correct = true;
       quiz.template = 'Correct. The answer is ' + correctString;

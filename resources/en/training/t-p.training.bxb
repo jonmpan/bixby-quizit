@@ -1,5 +1,10 @@
 train (t-p0rrm1iksvyu09ol5lwle5bea) {
   utterance ("[g:GetQuiz] quiz (games)[v:Category:'video games'] (easy)[v:Difficulty:easy]")
   plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
-  last-modified (1561491081607)
+  last-modified (1562005223092)
+}
+train (t-pmqhr4wrhn0lpxzxru5cd563j) {
+  utterance ("[g:GetQuiz] Start a (medium)[v:Difficulty:medium] difficulty quiz about (animals)[v:Category:animals]")
+  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
+  last-modified (1562005044335)
 }

@@ -3,6 +3,10 @@ var http = require('http');
 const {categories, formatQuestion, formatQuestions} = require('./utils/index.js');
 
 module.exports.function = function getQuiz (category, difficulty) {
+  console.log("category");
+  console.log(category);
+  console.log("difficulty");
+  console.log(difficulty);
   let url = 'https://opentdb.com/api.php?amount=5&type=multiple';
   if(category !== 'all categories'){
     const formattedCategory = category.toLowerCase().replace(" ", "");
@@ -10,6 +14,7 @@ module.exports.function = function getQuiz (category, difficulty) {
       url += '&category=' + categories[formattedCategory];
     }     
   }
+  console.log(url);
   if(difficulty.toString() !== 'all difficulties'){
     url += '&difficulty=' + difficulty;
   }

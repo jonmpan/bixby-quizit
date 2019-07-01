@@ -1,0 +1,5 @@
+train (t-ea5ks5vs5iz03g4offe5wcr43) {
+  utterance ("[g:CheckAnswer:continue:NextQuestion] (A)[v:UserAnswer:A] (general)[v:Category:general] (dog in high heels)[v:UserAnswerString]")
+  plan (Y2BnEM7Kz8stSMzTKyzNrPIs0QsEUgxSaILOGanJ2Y55xeWpRQzi6HKJJanp+UWVDIq4NdUlQvRitUwSTTC0OLUIapc8TqngkqLMvHQGNgZGBiYGZgYWBlYgmwHIA0FmIGRkQAYsYHVgNQA=)
+  last-modified (1562009019379)
+}

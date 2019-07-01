@@ -6,8 +6,16 @@ action (CheckAnswer) {
       type (Quiz)
       min (Required) max (One)
     }
+    input (category) {
+      type (Category)
+      min (Optional) max (Many)
+    }
+    input (difficulty) {
+      type (Difficulty)
+      min (Optional) max (Many)
+    }
     input-group (answer){
-      requires (OneOf)
+      requires (ZeroOrMoreOf)
       collect{
         input (userAnswer) {
           type (UserAnswer)

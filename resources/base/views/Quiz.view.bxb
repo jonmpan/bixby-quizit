@@ -2,49 +2,49 @@ result-view {
   match {
     Quiz (this)
   }
-  refresh {
-    if (this.status == 'tutorial') {
-      spec {
-        delay-seconds (8)
-        with-request {
-          intent {
-            goal {NextQuestion}
-            value {$expr(this)}
-          }
-        }
-      }
-    }
-    if (this.status == 'answer') {
-      spec {
-        delay-seconds (6)
-        with-request {
-          intent {
-            goal {NextQuestion}
-            value {$expr(this)}
-          }
-        }
-      }
-    }
-  }
-  followup{
-    prompt {
-      dialog(" ")
-      on-confirm{
-        message{
-          template ("#{title(this.template)}"){
-            speech ("#{title(this.speech)}")
-          }
-        }
-      }
-      on-deny{
-        message{
-          template ("#{title(this.template)}"){
-            speech ("#{title(this.speech)}")
-          }
-        }
-      }
-    }
-  }
+  // refresh {
+  //   if (this.status == 'tutorial') {
+  //     spec {
+  //       delay-seconds (8)
+  //       with-request {
+  //         intent {
+  //           goal {NextQuestion}
+  //           value {$expr(this)}
+  //         }
+  //       }
+  //     }
+  //   }
+  //   if (this.status == 'answer') {
+  //     spec {
+  //       delay-seconds (6)
+  //       with-request {
+  //         intent {
+  //           goal {NextQuestion}
+  //           value {$expr(this)}
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  // followup{
+  //   prompt {
+  //     dialog(" ")
+  //     on-confirm{
+  //       message{
+  //         template ("#{title(this.template)}"){
+  //           speech ("#{title(this.speech)}")
+  //         }
+  //       }
+  //     }
+  //     on-deny{
+  //       message{
+  //         template ("#{title(this.template)}"){
+  //           speech ("#{title(this.speech)}")
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
   render {
     if (this.status == 'tutorial'){
       layout-macro (tutorial) {
