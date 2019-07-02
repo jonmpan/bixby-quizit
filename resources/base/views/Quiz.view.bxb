@@ -37,7 +37,6 @@ result-view {
       }
     }
   }
-  
   followup{
     prompt {
       dialog{

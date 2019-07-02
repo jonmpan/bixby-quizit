@@ -63,7 +63,7 @@ layout-macro-def(completed) {
         }
         divider
         paragraph{
-          value("Thank you for playing QuizIt! QuizIt is free and was made by just some guy who loves trivia. If you enjoyed this capsule, please rate it 🌟🌟🌟🌟🌟\n\nThe code for QuizIt is open source at my github github.com/jonmpan/bixby-quizit.\n\nSincerely,\nJon P.")
+          value("Thank you for playing QuizIt! QuizIt is free and was made by some guy who needed something to do when driving home from work.\n\nIf you enjoyed this capsule, please rate it:\n🌟🌟🌟🌟🌟\n\nThe source code for QuizIt is available at github github.com/jonmpan/bixby-quizit.\n\nSincerely,\nJon P.")
           style(Detail_L_Soft)
         }
       }
