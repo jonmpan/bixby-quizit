@@ -1,5 +1,5 @@
-train (t-s7onjpky37s2d6o6bo02a3fbs) {
-  utterance ([g:GetQuiz] start quiz game)
-  plan (Y2BhECgszazKLNFLSc3N1wsEshmEkUXcU0vAgiLIgs6JJanp+UWVDGLIoi6ZaWmZyaU5JZUMzAyMDExAkgFIgyAEgFkA)
-  last-modified (1559778055494)
+train (t-sdaur9sr4p7q77d6fyr4c4mkw) {
+  utterance ("[g:Category:prompt] (music)[v:Category:music]")
+  plan (Y2BiEM/Kz8stSMzTKyzNrPIs0XNOLElNzy+qxC3BCIQMDDxAzATEQDYA)
+  last-modified (1562027257445)
 }

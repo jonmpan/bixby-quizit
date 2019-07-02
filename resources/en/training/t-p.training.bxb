@@ -1,5 +1,10 @@
-train (t-p0rrm1iksvyu09ol5lwle5bea) {
-  utterance ("[g:GetQuiz] quiz (games)[v:Category:'video games'] (easy)[v:Difficulty:easy]")
-  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
-  last-modified (1561491081607)
+train (t-pb78y2e1gc6cs5u54tyotx9fv) {
+  utterance ("[g:CheckAnswer:continue:NextQuestion] (easy)[v:Difficulty:easy]")
+  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxSaILOGanJ2Y55xeWpRQySaHIumWlpmcmlOSWV2M1iZmBkYAKSDEAaBCGACSzKAAA=)
+  last-modified (1562026967992)
+}
+train (t-pytehjbk64u1utxntks65nqmn) {
+  utterance ("[g:CheckAnswer:continue:NextQuestion] (herp derp foo bar hello world)[v:UserAnswerString]")
+  plan (Y2BlEM7Kz8stSMzTKyzNrPIs0QsEUgxSaILOGanJ2Y55xeWpRQyKuOXqEiFKsJopjyYYWpxaBNEWXFKUmZfOwMLAyMDEwAykGYAsEJuRAQZAbKA4AA==)
+  last-modified (1562026596911)
 }

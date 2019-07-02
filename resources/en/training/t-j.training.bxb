@@ -1,5 +1,5 @@
-train (t-jx8pxq6zshjomfyx2jh1rntwr) {
-  utterance ("[g:Difficulty:prompt] (really easy)[v:Difficulty:easy]")
-  plan (Y2BiECsszazKLNFLSc3N13PJTEvLTC7NKanEKc4IhAwMPEDMBMRANgA=)
-  last-modified (1559931871202)
+train (t-j4i9zg8pixd47jsjonwlsx10o) {
+  utterance ("[g:GetQuiz] Start an (easy)[v:Difficulty:easy] game about (video games)[v:Category:'video games']")
+  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
+  last-modified (1562027713900)
 }

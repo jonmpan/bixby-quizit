@@ -1,0 +1,8 @@
+boolean (Skip) {
+  description (__DESCRIPTION__)
+  features{
+    profile-stored{
+      max (One)
+    }
+  }
+}

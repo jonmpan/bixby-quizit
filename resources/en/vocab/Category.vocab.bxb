@@ -1,13 +1,13 @@
 vocab(Category){
-  "all categories" {"all categories" "all" "any" "all of them" "any category"}
-  "general" {"general" "general knowledge" "channel"}
+  "all categories" {"all categories" "any category" "all category"}
+  "general knowledge" {"general knowledge"}
   "books" {"books"}
   "film" {"film" "movies" "movie"}
   "music" {"music"}
   "musicals" {"musicals"}
   "theatre" {"theatre"}
   "television" {"television" "tv"}
-  "video games" {"video games" "videoGames" "games" "game"}
+  "video games" {"video games" "videoGames"}
   "board games" {"board games" "boardGames" "boring games" "bored games" "boring"}
   "science" {"science" "technology"}
   "nature" {"nature"}

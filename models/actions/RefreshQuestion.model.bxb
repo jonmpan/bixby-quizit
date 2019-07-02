@@ -1,0 +1,11 @@
+action (RefreshQuestion) {
+  type (Search)
+  description (__DESCRIPTION__)
+  collect {
+    input (quiz) {
+      type (Quiz)
+      min (Required) max (One)
+    }
+  }
+  output (Quiz)
+}

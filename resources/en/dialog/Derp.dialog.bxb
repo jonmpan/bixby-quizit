@@ -1,0 +1,4 @@
+dialog (NoFunction) {
+  match: CheckAnswer
+  template("Something went wrong. Try saying \"new game\" to start a new game")
+}

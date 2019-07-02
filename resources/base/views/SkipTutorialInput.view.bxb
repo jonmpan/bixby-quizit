@@ -1,0 +1,6 @@
+input-view{
+  match:Skip(skip)
+  
+  render{
+  }
+}

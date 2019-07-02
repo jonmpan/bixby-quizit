@@ -66,11 +66,15 @@ layout-macro-def(tutorial) {
         partitioned {
           content {
             paragraph{
-              value("Your game will automatically start in 12 seconds.")
+              value("Your game will automatically start in 10 seconds.")
               style(Detail_L)
             }
             paragraph{
               value("QuizIt automatically moves you past this tutorial screen and the answer screens.")
+              style(Detail_L)
+            }
+            paragraph{
+              value("QuizIt recommends saying A, B, C, or D to avoid ASR issues.")
               style(Detail_L)
             }
             paragraph{

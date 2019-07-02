@@ -1,5 +1,5 @@
-train (t-tanorsqykfqhntahl0g683afn) {
-  utterance ([g:NextQuestion:continue:CheckAnswer] continue)
-  plan (Y2BmEM7Kz8stSMzTKyzNrPIs0QsEUgzSaIJ+qRUlgaWpxSWZ+XnYdTAxMAIxA5BkZGCA0QA=)
-  last-modified (1560283374324)
+train (t-tz8h1n8vt5r2m1y37lg58qy6n) {
+  utterance ("[g:GetQuiz] quiz me on (politics)[v:Category:politics]")
+  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRACmMCiDAA=)
+  last-modified (1562027783476)
 }

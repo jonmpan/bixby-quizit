@@ -1,0 +1,11 @@
+action (SkipTutorialAction) {
+  description (__DESCRIPTION__)
+  type(Search)
+  collect{
+    input (skip){
+      type (Skip)
+      max (One) min (Optional)
+    }
+  }
+  output (Skip)
+}

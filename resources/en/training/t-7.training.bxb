@@ -1,10 +1,5 @@
-train (t-77k8m2iyqf6b5313x7xhns2su) {
-  utterance ([g:GetQuiz] start quiz it game)
-  plan (Y2BhECgszazKLNFLSc3N1wsEshmEkUXcU0vAgiLIgs6JJanp+UWVDGLIoi6ZaWmZyaU5JZUMzAyMDExAkgFIgyAEgFkA)
-  last-modified (1559778088791)
-}
 train (t-7bzvxia8nyemcp6wpkkmfcvh5) {
   utterance ("[g:CheckAnswer:continue:NextQuestion] (A)[v:UserAnswer:A]")
-  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxSaILOGanJ2Y55xeWpRdg1SKIJhhanFkHVMzMwMjABSQYgDYIQwARkAcUA)
-  last-modified (1560283356204)
+  plan (Y2BlEM7Kz8stSMzTKyzNrPIs0QsEUgxSaILOGanJ2Y55xeWpRQyKuOXqEiFKsJopiSYYWpxaBDWShYGRgYmBGUgzAFkgNiMDDIDYQHEA)
+  last-modified (1562018444189)
 }
