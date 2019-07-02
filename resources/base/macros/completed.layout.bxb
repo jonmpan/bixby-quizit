@@ -15,6 +15,28 @@ layout-macro-def(completed) {
           aspect-ratio(21:9)
           object-fit (Contain)
         }
+        split-input-cell{
+          left{
+            input-cell{
+              label{
+                template ("Total Score:")
+              }
+              value{
+                template ("[#{value(quiz.totalScore)}] points")
+              }
+            }
+          }
+          right{
+            input-cell{
+              label{
+                template ("Time Bonus:")
+              }
+              value{
+                template ("[#{value(quiz.timeBonus)}] points")
+              }
+            }
+          }
+        }
         for-each (quiz.questions){
           as (question){
             divider

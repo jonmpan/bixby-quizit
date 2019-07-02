@@ -348,7 +348,7 @@ const formatQuestions = results => {
     };
     result.incorrect_answers = result.incorrect_answers.filter(Boolean);
     result.correct_answer = removeA(result.correct_answer);
-      result.incorrect_answers = result.incorrect_answers.map(o => {
+    result.incorrect_answers = result.incorrect_answers.map(o => {
       return removeA(o);
     });
     for (var i = 0; i < result.incorrect_answers.length; i++) {
@@ -366,6 +366,7 @@ const formatQuestions = results => {
     for (var i = 0; i < question.answers.length; i++) {
       question.answers[i].letter = alphabet.charAt(i);
     }
+    question.timer = 20;
     return question;
   });
 };
@@ -510,11 +511,29 @@ const levenshteinQuestion = (answer, question) => {
   }
 };
 
+const calculateFinalScore = (quiz) => {
+  quiz.totalScore = 0;
+  quiz.timeBonus = 0;
+  quiz.questions.map((q,i)=>{
+    if(q.correct){
+      quiz.totalScore += 10;
+      if(q.timer > 9){
+        quiz.timeBonus += 10;
+        quiz.totalScore += 10;
+      } else {
+        quiz.timeBonus += q.timer;
+        quiz.totalScore += q.timer;
+      }
+    }
+  })
+}
+
 module.exports = {
   categories:categories,
   categoriesArray:categoriesArray,
   categoriesInfo:categoriesInfo,
   formatQuestions:formatQuestions,
   levenshteinQuestion:levenshteinQuestion,
-  onlyNumbers:onlyNumbers
+  onlyNumbers:onlyNumbers,
+  calculateFinalScore:calculateFinalScore
 }

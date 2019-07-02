@@ -24,8 +24,13 @@ structure (FullQuestion) {
     type (Correct)
     min (Required) max (One)
   }
-  property (refresher){
+  property (emoji){
     type (viv.core.Text)
+    min (Optional) max (One)
+    visibility (Private)
+  }
+  property (timer){
+    type (viv.core.Integer)
     min (Optional) max (One)
     visibility (Private)
   }

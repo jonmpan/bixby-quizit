@@ -37,11 +37,11 @@ layout-macro-def (help) {
               style (Detail_L_Soft)
             }
             paragraph{
-              value ("You can wake Bixby up to submit your answer.")
+              value ("Wake Bixby up during the question phase to submit your answer.")
               style (Detail_L_Soft)
             }
             paragraph{
-              value ("Bixby recognizes A B C D as valid answers")
+              value ("QuizIt recommends saying A, B, C, or D to input your answer.")
               style (Detail_L_Soft)
             }
             paragraph{
@@ -64,15 +64,15 @@ layout-macro-def (help) {
         partitioned {
           content {
             paragraph{
-              value ("\"Start\"")
-              style (Detail_L_Soft)
-            }
-            paragraph{
               value ("\"New Game\"")
               style (Detail_L_Soft)
             }
             paragraph{
-              value ("\"Trivia books easy\"")
+              value ("\"Start a new game about books on easy\"")
+              style (Detail_L_Soft)
+            }
+            paragraph{
+              value ("\"Give me an easy game about animals\"")
               style (Detail_L_Soft)
             }
           }

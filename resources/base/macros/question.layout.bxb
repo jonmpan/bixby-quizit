@@ -88,10 +88,16 @@ layout-macro-def(question) {
           }
         }
         divider
-        if(quiz.questions[quiz.currentQuestion].refresher != null){
+        // if(quiz.questions[quiz.currentQuestion].emoji != null){
+        //   paragraph {
+        //     value("[Each emoji means 10 seconds have passed:\n\n#{value(quiz.questions[quiz.currentQuestion].emoji)}]")
+        //     style(Detail_M_Soft)
+        //   }
+        // }
+        if(quiz.questions[quiz.currentQuestion].timer < 11){
           paragraph {
-            value("[This is here to remove the \"what would you like to do next?\" screen. Each emoji is worth 10 seconds! \n\n#{value(quiz.questions[quiz.currentQuestion].refresher)}]")
-            style(Detail_M_Soft)
+            value("[Timer for bonus: #{value(quiz.questions[quiz.currentQuestion].timer)}]")
+            style(Detail_L)
           }
         }
       }

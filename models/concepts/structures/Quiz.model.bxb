@@ -45,8 +45,18 @@ structure (Quiz) {
     min (Optional) max (One)
     visibility (Private)
   }
-  property (youSaidSomething){
+  property (youSaidSomething) {
     type (viv.core.Boolean)
+    min (Optional) max (One)
+    visibility (Private)
+  }
+  property (timeBonus) {
+    type (viv.core.Integer)
+    min (Optional) max (One)
+    visibility (Private)
+  }
+  property (totalScore) {
+    type (viv.core.Integer)
     min (Optional) max (One)
     visibility (Private)
   }

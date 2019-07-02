@@ -27,7 +27,7 @@ result-view {
     }
     if (this.status == 'question') {
       spec {
-        delay-seconds (10)
+        delay-seconds (1)
         with-request {
           intent {
             goal {RefreshQuestion}
