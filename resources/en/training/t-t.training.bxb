@@ -1,3 +1,8 @@
+train (t-tapa9nqzb7pk32oumf1izn7vx) {
+  utterance ("[g:CheckAnswer:continue:RefreshQuestion] (general knowledge)[v:Category:'general knowledge']")
+  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxSaILOGanJ2Y55xeWpRQzi6HKJJanp+UWV2E1iZmBkYAKSDEAaBCGACSzKAAA=)
+  last-modified (1562102685367)
+}
 train (t-tz8h1n8vt5r2m1y37lg58qy6n) {
   utterance ("[g:GetQuiz] quiz me on (politics)[v:Category:politics]")
   plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRACmMCiDAA=)

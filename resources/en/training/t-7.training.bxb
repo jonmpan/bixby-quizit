@@ -1,3 +1,8 @@
+train (t-77d4v199ba4oay0t38w6xasqv) {
+  utterance ("[g:CheckAnswer:continue:RefreshQuestion] (A)[v:UserAnswer:A]")
+  plan (Y2BlEM7Kz8stSMzTKyzNrPIs0QsEUgxSaILOGanJ2Y55xeWpRQyKuOXqEiFKsJopiSYYWpxaBDWShYGRgYmBGUgzAFkgNiMDDIDYQHEA)
+  last-modified (1562102657007)
+}
 train (t-7bzvxia8nyemcp6wpkkmfcvh5) {
   utterance ("[g:CheckAnswer:continue:NextQuestion] (A)[v:UserAnswer:A]")
   plan (Y2BlEM7Kz8stSMzTKyzNrPIs0QsEUgxSaILOGanJ2Y55xeWpRQyKuOXqEiFKsJopiSYYWpxaBDWShYGRgYmBGUgzAFkgNiMDDIDYQHEA)

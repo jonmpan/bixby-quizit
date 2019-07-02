@@ -8,6 +8,11 @@ train (t-mlofitz8o1r21scyyr72o196i) {
   plan (Y2BhECgszazKLNFLSc3N1wsEshmEkUXcU0vAgiLIgs6JJanp+UWVDGLIoi6ZaWmZyaU5JZUMzAyMDExAkgFIgyAEgFkA)
   last-modified (1559778037007)
 }
+train (t-mvox402h8krxwwep18zuzipra) {
+  utterance ("[g:CheckAnswer:continue:RefreshQuestion] (hello world)[v:UserAnswerString]")
+  plan (Y2BlEM7Kz8stSMzTKyzNrPIs0QsEUgxSaILOGanJ2Y55xeWpRQyKuOXqEiFKsJopjyYYWpxaBNEWXFKUmZfOwMLAyMDEwAykGYAsEJuRAQZAbKA4AA==)
+  last-modified (1562103112144)
+}
 train (t-mzdhyvq96av0nnd0b1hp0agc2) {
   utterance ("[g:Difficulty:prompt] (Easy)[v:Difficulty:easy]")
   plan (Y2BikMzKz8stSMzTKyzNrPIs0XPJTEvLTC7NKanEJ8UIhAwMPEDMBMRANgA=)

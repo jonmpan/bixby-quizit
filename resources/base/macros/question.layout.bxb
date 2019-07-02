@@ -46,7 +46,7 @@ layout-macro-def(question) {
                 single-line {
                   text {
                     value ("Category:")
-                    style(Title_XS)
+                    style(Detail_M_Soft)
                   }
                 }
               }
@@ -56,7 +56,7 @@ layout-macro-def(question) {
                 single-line {
                   text {
                     value ("Difficulty:")
-                    style(Title_XS)
+                    style(Detail_M_Soft)
                   }
                 }
               }
@@ -70,7 +70,7 @@ layout-macro-def(question) {
                 single-line {
                   text {
                     value ("#{title(quiz.questions[quiz.currentQuestion].category)}")
-                    style(Detail_M_Soft)
+                    style(Detail_M)
                   }
                 }
               }
@@ -80,7 +80,7 @@ layout-macro-def(question) {
                 single-line {
                   text {
                     value ("#{title(quiz.questions[quiz.currentQuestion].difficulty)}")
-                    style(Detail_M_Soft)
+                    style(Detail_M)
                   }
                 }
               }
@@ -90,7 +90,7 @@ layout-macro-def(question) {
         divider
         if(quiz.questions[quiz.currentQuestion].refresher != null){
           paragraph {
-            value("[This is here to remove the useless \"what would you like to do next?\" screen. Each emoji is worth 10 seconds! \n\n#{value(quiz.questions[quiz.currentQuestion].refresher)}]")
+            value("[This is here to remove the \"what would you like to do next?\" screen. Each emoji is worth 10 seconds! \n\n#{value(quiz.questions[quiz.currentQuestion].refresher)}]")
             style(Detail_M_Soft)
           }
         }

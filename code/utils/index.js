@@ -329,10 +329,10 @@ function removeHtmlStuff(encodedString) {
 }
 
 const removeA = (answer) =>{
-  var tempString = " " + answer + " ";
+  var tempString = "  " + answer;
   return tempString
-    .replace(" a ", "")
-    .replace(" A ", "")
+    .replace("  a ", "")
+    .replace("  A ", "")
     .trim();
 }
 

@@ -3,6 +3,11 @@ train (t-q59covaksiclihjfylooxk4zx) {
   plan (Y2BhECgszazKLNFLSc3N1wsEshmEkUXcU0vAgiLIgs6JJanp+UWVDGLIoi6ZaWmZyaU5JZUMzAyMDExAkgFIgyAEgFkA)
   last-modified (1559931549282)
 }
+train (t-qkijyr6vedjemc3ft35upf1ob) {
+  utterance ([g:NextQuestion:continue:GetQuiz] skip the tutorial)
+  plan (Y2BmEM7Kz8stSMzTKyzNrPIs0QsEUgzSaIJ+qRUlgaWpxSWZ+XnYdTAxMAIxA5BkZGCA0QA=)
+  last-modified (1562100639807)
+}
 train (t-qlp2ze33lcf7t5qnq914d8qo0) {
   utterance ("[g:NextQuestion:continue:GetQuiz] (foo bar herp derp)[v:UserAnswerString]")
   plan (Y2BnEM7Kz8stSMzTKyzNrPIs0QsEUgzSaIJ+qRUlgaWpxSWZ+XnYdUihCTpnpCZnO+YVl6cWMSjilqtLhCjBaqY8mmBocWoRRFtwSVFmXjoDGwMjAxMDMwMLAyuQzQDlgfiMYB4MMAHZQHkA)
