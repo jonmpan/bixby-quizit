@@ -1,5 +1,5 @@
 const categories = {
-  "general":9,
+  "generalknowledge":9,
   "books":10,
   "film":11,
   "music":12,
@@ -29,7 +29,7 @@ const categories = {
   "animation":33,
 }
 
-const categoriesArray = ["all categories", "general", "music", "video games", "anime", "computers", "geography", "animals", "books", "sports", "science", "history", "film", "musicals", "theatre", "television", "board games", "nature", "mathematics", "mythology", "politics", "art", "celebrities", "vehicles", "comics", "gadgets", "cartoon"]
+const categoriesArray = ["all categories", "general knowledge", "music", "video games", "anime", "computers", "geography", "animals", "books", "sports", "science", "history", "film", "musicals", "theatre", "television", "board games", "nature", "mathematics", "mythology", "politics", "art", "celebrities", "vehicles", "comics", "gadgets", "cartoon"]
 
 
 const categoriesInfo = [
@@ -313,11 +313,12 @@ const foreignCharacters = {
   'alpha':'α',
   'beta':'β',
   'infin':'∞',
-  '&hellip':'…'
+  '&hellip':'…',
+  '&shy;':'-'
 }
 
 function removeHtmlStuff(encodedString) {
-  var translate_re = /&(nbsp|amp|quot|lt|gt|apos|Aacute|aacute|Agrave|Acirc|agrave|Acirc|acirc|Auml|auml|Atilde|atilde|Aring|aring|Aelig|aelig|Ccedil|ccedil|Eth|eth|Eacute|eacute|Egrave|egrave|Ecirc|ecirc|Euml|euml|Iacute|iacute|Igrave|igrave|Icirc|icirc|Iuml|iuml|Ntilde|ntilde|Oacute|oacute|Ograve|ograve|Ocirc|ocirc|Ouml|ouml|Otilde|otilde|Oslash|oslash|szlig|Thorn|thorn|Uacute|uacute|Ugrave|ugrave|Ucirc|ucirc|Uuml|uuml|Yacute|yacute|yuml|copy|reg|trade|lt|gt|euro|cent|pound|quot|lsquo|rsquo|ldquo|rdquo|laquo|raquo|mdash|ndash|deg|plusmn|frac14|frac12|frac34|times|divide|alpha|beta|infin|hellip);/g;
+  var translate_re = /&(nbsp|amp|quot|lt|gt|apos|Aacute|aacute|Agrave|Acirc|agrave|Acirc|acirc|Auml|auml|Atilde|atilde|Aring|aring|Aelig|aelig|Ccedil|ccedil|Eth|eth|Eacute|eacute|Egrave|egrave|Ecirc|ecirc|Euml|euml|Iacute|iacute|Igrave|igrave|Icirc|icirc|Iuml|iuml|Ntilde|ntilde|Oacute|oacute|Ograve|ograve|Ocirc|ocirc|Ouml|ouml|Otilde|otilde|Oslash|oslash|szlig|Thorn|thorn|Uacute|uacute|Ugrave|ugrave|Ucirc|ucirc|Uuml|uuml|Yacute|yacute|yuml|copy|reg|trade|lt|gt|euro|cent|pound|quot|lsquo|rsquo|ldquo|rdquo|laquo|raquo|mdash|ndash|deg|plusmn|frac14|frac12|frac34|times|divide|alpha|beta|infin|hellip|shy);/g;
   var translate = foreignCharacters;
   return encodedString.replace(translate_re, function(match, entity) {
     return translate[entity];
@@ -327,52 +328,35 @@ function removeHtmlStuff(encodedString) {
   });
 }
 
-const formatQuestion = response => {
-  const result = response.results[0];
-  const questionFormatted = removeHtmlStuff(result.question)
-  const question = {
-    question: questionFormatted,
-    answers: [],
-    category: result.category,
-    difficulty: result.difficulty,
-  };
-  for (var i = 0; i < result.incorrect_answers.length; i++) {
-    question.answers.push({
-      text: removeHtmlStuff(result.incorrect_answers[i]),
-      correct: false,
-    });
-  }
-
-  question.answers.push({
-    text: removeHtmlStuff(result.correct_answer),
-    correct: true,
-  });
-  shuffle(question.answers);
-
-  for (var i = 0; i < question.answers.length; i++) {
-    question.answers[i].letter = alphabet.charAt(i);
-  }
-  question.answers;
-  return question;
-};
+const removeA = (answer) =>{
+  var tempString = " " + answer + " ";
+  return tempString
+    .replace(" a ", "")
+    .replace(" A ", "")
+    .trim();
+}
 
 const formatQuestions = results => {
-  return results.map( result => {
-    const questionFormatted = removeHtmlStuff(result.question)
+  return results.map((result, j) => {
+    const questionFormatted = result.question;
     const question = {
-      question: questionFormatted,
+      question: removeHtmlStuff(questionFormatted),
       answers: [],
       category: result.category,
       difficulty: result.difficulty,
       correct: false,
     };
+    result.incorrect_answers = result.incorrect_answers.filter(Boolean);
+    result.correct_answer = removeA(result.correct_answer);
+      result.incorrect_answers = result.incorrect_answers.map(o => {
+      return removeA(o);
+    });
     for (var i = 0; i < result.incorrect_answers.length; i++) {
       question.answers.push({
         text: removeHtmlStuff(result.incorrect_answers[i]),
         correct: false,
       });
     }
-
     question.answers.push({
       text: removeHtmlStuff(result.correct_answer),
       correct: true,
@@ -382,9 +366,23 @@ const formatQuestions = results => {
     for (var i = 0; i < question.answers.length; i++) {
       question.answers[i].letter = alphabet.charAt(i);
     }
-    question.answers;
     return question;
-  })
+  });
+};
+
+function hasLetter(str) {
+  return /^[a-zA-Z]+$/.test(str);
+}
+
+function hasNumber(str) {
+  return /^[0-9]+$/.test(str);
+}
+
+const onlyNumbers = str => {
+  if (hasNumber(str) && !hasLetter(str)) {
+    return true;
+  }
+  return false;
 };
 
 const levDist = (s, t) => {
@@ -447,38 +445,76 @@ const indexOfSmallest = a => {
 
 const levenshteinQuestion = (answer, question) => {
   const levNums = [];
+
   const answers = question.answers;
-  answers.map(o => {
-    if (answer == o.text) {
-      levNums.push(0);
-    } else {
-      levNums.push(levDist(answer, o.text));
-    }
+  const correctAnswer = answers.find(o=>{
+    return o.correct === true;
   });
-  const i = indexOfSmallest(levNums);
-  const userAnswer = answers[i].text;
-  if (answers[i].correct) {
-    return {
-      answer: answers[i].letter,
-      userAnswer: userAnswer,
-      correct: true,
-      userInputString: answer
-    };
+  if(onlyNumbers(correctAnswer.text)){
+    if(answer == correctAnswer.text){
+      return {
+        answer: correctAnswer.letter,
+        userAnswer: answer,
+        correct: true,
+        userInputString: answer
+      };
+    } else {
+      const userSelectedAnswer = answers.find(o=>{
+        return o.text == answer;
+      });
+      let userSelectedAnswerLetter = "No match"
+      if(userSelectedAnswer){
+        userSelectedAnswerLetter = userSelectedAnswer.letter;
+      }
+      return {
+        answer: userSelectedAnswerLetter,
+        userAnswer: answer,
+        correct: false,
+        userInputString: answer
+      };
+    }
   } else {
-    return {
-      answer: answers[i].letter,
-      userAnswer: userAnswer,
-      correct: false,
-      userInputString: answer
-    };
-  }  
+    answers.map(o => {
+      if (answer == o.text) {
+        levNums.push(0);
+      } else {
+        levNums.push(levDist(answer, o.text.toLowerCase()));
+      }
+    });
+    const i = indexOfSmallest(levNums);
+    if(levNums[i] < correctAnswer.text.length / 2 && levNums[i] < 5 || correctAnswer.text.length === 1){
+      const userAnswer = answers[i].text;
+      if (answers[i].correct) {
+        return {
+          answer: answers[i].letter,
+          userAnswer: userAnswer,
+          correct: true,
+          userInputString: answer
+        };
+      } else {
+        return {
+          answer: answers[i].letter,
+          userAnswer: userAnswer,
+          correct: false,
+          userInputString: answer
+        };
+      }
+    } else {
+      return {
+        answer: 'No match',
+        userAnswer: 'No match',
+        correct: false,
+        userInputString: answer
+      };
+    }
+  }
 };
 
 module.exports = {
   categories:categories,
   categoriesArray:categoriesArray,
   categoriesInfo:categoriesInfo,
-  formatQuestion:formatQuestion,
   formatQuestions:formatQuestions,
-  levenshteinQuestion:levenshteinQuestion
+  levenshteinQuestion:levenshteinQuestion,
+  onlyNumbers:onlyNumbers
 }

@@ -25,10 +25,26 @@ result-view {
         }
       }
     }
+    if (this.status == 'question') {
+      spec {
+        delay-seconds (10)
+        with-request {
+          intent {
+            goal {RefreshQuestion}
+            value {$expr(this)}
+          }
+        }
+      }
+    }
   }
+  
   followup{
     prompt {
-      dialog(" ")
+      dialog{
+        template (" "){
+          speech (" ")
+        }
+      }
       on-confirm{
         message{
           template ("#{title(this.template)}"){
@@ -45,6 +61,7 @@ result-view {
       }
     }
   }
+  
   render {
     if (this.status == 'tutorial'){
       layout-macro (tutorial) {
@@ -70,7 +87,7 @@ result-view {
   conversation-drivers{
     if(this.status == 'tutorial'){
       conversation-driver{
-        template (Start Now)
+        template (Skip Tutorial) 
       }
       conversation-driver{
         template (Help)
@@ -87,14 +104,14 @@ result-view {
         template (C)   
       }
       conversation-driver{
-        template (D)   
+        template (D)
       }
     }
-    // if(this.status == 'answer'){
-    //   conversation-driver{
-    //     template (Next Question)
-    //   }
-    // }
+    if(this.status == 'answer'){
+      conversation-driver{
+        template (Next Question)
+      }
+    }
     if(this.status == 'completed'){
       conversation-driver{
         template (Play Again)

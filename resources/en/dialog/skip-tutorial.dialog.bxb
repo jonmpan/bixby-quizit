@@ -1,0 +1,4 @@
+dialog (Storage) {
+  match: Skip
+  template("Say \"yes\" to skip the tutorial from now on!")
+}

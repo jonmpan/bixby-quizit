@@ -1,0 +1,31 @@
+result-view{
+  match:Skip(skip)
+
+  message{
+    if(skip){
+      template ("Ok, I will skip the tutorial screen from now on. Please say \"new game\" to start a new game!")
+    } else {
+      template ("I will stop skipping the tutorial screen. Please say \"new game\" to start a new game!")
+    }
+  }
+  
+  render{
+    layout{
+      section{
+        content{
+          image{
+            aspect-ratio(21:9)
+            object-fit (Contain)
+            url(/images/quizit-logo-white-min.png)
+          }
+        }
+      }
+    }
+  }
+  
+  conversation-drivers{
+    conversation-driver{
+      template (New Game)
+    }
+  }
+}

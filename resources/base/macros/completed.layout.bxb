@@ -10,6 +10,11 @@ layout-macro-def(completed) {
   content {
     section {
       content {
+        image{
+          url(/images/quizit-logo-white-min.png)
+          aspect-ratio(21:9)
+          object-fit (Contain)
+        }
         for-each (quiz.questions){
           as (question){
             divider
@@ -50,11 +55,16 @@ layout-macro-def(completed) {
             }
             if(question.userAnswer != null && !question.correct){
               paragraph{
-                value("Incorrect. You chose #{value(question.userAnswer)}")
+                value("[Incorrect. Your answer: #{value(question.userAnswer)}]")
                 style(Detail_L_Soft)
               }
             }
           }
+        }
+        divider
+        paragraph{
+          value("Thank you for playing QuizIt! QuizIt is free and was made by just some guy who loves trivia. If you enjoyed this capsule, please rate it 🌟🌟🌟🌟🌟\n\nThe code for QuizIt is open source at my github github.com/jonmpan/bixby-quizit.\n\nSincerely,\nJon P.")
+          style(Detail_L_Soft)
         }
       }
     }

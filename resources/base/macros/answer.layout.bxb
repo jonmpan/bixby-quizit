@@ -86,11 +86,28 @@ layout-macro-def(answer) {
             }
           }
         }
-        if(quiz.questions[quiz.currentQuestion].userAnswer != null){
+        divider
+        if(quiz.youSaidSomething){
           single-line{
             text{
-              value("You Chose: #{value(quiz.questions[quiz.currentQuestion].userAnswer)}")
+              value("[You Said: #{value(quiz.youSaid)}]")
               style(Detail_L)
+            }
+          }
+          divider
+          single-line{
+            text{
+              value("[Closest match was: #{value(quiz.questions[quiz.currentQuestion].userAnswer)}]")
+              style(Detail_L)
+            }
+          }
+        } else {
+          if(quiz.questions[quiz.currentQuestion].userAnswer != null){
+            single-line{
+              text{
+                value("You Chose: #{value(quiz.questions[quiz.currentQuestion].userAnswer)}")
+                style(Detail_L)
+              }
             }
           }
         }

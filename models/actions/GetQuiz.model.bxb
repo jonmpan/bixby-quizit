@@ -20,6 +20,10 @@ action (GetQuiz) {
         }
       }
     }
+    input (skip) {
+      type (Skip)
+      min (Optional) max (One)
+    }
   }
 
   output (Quiz)

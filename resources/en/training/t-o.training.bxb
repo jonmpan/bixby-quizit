@@ -1,5 +1,15 @@
 train (t-o2f5kc0jmvk1bzuazckveltas) {
   utterance ("[g:CheckAnswer:continue:NextQuestion] (foo bar herp derp)[v:UserAnswerString]")
-  plan (Y2BlEM7Kz8stSMzTKyzNrPIs0QsEUgxSaILOGanJ2Y55xeWpRdg1SKIJhhanFkHVy+OUCi4pysxLZ2BhYGRgYmAG0gxAFgTCABOQDRQHAA==)
-  last-modified (1561478178307)
+  plan (Y2BlEM7Kz8stSMzTKyzNrPIs0QsEUgxSaILOGanJ2Y55xeWpRQyKuOXqEiFKsJopjyYYWpxaBNEWXFKUmZfOwMLAyMDEwAykGYAsEJuRAQZAbKA4AA==)
+  last-modified (1562018467531)
+}
+train (t-o6qs8blne31i2ds46i9393o9e) {
+  utterance ([g:NextQuestion:continue:CheckAnswer] next)
+  plan (Y2BmEM7Kz8stSMzTKyzNrPIs0QsEUgzSaIJ+qRUlgaWpxSWZ+XnYdTAxMAIxA5BkZGCA0QA=)
+  last-modified (1562026830673)
+}
+train (t-opxgobaqu7x0ne1jkbb2yh5e4) {
+  utterance ("[g:GetQuiz] new game on (animals)[v:Category:animals] with (any difficulty)[v:Difficulty:'all difficulties']")
+  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
+  last-modified (1562034523906)
 }

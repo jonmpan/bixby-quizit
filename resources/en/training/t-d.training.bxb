@@ -1,5 +1,5 @@
-train (t-dllqzu78kaiz6abjkufkbono8) {
-  utterance ("[g:GetQuiz] (games)[v:Category:'video games'] (easy)[v:Difficulty:easy]")
-  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
-  last-modified (1561491126289)
+train (t-d30rqmiz3tcfu3v6dakkqq01g) {
+  utterance ("[g:CheckAnswer:continue:GetQuiz] (A)[v:UserAnswer:A]")
+  plan (Y2BlEM7Kz8stSMzTKyzNrPIs0QsEUgxSaILOGanJ2Y55xeWpRQyKuOXqEiFKsJopiSYYWpxaBDWShYGRgYmBGUgzAFkgNiMDDIDYQHEA)
+  last-modified (1562029620929)
 }

@@ -1,5 +1,0 @@
-train (t-inistco4uxczfz38k5q2k3x7u) {
-  utterance ("[g:Category:prompt] (all)[v:Category:'all categories']")
-  plan (Y2BiEM/Kz8stSMzTKyzNrPIs0XNOLElNzy+qxC3BCIQMDDxAzATEQDYA)
-  last-modified (1561494546349)
-}

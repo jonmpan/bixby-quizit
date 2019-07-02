@@ -8,11 +8,6 @@ train (t-yk49pbwunmzyc3lcjhlnfkg96) {
   plan (Y2BmECgszazKLNFLSc3N1wsEshmkkEWCUgtSE0sCS1OLSzLz87CoZmJgBGIGIMnIwACjAQ==)
   last-modified (1559939838678)
 }
-train (t-yp0dkjtykvy5ycfkm672f1eax) {
-  utterance ("[g:GetQuiz] (video games)[v:Category:'video games'] (really easy)[v:Difficulty:easy]")
-  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
-  last-modified (1561491181552)
-}
 train (t-yyphsvr4a87q77cpp5hakx0pj) {
   utterance ([g:GetQuiz] Play Again)
   plan (Y2BhECgszazKLNFLSc3N1wsEshmEkUXcU0vAgiLIgs6JJanp+UWVDGLIoi6ZaWmZyaU5JZUMzAyMDExAkgFIgyAEgFkA)

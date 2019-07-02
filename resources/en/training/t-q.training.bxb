@@ -3,13 +3,8 @@ train (t-q59covaksiclihjfylooxk4zx) {
   plan (Y2BhECgszazKLNFLSc3N1wsEshmEkUXcU0vAgiLIgs6JJanp+UWVDGLIoi6ZaWmZyaU5JZUMzAyMDExAkgFIgyAEgFkA)
   last-modified (1559931549282)
 }
-train (t-qgx86eirgwhy1euc07k2nlrk4) {
-  utterance ([g:GetQuiz] Get Quiz)
-  plan (Y2BhECgszazKLNFLSc3N1wsEshmEkUXcU0vAgiLIgs6JJanp+UWVDGLIoi6ZaWmZyaU5JZUMzAyMDExAkgFIgyAEgFkA)
-  last-modified (1559778035879)
-}
 train (t-qlp2ze33lcf7t5qnq914d8qo0) {
   utterance ("[g:NextQuestion:continue:GetQuiz] (foo bar herp derp)[v:UserAnswerString]")
-  plan (Y2BjEM7Kz8stSMzTKyzNrPIs0QsEUgzSaIJ+qRUlgaWpxSWZ+XnYdUihCTpnpCZnO+YVl6cWYdcgjyYYWpxaBFEfXFKUmZfOwMrAyMDEwMzAAmQxQNnMQJoBjEGACcgCygEA)
-  last-modified (1561480589522)
+  plan (Y2BnEM7Kz8stSMzTKyzNrPIs0QsEUgzSaIJ+qRUlgaWpxSWZ+XnYdUihCTpnpCZnO+YVl6cWMSjilqtLhCjBaqY8mmBocWoRRFtwSVFmXjoDGwMjAxMDMwMLAyuQzQDlgfiMYB4MMAHZQHkA)
+  last-modified (1562018472388)
 }

@@ -7,7 +7,7 @@ action (CheckAnswer) {
       min (Required) max (One)
     }
     input-group (answer){
-      requires (OneOf)
+      requires (ZeroOrMoreOf)
       collect{
         input (userAnswer) {
           type (UserAnswer)
@@ -19,7 +19,14 @@ action (CheckAnswer) {
         }
       }
     }
-
+    input (categories) {
+      type (Category)
+      min (Optional) max (Many)
+    }
+    input (difficulties) {
+      type (Difficulty)
+      min (Optional) max (Many)
+    }
   }
   output (Quiz)
 }

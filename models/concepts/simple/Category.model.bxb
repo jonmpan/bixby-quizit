@@ -1,7 +1,7 @@
 enum (Category) {
   description (__DESCRIPTION__)
   symbol ("all categories")
-  symbol ("general")
+  symbol ("general knowledge")
   symbol ("books")
   symbol ("film")
   symbol ("music")
