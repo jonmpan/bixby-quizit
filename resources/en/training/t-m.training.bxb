@@ -5,8 +5,8 @@ train (t-mhs3jjhd3rq5bspcfdvikjzah) {
 }
 train (t-mlofitz8o1r21scyyr72o196i) {
   utterance ([g:GetQuiz] Start Game)
-  plan (Y2BhECgszazKLNFLSc3N1wsEshmEkUXcU0vAgiLIgs6JJanp+UWVDGLIoi6ZaWmZyaU5JZUMzAyMDExAkgFIgyAEgFkA)
-  last-modified (1559778037007)
+  plan (Y2BhEM/Kz8stSMzTKyzNrPIs0QspLckvykzMYRBDk3BPLQkEsjA0OCeWpKbnF1UySKJJuGSmpWUml+aUVDIwMzAyMAFJBiANghAAZgEA)
+  last-modified (1562174790856)
 }
 train (t-mvox402h8krxwwep18zuzipra) {
   utterance ("[g:CheckAnswer:continue:RefreshQuestion] (hello world)[v:UserAnswerString]")

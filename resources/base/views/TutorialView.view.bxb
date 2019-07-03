@@ -47,7 +47,7 @@ result-view {
   }
   conversation-drivers{
     conversation-driver{
-      template (Skip Tutorial) 
+      template (Skip Tutorial)
     }
     conversation-driver{
       template (Help)

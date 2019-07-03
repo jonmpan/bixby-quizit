@@ -5,11 +5,11 @@ train (t-o2f5kc0jmvk1bzuazckveltas) {
 }
 train (t-o6qs8blne31i2ds46i9393o9e) {
   utterance ([g:NextQuestion:continue:CheckAnswer] next)
-  plan (Y2BmEM7Kz8stSMzTKyzNrPIs0QsEUgzSaIJ+qRUlgaWpxSWZ+XnYdTAxMAIxA5BkZGCA0QA=)
-  last-modified (1562026830673)
+  plan (Y2BiEM7Kz8stSMzTKyzNrPIs0QsEUgzSaIJ+qRUlgaWpxSWZ+XkMjEDIAMVAEgA=)
+  last-modified (1562174789585)
 }
 train (t-opxgobaqu7x0ne1jkbb2yh5e4) {
   utterance ("[g:GetQuiz] new game on (animals)[v:Category:animals] with (any difficulty)[v:Difficulty:'all difficulties']")
-  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
-  last-modified (1562034523906)
+  plan (Y2BhEM/Kz8stSMzTKyzNrPIs0QspLckvykzMYRBDk3BPLQkEsjA0OCeWpKbnF1UySKJJuGSmpWUml+aUVDIwMzAyMAFJBiANghAAFwUA)
+  last-modified (1562174789653)
 }

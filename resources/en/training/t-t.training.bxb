@@ -5,6 +5,6 @@ train (t-tapa9nqzb7pk32oumf1izn7vx) {
 }
 train (t-tz8h1n8vt5r2m1y37lg58qy6n) {
   utterance ("[g:GetQuiz] quiz me on (politics)[v:Category:politics]")
-  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRACmMCiDAA=)
-  last-modified (1562027783476)
+  plan (Y2BhEM/Kz8stSMzTKyzNrPIs0QspLckvykzMYRBDk3BPLQkEsjA0OCeWpKbnF1UySKJJuGSmpWUml+aUVDIwMzAyMAFJBiANghDABBZlAAA=)
+  last-modified (1562174790226)
 }
