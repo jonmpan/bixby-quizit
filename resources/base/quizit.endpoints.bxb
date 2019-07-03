@@ -15,7 +15,7 @@ endpoints {
       local-endpoint (GetDifficulties.js)
     }
     action-endpoint (NextQuestion) {
-      accepted-inputs (quiz)
+      accepted-inputs (quiz, tutorial)
       local-endpoint (NextQuestion.js)
     }
     action-endpoint (CheckAnswer) {

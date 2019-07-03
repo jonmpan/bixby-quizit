@@ -4,7 +4,11 @@ action (NextQuestion) {
   collect {
     input (quiz) {
       type (Quiz)
-      min (Required) max (One)
+      min (Optional) max (One)
+    }
+    input (tutorial) {
+      type (Tutorial)
+      min (Optional) max (One)
     }
   }
   output (Quiz)

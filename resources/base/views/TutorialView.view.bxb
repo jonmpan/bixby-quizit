@@ -1,0 +1,56 @@
+result-view {
+  match {
+    Tutorial (this)
+  }
+  refresh {
+      spec {
+        delay-seconds (8)
+        with-request {
+          intent {
+            goal {NextQuestion}
+            value {$expr(this)}
+          }
+        }
+      }
+  }
+  message{
+    template ("QuizIt is a trivia game with thousands of questions! Your game will begin shortly.")
+  }
+  followup{
+    prompt {
+      dialog{
+        template (" "){
+          speech (" ")
+        }
+      }
+      on-confirm{
+        message{
+          template ("QuizIt is a trivia game with thousands of questions! Your game will begin shortly."){
+            speech ("QuizIt is a trivia game with thousands of questions! Your game will begin shortly.")
+          }
+        }
+      }
+      on-deny{
+        message{
+          template ("QuizIt is a trivia game with thousands of questions! Your game will begin shortly."){
+            speech ("QuizIt is a trivia game with thousands of questions! Your game will begin shortly.")
+          }
+        }
+      }
+    }
+  }
+
+  render {
+    layout-macro (tutorial-pre-quiz) {
+      param (tutorial) {expression (this)}
+    }
+  }
+  conversation-drivers{
+    conversation-driver{
+      template (Skip Tutorial) 
+    }
+    conversation-driver{
+      template (Help)
+    }
+  }
+}

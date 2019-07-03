@@ -30,12 +30,13 @@ const nextQuestion = (quiz) =>{
 }
 
 module.exports.function = function getQuiz (category, difficulty, skip) {
-  let quiz = makeQuiz(category, difficulty);
-  if(skip){
-    return nextQuestion(quiz);
-  } else {
-    return quiz;    
-  }
+  // let quiz = makeQuiz(category, difficulty);
+  // if(skip){
+  //   return nextQuestion(quiz);
+  // } else {
+  //   return quiz;
+  // }
+  return { category: category, difficulty: difficulty }
 }
 
 // template: 'QuizIt is a trivia game with tons of questions! The questions are multiple choice. You must say A, B, C, or D, to select your answer.',
