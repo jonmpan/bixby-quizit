@@ -1,3 +1,5 @@
+var http = require('http');
+
 const categories = {
   "generalknowledge":9,
   "books":10,
@@ -366,7 +368,7 @@ const formatQuestions = results => {
     for (var i = 0; i < question.answers.length; i++) {
       question.answers[i].letter = alphabet.charAt(i);
     }
-    question.timer = 20;
+    question.timer = 30;
     return question;
   });
 };
@@ -517,15 +519,43 @@ const calculateFinalScore = (quiz) => {
   quiz.questions.map((q,i)=>{
     if(q.correct){
       quiz.totalScore += 10;
-      if(q.timer > 9){
+      if(q.timer/2 > 9){
         quiz.timeBonus += 10;
         quiz.totalScore += 10;
       } else {
-        quiz.timeBonus += q.timer;
-        quiz.totalScore += q.timer;
-      }
+        quiz.timeBonus += Math.floor(q.timer/2);
+        quiz.totalScore += Math.floor(q.timer/2);
+      }      
     }
   })
+}
+
+const makeQuiz = (category, difficulty) => {
+    let url = 'https://opentdb.com/api.php?amount=5&type=multiple';
+  if(category !== 'all categories'){
+    const formattedCategory = category.toLowerCase().replace(" ", "");
+    if(categories[formattedCategory]){
+      url += '&category=' + categories[formattedCategory];
+    }     
+  }
+  if(difficulty.toString() !== 'all difficulties'){
+    url += '&difficulty=' + difficulty;
+  }
+  var response = http.getUrl(url, { format: 'json'});
+  const questions = formatQuestions(response.results);
+  const quiz = {
+    questions:questions,
+    category: category,
+    difficulty: difficulty,
+    currentQuestion: -1,
+    score: 0,
+    questionCount: questions.length,
+    currentUserAnswer: 'Skip',
+    status:'tutorial',
+    template: 'QuizIt is a trivia game with thousands of questions! Your game will begin shortly.',
+    speech: 'QuizIt is a trivia game with thousands of questions! Your game will begin shortly.',
+  }
+  return quiz;
 }
 
 module.exports = {
@@ -535,5 +565,6 @@ module.exports = {
   formatQuestions:formatQuestions,
   levenshteinQuestion:levenshteinQuestion,
   onlyNumbers:onlyNumbers,
-  calculateFinalScore:calculateFinalScore
+  calculateFinalScore:calculateFinalScore,
+  makeQuiz:makeQuiz
 }

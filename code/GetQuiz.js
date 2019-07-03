@@ -1,6 +1,6 @@
 var console = require('console');
 var http = require('http');
-const {categories, formatQuestions} = require('./utils/index.js');
+const {categories, formatQuestions, makeQuiz} = require('./utils/index.js');
 
 const nextQuestion = (quiz) =>{
   quiz.currentQuestion++;
@@ -9,19 +9,9 @@ const nextQuestion = (quiz) =>{
     var questionCounter = quiz.currentQuestion + 1;
     quiz.status = 'question';
     quiz.template = "Question " +questionCounter+ " out of " +quiz.questionCount+ ". " +currentQuestion.question;
-    quiz.speech = 
-      "Question "
-      + questionCounter
-      + "... "
-      + currentQuestion.question
-      + "... A... "
-      + currentQuestion.answers[0].text
-      + "... B... "
-      + currentQuestion.answers[1].text
-      + "... C... "
-      + currentQuestion.answers[2].text
-      + "... D... "
-      + currentQuestion.answers[3].text;
+    currentQuestion.answers.map(o=>{
+      quiz.speech += "... " + o.letter + "... " + o.text      
+    })
   }
   else {
     quiz.status = 'completed';
@@ -35,39 +25,12 @@ const nextQuestion = (quiz) =>{
       quiz.template += " It's ok... It could be worse, right?"
       quiz.speech += " It's ok... It could be worse, right?"
     }
-    // else {
-    //   quiz.template += " You're so close to perfection! Try again!"
-    //   quiz.speech += " You're so close to perfection! Try again!"
-    // }
   }
   return quiz
 }
 
 module.exports.function = function getQuiz (category, difficulty, skip) {
-  let url = 'https://opentdb.com/api.php?amount=5&type=multiple';
-  if(category !== 'all categories'){
-    const formattedCategory = category.toLowerCase().replace(" ", "");
-    if(categories[formattedCategory]){
-      url += '&category=' + categories[formattedCategory];
-    }     
-  }
-  if(difficulty.toString() !== 'all difficulties'){
-    url += '&difficulty=' + difficulty;
-  }
-  var response = http.getUrl(url, { format: 'json'});
-  const questions = formatQuestions(response.results);
-  const quiz = {
-    questions:questions,
-    category: category,
-    difficulty: difficulty,
-    currentQuestion: -1,
-    score: 0,
-    questionCount: questions.length,
-    currentUserAnswer: 'Skip',
-    status:'tutorial',
-    template: 'QuizIt is a trivia game with thousands of questions! Your game will begin shortly.',
-    speech: 'QuizIt is a trivia game with thousands of questions! Your game will begin shortly.',
-  }
+  let quiz = makeQuiz(category, difficulty);
   if(skip){
     return nextQuestion(quiz);
   } else {

@@ -25,9 +25,9 @@ result-view {
         }
       }
     }
-    if (this.status == 'question') {
+    if (this.status == 'question' && this.questions[this.currentQuestion].timer > 0) {
       spec {
-        delay-seconds (1)
+        delay-seconds (5)
         with-request {
           intent {
             goal {RefreshQuestion}

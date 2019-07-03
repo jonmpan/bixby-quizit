@@ -9,7 +9,7 @@ const addEmoji = (quiz)=>{
 
 const countdownTimer = (quiz) => {
   if(quiz.questions[quiz.currentQuestion].timer > 0){
-    quiz.questions[quiz.currentQuestion].timer += -1;     
+    quiz.questions[quiz.currentQuestion].timer += -5;     
   }
 }
 

@@ -94,11 +94,13 @@ layout-macro-def(question) {
         //     style(Detail_M_Soft)
         //   }
         // }
-        if(quiz.questions[quiz.currentQuestion].timer < 11){
-          paragraph {
-            value("[Timer for bonus: #{value(quiz.questions[quiz.currentQuestion].timer)}]")
-            style(Detail_L)
-          }
+        paragraph {
+          value("[Timer for bonus: #{value(quiz.questions[quiz.currentQuestion].timer)}]")
+          style(Detail_L)
+        }
+        paragraph {
+          value("(refreshes every 5 seconds)")
+          style(Detail_M_Soft)
         }
       }
     }
