@@ -1,4 +1,0 @@
-action (GetCategories) {
-  type (Search)
-  output (Category)
-}

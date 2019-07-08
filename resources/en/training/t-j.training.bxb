@@ -1,5 +1,6 @@
 train (t-j4i9zg8pixd47jsjonwlsx10o) {
-  utterance ("[g:GetQuiz] Start an (easy)[v:Difficulty:easy] game about (video games)[v:Category:'video games']")
-  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
-  last-modified (1562027713900)
+  utterance ("[g:StartQuiz] Start an (easy)[v:Difficulty] game about (video games)[v:Category]")
+  plan (Y2BjEM7Kz8stSMzTKyzNrPIs0QsEUgwSaILBJYlFJWAZrMrF0ATdUyGKxdHEnRNLUtPziyoZJNEkXDLT0jKTS3NKKhlYGRgZmBiYGViALAYomxlIM4AxCIB4YFkA)
+  enabled (false)
+  last-modified (1562616727946)
 }

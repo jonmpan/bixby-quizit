@@ -1,5 +1,5 @@
-train (t-b0jitcerc7l1ms6t2yrqo66yh) {
-  utterance ("[g:CheckAnswer:continue:NextQuestion] (general knowledge)[v:Category:'general knowledge']")
-  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxSaILOGanJ2Y55xeWpRQzi6HKJJanp+UWV2E1iZmBkYAKSDEAaBCGACSzKAAA=)
-  last-modified (1562026389929)
+train (t-b1zb96qnuxxucd5c0egh9g6yw) {
+  utterance ([g:GetQuiz] new game)
+  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRACwCwA)
+  last-modified (1562616675727)
 }

@@ -7,7 +7,7 @@ const nextQuestion = (quiz) =>{
   const currentQuestion = quiz.questions[quiz.currentQuestion];
   if(quiz.currentQuestion < quiz.questions.length){
     var questionCounter = quiz.currentQuestion + 1;
-    quiz.status = 'question';
+    quiz.status = 'transition';
     quiz.template = "Question " +questionCounter+ " out of " +quiz.questionCount+ ". " +currentQuestion.question;
     quiz.speech = 
       "Question "
@@ -43,8 +43,8 @@ const nextQuestion = (quiz) =>{
   return quiz
 }
 
-module.exports.function = function getQuiz (category, difficulty, skip) {
-  let url = 'https://opentdb.com/api.php?amount=5&type=multiple';
+module.exports.function = function getQuiz (category, difficulty) {
+  let url = 'https://opentdb.com/api.php?amount=2&type=multiple';
   if(category !== 'all categories'){
     const formattedCategory = category.toLowerCase().replace(" ", "");
     if(categories[formattedCategory]){
@@ -68,11 +68,7 @@ module.exports.function = function getQuiz (category, difficulty, skip) {
     template: 'QuizIt is a trivia game with thousands of questions! Your game will begin shortly.',
     speech: 'QuizIt is a trivia game with thousands of questions! Your game will begin shortly.',
   }
-  if(skip){
-    return nextQuestion(quiz);
-  } else {
-    return quiz;    
-  }
+  return quiz;
 }
 
 // template: 'QuizIt is a trivia game with tons of questions! The questions are multiple choice. You must say A, B, C, or D, to select your answer.',

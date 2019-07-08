@@ -24,7 +24,22 @@ structure (FullQuestion) {
     type (Correct)
     min (Required) max (One)
   }
-  property (refresher){
+  property (acceptedAnswers){
+    type (viv.core.Text)
+    min (Required) max (Many)
+    visibility (Private)
+  }
+  property (timeStarted){
+    type (viv.core.Text)
+    min (Optional) max (One)
+    visibility (Private)
+  }
+  property (timeAnswered){
+    type (viv.core.Text)
+    min (Optional) max (One)
+    visibility (Private)
+  }
+  property (timeBonus){
     type (viv.core.Text)
     min (Optional) max (One)
     visibility (Private)

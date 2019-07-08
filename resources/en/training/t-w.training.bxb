@@ -1,7 +1,8 @@
 train (t-wn78hbjn1tr96srh8dnurdb4k) {
-  utterance ("[g:GetQuiz] new game (politics)[v:Category:politics] (all difficulties)[v:Difficulty:'all difficulties']")
-  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
-  last-modified (1562034404287)
+  utterance ("[g:StartQuiz] new game (politics)[v:Category] (all difficulties)[v:Difficulty]")
+  plan (Y2BjEM7Kz8stSMzTKyzNrPIs0QsEUgwSaILBJYlFJWAZrMrF0ATdUyGKxdHEnRNLUtPziyoZJNEkXDLT0jKTS3NKKhlYGRgZmBiYGViALAYomxlIM4AxCIB4YFkA)
+  enabled (false)
+  last-modified (1562616735324)
 }
 train (t-wxrdcsb4xk8ymqfnw01t8luq2) {
   utterance ([g:RepeatQuestion:continue:NextQuestion] repeat question)

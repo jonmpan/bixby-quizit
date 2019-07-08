@@ -29,6 +29,18 @@ const categories = {
   "animation":33,
 }
 
+const letterAliases = {
+  a:"A",
+  hey:"A",
+  b:"B",
+  bee:"B",
+  c:"C",
+  see:"C",
+  sea:"C",
+  d:"D",
+  tee:"D"
+}
+
 const categoriesArray = ["all categories", "general knowledge", "music", "video games", "anime", "computers", "geography", "animals", "books", "sports", "science", "history", "film", "musicals", "theatre", "television", "board games", "nature", "mathematics", "mythology", "politics", "art", "celebrities", "vehicles", "comics", "gadgets", "cartoon"]
 
 
@@ -347,7 +359,7 @@ const formatQuestions = results => {
       correct: false,
     };
     result.incorrect_answers = result.incorrect_answers.filter(Boolean);
-    result.correct_answer = removeA(result.correct_answer);
+    // result.correct_answer = removeA(result.correct_answer);
       result.incorrect_answers = result.incorrect_answers.map(o => {
       return removeA(o);
     });
@@ -365,6 +377,12 @@ const formatQuestions = results => {
 
     for (var i = 0; i < question.answers.length; i++) {
       question.answers[i].letter = alphabet.charAt(i);
+      if(question.answers[i].correct){
+        question.acceptedAnswers = [
+          question.answers[i].letter,
+          question.answers[i].text,
+          question.answers[i].letter + " " + question.answers[i].text]
+      }
     }
     return question;
   });
@@ -516,5 +534,6 @@ module.exports = {
   categoriesInfo:categoriesInfo,
   formatQuestions:formatQuestions,
   levenshteinQuestion:levenshteinQuestion,
-  onlyNumbers:onlyNumbers
+  onlyNumbers:onlyNumbers,
+  letterAliases:letterAliases
 }

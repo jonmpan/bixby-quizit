@@ -1,31 +1,32 @@
 action (CheckAnswer) {
-  type(Search)
+  type(Calculation)
   description (__DESCRIPTION__)
   collect {
     input (quiz) {
       type (Quiz)
       min (Required) max (One)
-    }
-    input-group (answer){
-      requires (ZeroOrMoreOf)
-      collect{
-        input (userAnswer) {
-          type (UserAnswer)
-          min (Optional) max (Many)
+      validate {
+        if (quiz.status == 'transition') {
+          replan {
+            intent {
+              goal: NextQuestion
+              value { $expr(quiz) }
+            }
+          }
         }
-        input (userAnswerString) {
-          type (UserAnswerString)
-          min (Optional) max (One)
+        if (quiz.status == 'tutorial') {
+          replan {
+            intent {
+              goal: NextQuestion
+              value { $expr(quiz) }
+            }
+          }
         }
       }
     }
-    input (categories) {
-      type (Category)
-      min (Optional) max (Many)
-    }
-    input (difficulties) {
-      type (Difficulty)
-      min (Optional) max (Many)
+    input (userAnswerString) {
+      type (UserAnswerString)
+      min (Required) max (One)
     }
   }
   output (Quiz)

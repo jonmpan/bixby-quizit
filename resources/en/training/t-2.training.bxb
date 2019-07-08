@@ -1,5 +1,6 @@
 train (t-22cnr1wbwymx6ioh9z0k6pdbi) {
-  utterance ("[g:GetQuiz] new game (anime)[v:Category:anime] (medium)[v:Difficulty:medium]")
-  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
-  last-modified (1562034299669)
+  utterance ("[g:StartQuiz] new game (anime)[v:Category] (medium)[v:Difficulty]")
+  plan (Y2BjEM7Kz8stSMzTKyzNrPIs0QsEUgwSaILBJYlFJWAZrMrF0ATdUyGKxdHEnRNLUtPziyoZJNEkXDLT0jKTS3NKKhlYGRgZmBiYGViALAYomxlIM4AxCIB4YFkA)
+  enabled (false)
+  last-modified (1562616724443)
 }

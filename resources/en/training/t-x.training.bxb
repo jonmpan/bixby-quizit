@@ -1,10 +1,6 @@
 train (t-xdfg0qrsofwp59md0hspsfy1s) {
-  utterance ("[g:GetQuiz] new game (video games)[v:Category:'video games'] (hard)[v:Difficulty:hard]")
-  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
-  last-modified (1562034356111)
-}
-train (t-xppk3x2el19d33kjj8kbq74f8) {
-  utterance ("[g:CheckAnswer:continue:RefreshQuestion] (bee)[v:UserAnswer:B] (foo bar herp derp)[v:UserAnswerString]")
-  plan (Y2BjEM7Kz8stSMzTKyzNrPIs0QsEUgxSaILOGanJ2Y55xeWpRQyKuOXqEiFKsJopiSYYWpxaBDVSHqdUcElRZl46AysDIwMTAzMDC5DFAGSDeExAEgGYgTywLAA=)
-  last-modified (1562102737524)
+  utterance ("[g:StartQuiz] new game (video games)[v:Category] (hard)[v:Difficulty]")
+  plan (Y2BjEM7Kz8stSMzTKyzNrPIs0QsEUgwSaILBJYlFJWAZrMrF0ATdUyGKxdHEnRNLUtPziyoZJNEkXDLT0jKTS3NKKhlYGRgZmBiYGViALAYomxlIM4AxCIB4YFkA)
+  enabled (false)
+  last-modified (1562616738096)
 }

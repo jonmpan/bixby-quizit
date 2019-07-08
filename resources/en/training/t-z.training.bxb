@@ -1,5 +1,12 @@
+train (t-z2n2fvjkjnq2iset359bi2pnf) {
+  utterance ("[g:StartQuiz] give me an (easy)[v:Difficulty] quiz on (video games)[v:Category]")
+  plan (Y2BjEM7Kz8stSMzTKyzNrPIs0QsEUgwSaILBJYlFJWAZrMrF0ATdUyGKxdHEnRNLUtPziyoZJNEkXDLT0jKTS3NKKhlYGRgZmBiYGViALAYomxlIM4AxCIB4YFkA)
+  enabled (false)
+  last-modified (1562616739930)
+}
 train (t-zbslj3uhzwgmh5o1qo9er5emt) {
-  utterance ("[g:GetQuiz] Start a (medium)[v:Difficulty:medium] difficulty quiz about (animals)[v:Category:animals]")
-  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
-  last-modified (1562028189974)
+  utterance ("[g:StartQuiz] Start a (medium)[v:Difficulty] difficulty quiz about (animals)[v:Category]")
+  plan (Y2BjEM7Kz8stSMzTKyzNrPIs0QsEUgwSaILBJYlFJWAZrMrF0ATdUyGKxdHEnRNLUtPziyoZJNEkXDLT0jKTS3NKKhlYGRgZmBiYGViALAYomxlIM4AxCIB4YFkA)
+  enabled (false)
+  last-modified (1562616741476)
 }

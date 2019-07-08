@@ -1,0 +1,11 @@
+action (ExtractAnswerFromModel) {
+  description (Convert an option - the option user tapped on - to a (text) answer)
+  type (Constructor)
+  collect {
+    input (answer) {
+      type (Answer)
+      min (Required) max (One)
+    }
+  }
+  output (UserAnswerString)
+}

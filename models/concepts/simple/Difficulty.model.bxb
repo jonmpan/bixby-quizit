@@ -1,10 +1,16 @@
-enum (Difficulty) {
+text (Difficulty) {
   description (__DESCRIPTION__)
-  symbol ("all difficulties")
-  symbol ("easy")
-  symbol ("medium")
-  symbol ("hard")
   features{
     transient
   }
 }
+// enum (Difficulty) {
+//   description (__DESCRIPTION__)
+//   symbol ("all difficulties")
+//   symbol ("easy")
+//   symbol ("medium")
+//   symbol ("hard")
+//   features{
+//     transient
+//   }
+// }

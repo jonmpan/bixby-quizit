@@ -1,0 +1,29 @@
+action (ContinueQuiz) {
+  description (Keep prompting the user for answers until quiz is completed.)
+  type (Calculation)
+  collect {
+    input (quiz) {
+      type (Quiz)
+      min (Required) max (One)
+      validate{
+        if (quiz.status == 'transition'){
+          replan{
+            intent{
+              goal:CheckAnswer
+              value { $expr(quiz) }
+            }
+          }
+        }
+        if (quiz.status == 'tutorial'){
+          replan{
+            intent{
+              goal:CheckAnswer
+              value { $expr(quiz) }
+            }
+          }
+        }
+      }
+    }
+  }
+  output (Quiz)
+}

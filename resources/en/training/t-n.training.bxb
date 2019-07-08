@@ -1,10 +1,6 @@
 train (t-n9ov3uc39jwvb6knbd73g9j01) {
   utterance ([g:Help] help)
   plan (Y2BiEM/Kz8stSMzTKyzNrPIs0QvOyC/3SM0pYBBGkwALMgIhAxQDSQA=)
-  last-modified (1562026754937)
-}
-train (t-nn0bgnsrp2vz9urslps12wdqh) {
-  utterance ("[g:CheckAnswer:continue:NextQuestion] (bee)[v:UserAnswer:B] (foo bar herp derp)[v:UserAnswerString]")
-  plan (Y2BjEM7Kz8stSMzTKyzNrPIs0QsEUgxSaILOGanJ2Y55xeWpRQyKuOXqEiFKsJopiSYYWpxaBDVSHqdUcElRZl46AysDIwMTAzMDC5DFAGSDeExAEgGYgTywLAA=)
-  last-modified (1562026770323)
+  enabled (false)
+  last-modified (1562616767154)
 }

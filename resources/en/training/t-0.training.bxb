@@ -1,5 +1,10 @@
 train (t-02pg6i86us527s60qvzp9bjlw) {
-  utterance ("[g:Difficulty:prompt] (all difficulties)[v:Difficulty:'all difficulties']")
-  plan (Y2BikMzKz8stSMzTKyzNrPIs0XPJTEvLTC7NKanEJ8UIhAwMPEDMBMRANgA=)
-  last-modified (1562027222341)
+  utterance ("[g:GetDifficulties:prompt] (all difficulties)[v:DifficultyInput]")
+  plan (Y2BmkMzKz8stSMzTKyzNrPIs0XPJTEvLTC7NKalkkEOTck8tgctmphZjyCO0euYVlJYwMDEwAjEDkGRkAAEoHwA=)
+  last-modified (1562615259955)
+}
+train (t-0mkad3s3wow0s6dk65yvwqz2c) {
+  utterance ("[g:GetCategory:prompt] (herp derp foo bar)[v:CategoryInput]")
+  plan (Y2BmEM/Kz8stSMzTKyzNrPIs0XNOLElNzy+qZJBCk3BPLYHLyeDQ5JlXUFrCwMTACMQMQJKRAQSgfAA=)
+  last-modified (1562615615818)
 }

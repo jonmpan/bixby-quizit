@@ -1,5 +1,5 @@
-train (t-ujo8od07cpf8ppbh9jteejmr3) {
-  utterance ("[g:Category:prompt] (video games)[v:Category:'video games']")
-  plan (Y2BiEM/Kz8stSMzTKyzNrPIs0XNOLElNzy+qxC3BCIQMDDxAzATEQDYA)
-  last-modified (1562027075884)
+train (t-uox9seczddnsfvv11t08rya9n) {
+  utterance ("[g:GetCategory:prompt] (one)[v:CategoryInput]")
+  plan (Y2BmEM/Kz8stSMzTKyzNrPIs0XNOLElNzy+qZJBCk3BPLYHLyeDQ5JlXUFrCwMTACMQMQJKRAQSgfAA=)
+  last-modified (1562615947322)
 }

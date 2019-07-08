@@ -1,4 +1,10 @@
 action (GetDifficulties) {
   type (Search)
+  collect{
+    input (difficultyInput){
+      type (DifficultyInput)
+      min (Optional) max (One)
+    }
+  }
   output (Difficulty)
 }

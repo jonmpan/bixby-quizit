@@ -1,0 +1,31 @@
+// vocab(Category){
+//   "all categories" {"all categories" "any category" "all category"}
+//   "general knowledge" {"general knowledge"}
+//   "books" {"books"}
+//   "film" {"film" "movies" "movie"}
+//   "music" {"music"}
+//   "musicals" {"musicals"}
+//   "theatre" {"theatre"}
+//   "television" {"television" "tv"}
+//   "video games" {"video games" "videoGames"}
+//   "board games" {"board games" "boardGames" "boring games" "bored games" "boring"}
+//   "science" {"science" "technology"}
+//   "nature" {"nature"}
+//   "computers" {"computers"}
+//   "mathematics" {"mathematics"}
+//   "mythology" {"mythology"}
+//   "sports" {"sports"}
+//   "geography" {"geography"}
+//   "history" {"history"}
+//   "politics" {"politics"}
+//   "art" {"art"}
+//   "celebrities" {"celebrities" "gossip" "hollywood"}
+//   "animals" {"animals"}
+//   "vehicles" {"vehicles" "cars"}
+//   "comics" {"comics"}
+//   "gadgets" {"gadgets"}
+//   "anime" {"anime"}
+//   "manga" {"manga"}
+//   "cartoon" {"cartoon" "cartoons"}
+//   "animation" {"animation"}
+// }

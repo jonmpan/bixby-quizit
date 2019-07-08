@@ -5,37 +5,72 @@ result-view {
   refresh {
     if (this.status == 'tutorial') {
       spec {
-        delay-seconds (8)
+        delay-seconds (3)
         with-request {
           intent {
-            goal {NextQuestion}
+            goal { ContinueQuiz }
             value {$expr(this)}
           }
         }
       }
     }
     if (this.status == 'answer') {
-      spec {
-        delay-seconds (6)
-        with-request {
-          intent {
-            goal {NextQuestion}
-            value {$expr(this)}
+      if (this.currentQuestion+1 == size(this.questions)){
+        spec {
+          delay-seconds (3)
+          with-request {
+            intent {
+              goal {NextQuestion}
+              value: Quiz{
+                category:$expr(this.category)
+                currentQuestion:$expr(this.currentQuestion)
+                  currentUserAnswer:$expr(this.currentUserAnswer)
+                  difficulty:$expr(this.difficulty)
+                  questionCount:$expr(this.questionCount)
+                  questions:$expr(this.questions)
+                  template:$expr(this.template)
+                  speech:$expr(this.speech)
+                  score:$expr(this.score)
+                  status:(completed)
+                }
+            }
+          }
+        }
+      } else {
+        spec {
+          delay-seconds (3)
+          with-request {
+            intent {
+              goal {ContinueQuiz}
+              value: Quiz{
+                category:$expr(this.category)
+                currentQuestion:$expr(this.currentQuestion)
+                  currentUserAnswer:$expr(this.currentUserAnswer)
+                  difficulty:$expr(this.difficulty)
+                  questionCount:$expr(this.questionCount)
+                  questions:$expr(this.questions)
+                  template:$expr(this.template)
+                  speech:$expr(this.speech)
+                  score:$expr(this.score)
+                  status:(transition)
+                }
+            }
           }
         }
       }
+
     }
-    if (this.status == 'question') {
-      spec {
-        delay-seconds (10)
-        with-request {
-          intent {
-            goal {RefreshQuestion}
-            value {$expr(this)}
-          }
-        }
-      }
-    }
+    // if (this.status == 'question') {
+    //   spec {
+    //     delay-seconds (10)
+    //     with-request {
+    //       intent {
+    //         goal {RefreshQuestion}
+    //         value {$expr(this)}
+    //       }
+    //     }
+    //   }
+    // }
   }
   followup{
     prompt {
@@ -60,18 +95,18 @@ result-view {
       }
     }
   }
-  
+
   render {
     if (this.status == 'tutorial'){
       layout-macro (tutorial) {
         param (quiz) {expression (this)}
       }
     }
-    if (this.status == 'question'){
-      layout-macro (question) {
-        param (quiz) {expression (this)}
-      }
-    }
+    //    if (this.status == 'question'){
+    //      layout-macro (question) {
+    //       param (quiz) {expression (this)}
+    //   }
+    //}
     if (this.status == 'answer'){
       layout-macro (answer) {
         param (quiz) {expression (this)}

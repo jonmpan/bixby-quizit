@@ -1,10 +1,11 @@
-train (t-8l57nej87tmfo22aipl4ow1uc) {
-  utterance ([g:NextQuestion:continue:GetQuiz] skip tutorial)
-  plan (Y2BmEM7Kz8stSMzTKyzNrPIs0QsEUgzSaIJ+qRUlgaWpxSWZ+XnYdTAxMAIxA5BkZGCA0QA=)
-  last-modified (1562031369450)
+train (t-87saokahe3wtba3lwn2pr1n99) {
+  utterance ("[g:GetDifficulties:prompt] (easy)[v:DifficultyInput]")
+  plan (Y2BmkMzKz8stSMzTKyzNrPIs0XPJTEvLTC7NKalkkEOTck8tgctmphZjyCO0euYVlJYwMDEwAjEDkGRkAAEoHwA=)
+  last-modified (1562615206546)
 }
 train (t-8rjh1mif119nssv9j1yd2nauk) {
-  utterance ("[g:GetQuiz] give me a (hard)[v:Difficulty:hard] quiz")
-  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRACmIAsoBgA)
-  last-modified (1562027841125)
+  utterance ("[g:StartQuiz] give me a (hard)[v:Difficulty] quiz")
+  plan (Y2BjEM7Kz8stSMzTKyzNrPIs0QsEUgwSaILBJYlFJWAZrMrF0ATdUyGKxdHEnRNLUtPziyoZJNEkXDLT0jKTS3NKKhlYGRgZmBiYGViALAYomxlIM4AxCDABWUA5AA==)
+  enabled (false)
+  last-modified (1562616716923)
 }
