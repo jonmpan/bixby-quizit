@@ -1,6 +1,0 @@
-train (t-opxgobaqu7x0ne1jkbb2yh5e4) {
-  utterance ("[g:StartQuiz] new game on (animals)[v:Category] with (any difficulty)[v:Difficulty]")
-  plan (Y2BjEM7Kz8stSMzTKyzNrPIs0QsEUgwSaILBJYlFJWAZrMrF0ATdUyGKxdHEnRNLUtPziyoZJNEkXDLT0jKTS3NKKhlYGRgZmBiYGViALAYomxlIM4AxCIB4YFkA)
-  enabled (false)
-  last-modified (1562616729660)
-}

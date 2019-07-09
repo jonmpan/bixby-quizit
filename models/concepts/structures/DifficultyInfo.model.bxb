@@ -1,0 +1,22 @@
+structure (DifficultyInfo) {
+  description (__DESCRIPTION__)
+  property (difficulty) {
+    type (Difficulty)
+    min (Required) max (One)
+  }
+  property (text) {
+    type (viv.core.Text)
+    min (Required) max (One)
+    visibility (Private)
+  }
+  property (description) {
+    type (viv.core.Text)
+    min (Optional) max (One)
+    visibility (Private)
+  }
+  property (image) {
+    type (viv.core.Text)
+    min (Optional) max (One)
+    visibility (Private)
+  }
+}

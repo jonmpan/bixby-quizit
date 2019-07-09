@@ -1,41 +1,41 @@
-text (Category) {
-  description (The category)
-  features{
-    transient
-  }
-}
-// enum (Category) {
-//   description (__DESCRIPTION__)
-//   symbol ("all categories")
-//   symbol ("general knowledge")
-//   symbol ("books")
-//   symbol ("film")
-//   symbol ("music")
-//   symbol ("musicals")
-//   symbol ("theatre")
-//   symbol ("television")
-//   symbol ("video games")
-//   symbol ("board games")
-//   symbol ("science")
-//   symbol ("nature")
-//   symbol ("computers")
-//   symbol ("mathematics")
-//   symbol ("mythology")
-//   symbol ("sports")
-//   symbol ("geography")
-//   symbol ("history")
-//   symbol ("politics")
-//   symbol ("art")
-//   symbol ("celebrities")
-//   symbol ("animals")
-//   symbol ("vehicles")
-//   symbol ("comics")
-//   symbol ("gadgets")
-//   symbol ("anime")
-//   symbol ("manga")
-//   symbol ("cartoon")
-//   symbol ("animation")
+// text (Category) {
+//   description (The category)
 //   features{
 //     transient
 //   }
 // }
+enum (Category) {
+  description (__DESCRIPTION__)
+  symbol ("all categories")
+  symbol ("general knowledge")
+  symbol ("books")
+  symbol ("film")
+  symbol ("music")
+  symbol ("musicals")
+  symbol ("theatre")
+  symbol ("television")
+  symbol ("video games")
+  symbol ("board games")
+  symbol ("science")
+  symbol ("nature")
+  symbol ("computers")
+  symbol ("mathematics")
+  symbol ("mythology")
+  symbol ("sports")
+  symbol ("geography")
+  symbol ("history")
+  symbol ("politics")
+  symbol ("art")
+  symbol ("celebrities")
+  symbol ("animals")
+  symbol ("vehicles")
+  symbol ("comics")
+  symbol ("gadgets")
+  symbol ("anime")
+  symbol ("manga")
+  symbol ("cartoon")
+  symbol ("animation")
+  features{
+    transient
+  }
+}

@@ -1,14 +1,17 @@
+const {  calculateTotalTimeBonus, calculateTotalScore } = require('./utils/index.js');
+
 module.exports.function = function nextQuestion (quiz) {
   quiz.currentQuestion++;
   const currentQuestion = quiz.questions[quiz.currentQuestion];
   if(quiz.currentQuestion < quiz.questions.length){
     var questionCounter = quiz.currentQuestion + 1;
+    currentQuestion.timeStarted = new Date().toISOString();
     quiz.status = 'question';
     quiz.template = "Question " +questionCounter+ " out of " +quiz.questionCount+ ". " +currentQuestion.question;
     quiz.speech = 
       "Question "
       + questionCounter
-      // + " out of " +quiz.questionCount
+    // + " out of " +quiz.questionCount
       + "... "
       + currentQuestion.question
     currentQuestion.answers.map(o=>{
@@ -27,8 +30,10 @@ module.exports.function = function nextQuestion (quiz) {
   }
   else {
     quiz.status = 'completed';
-    quiz.template = "Congratulations! You got " +quiz.score+ " out of " +quiz.questionCount+ " right.";
-    quiz.speech = "Congratulations! You got " +quiz.score+ " out of " +quiz.questionCount+ " right.";
+    quiz.totalScore = calculateTotalScore(quiz);
+    quiz.timeBonus = calculateTotalTimeBonus(quiz);
+    quiz.template = "Congratulations! You got " +quiz.score+ " out of " +quiz.questionCount+ " questions right. Your score is " +quiz.totalScore + " out of " + parseInt(quiz.questions.length) * 20 +"!";
+    quiz.speech = "Congratulations! You got " +quiz.score+ " out of " +quiz.questionCount+ " questions right. Your score is " +quiz.totalScore + "!";
     if(quiz.score == quiz.questionCount){
       quiz.template += " You're so smart. Have a cookie!"
       quiz.speech += " You're so smart. Have a cookie!"

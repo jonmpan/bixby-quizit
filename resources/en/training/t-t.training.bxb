@@ -1,6 +1,0 @@
-train (t-tz8h1n8vt5r2m1y37lg58qy6n) {
-  utterance ("[g:StartQuiz] quiz me on (politics)[v:Category]")
-  plan (Y2BjEM7Kz8stSMzTKyzNrPIs0QsEUgwSaILBJYlFJWAZrMrF0ATdUyGKxdHEnRNLUtPziyoZJNEkXDLT0jKTS3NKKhlYGRgZmBiYGViALAYomxlIM4AxCDABWSwMDAA=)
-  enabled (false)
-  last-modified (1562616730986)
-}

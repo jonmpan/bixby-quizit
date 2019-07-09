@@ -1,6 +1,5 @@
-train (t-22cnr1wbwymx6ioh9z0k6pdbi) {
-  utterance ("[g:StartQuiz] new game (anime)[v:Category] (medium)[v:Difficulty]")
-  plan (Y2BjEM7Kz8stSMzTKyzNrPIs0QsEUgwSaILBJYlFJWAZrMrF0ATdUyGKxdHEnRNLUtPziyoZJNEkXDLT0jKTS3NKKhlYGRgZmBiYGViALAYomxlIM4AxCIB4YFkA)
-  enabled (false)
-  last-modified (1562616724443)
+train (t-2yxs2vryhh95pzj97pj61j49m) {
+  utterance ("[g:GetQuiz] start an (all difficulties)[v:Difficulty:'all difficulties'] quiz about (animals)[v:Category:animals]")
+  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
+  last-modified (1562634753693)
 }

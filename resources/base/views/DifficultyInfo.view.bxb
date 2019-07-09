@@ -1,0 +1,30 @@
+input-view {
+  match: DifficultyInfo (difficulties)
+
+  message ("Select a difficulty.")
+
+  render {
+    selection-of (difficulties) {
+      where-each (difficulty) {
+        cell-card {
+          slot1 {
+            image{
+              shape (Square)
+              url ("[#{value(difficulty.image)}]")
+            }
+          }
+          slot2 {
+            content {
+              primary {
+                template ("#{title(difficulty.text)}")
+              }
+              secondary {
+                template ("[#{value(difficulty.description)}]")
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

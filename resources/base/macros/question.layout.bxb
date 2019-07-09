@@ -33,6 +33,7 @@ layout-macro-def(question) {
                       category:$expr(quiz.category)
                       difficulty:$expr(quiz.difficulty)
                       currentUserAnswer:$expr(answer.letter)
+                      totalScore:$expr(quiz.totalScore)
                     }
                 }                
               }

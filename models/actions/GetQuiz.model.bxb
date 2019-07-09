@@ -16,7 +16,7 @@ action (GetQuiz) {
       min (Required) max (One)
       default-init {
         intent {
-          goal: GetDifficulties
+          goal: GetDifficulty
         }
       }
     }

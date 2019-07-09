@@ -24,6 +24,16 @@ structure (Quiz) {
     type (Score)
     min (Required) max (One)
   }
+  property (totalScore) {
+    type (viv.core.Integer)
+    min (Optional) max (One)
+    visibility (Private)
+  }
+  property (timeBonus) {
+    type (viv.core.Integer)
+    min (Optional) max (One)
+    visibility (Private)
+  }
   property (questionCount) {
     type (QuestionCount)
     min (Required) max (One)
@@ -39,15 +49,5 @@ structure (Quiz) {
   property (difficulty) {
     type (Difficulty)
     min (Required) max (One)
-  }
-  property (youSaid) {
-    type (viv.core.Text)
-    min (Optional) max (One)
-    visibility (Private)
-  }
-  property (youSaidSomething){
-    type (viv.core.Boolean)
-    min (Optional) max (One)
-    visibility (Private)
   }
 }

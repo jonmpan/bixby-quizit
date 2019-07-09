@@ -1,0 +1,5 @@
+train (t-m96d55upcrxqfkajbvexysp2b) {
+  utterance ("[g:GetQuiz] begin a game on (video games)[v:Category:'video games'] that's (hard)[v:Difficulty:hard]")
+  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
+  last-modified (1562629061099)
+}

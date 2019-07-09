@@ -1,0 +1,4 @@
+dialog (Progress) {
+  match: CategoryInfo
+  template("Cultivating your quiz for you...")
+}

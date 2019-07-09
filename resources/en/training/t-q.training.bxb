@@ -1,5 +1,0 @@
-train (t-qkijyr6vedjemc3ft35upf1ob) {
-  utterance ([g:NextQuestion:continue:GetQuiz] skip the tutorial)
-  plan (Y2BmEM7Kz8stSMzTKyzNrPIs0QsEUgzSaIJ+qRUlgaWpxSWZ+XnYdTAxMAIxA5BkZGCA0QA=)
-  last-modified (1562100639807)
-}

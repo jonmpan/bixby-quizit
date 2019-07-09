@@ -6,7 +6,7 @@ action (GetCategory) {
       min (Optional) max (One)
     }
   }
-  output (Category)
+  output (CategoryInfo)
 }
 
 // action (FindQuiz) {

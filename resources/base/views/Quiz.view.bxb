@@ -5,7 +5,7 @@ result-view {
   refresh {
     if (this.status == 'tutorial') {
       spec {
-        delay-seconds (3)
+        delay-seconds (10)
         with-request {
           intent {
             goal { ContinueQuiz }
@@ -17,7 +17,7 @@ result-view {
     if (this.status == 'answer') {
       if (this.currentQuestion+1 == size(this.questions)){
         spec {
-          delay-seconds (3)
+          delay-seconds (6)
           with-request {
             intent {
               goal {NextQuestion}
@@ -32,13 +32,14 @@ result-view {
                   speech:$expr(this.speech)
                   score:$expr(this.score)
                   status:(completed)
+                  totalScore:$expr(this.totalScore)
                 }
             }
           }
         }
       } else {
         spec {
-          delay-seconds (3)
+          delay-seconds (6)
           with-request {
             intent {
               goal {ContinueQuiz}
@@ -53,12 +54,12 @@ result-view {
                   speech:$expr(this.speech)
                   score:$expr(this.score)
                   status:(transition)
+                  totalScore:$expr(this.totalScore)
                 }
             }
           }
         }
       }
-
     }
     // if (this.status == 'question') {
     //   spec {
@@ -119,36 +120,36 @@ result-view {
     }
   }
   conversation-drivers{
-    if(this.status == 'tutorial'){
-      conversation-driver{
-        template (Skip Tutorial) 
-      }
-      conversation-driver{
-        template (Help)
-      }
-    }
-    if(this.status == 'question'){
-      conversation-driver{
-        template (A)   
-      }
-      conversation-driver{
-        template (B)   
-      }
-      conversation-driver{
-        template (C)   
-      }
-      conversation-driver{
-        template (D)
-      }
-    }
-    if(this.status == 'answer'){
-      conversation-driver{
-        template (Next Question)
-      }
-    }
+    // if(this.status == 'tutorial'){
+    //   conversation-driver{
+    //     template (Skip Tutorial) 
+    //   }
+    //   conversation-driver{
+    //     template (Help)
+    //   }
+    // }
+    // if(this.status == 'question'){
+    //   conversation-driver{
+    //     template (A)   
+    //   }
+    //   conversation-driver{
+    //     template (B)   
+    //   }
+    //   conversation-driver{
+    //     template (C)   
+    //   }
+    //   conversation-driver{
+    //     template (D)
+    //   }
+    // }
+    // if(this.status == 'answer'){
+    //   conversation-driver{
+    //     template (Next Question)
+    //   }
+    // }
     if(this.status == 'completed'){
       conversation-driver{
-        template (Play Again)
+        template (New Game)
       }
     }
   }

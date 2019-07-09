@@ -17,8 +17,14 @@ structure (FullQuestion) {
     min (Required) max (One)
   }
   property (userAnswer){
-    type (UserAnswer)
+    type (viv.core.Text)
     min(Optional) max (One)
+    visibility (Private)
+  }
+  property (userAnswerString){
+    type (viv.core.Text)
+    min(Optional) max (One)
+    visibility (Private)
   }
   property (correct){
     type (Correct)
@@ -34,7 +40,7 @@ structure (FullQuestion) {
     min (Optional) max (One)
     visibility (Private)
   }
-  property (timeAnswered){
+  property (timeSpent){
     type (viv.core.Text)
     min (Optional) max (One)
     visibility (Private)

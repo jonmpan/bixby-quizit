@@ -1,0 +1,10 @@
+train (t-vetr5b8ln94yqyv5hdro2ci3f) {
+  utterance ("[g:CategoryInfo:prompt] (foo bar herp derp)[v:CategoryInput]")
+  plan (Y2BmkM7Kz8stSMzTKyzNrPIs0XNOLElNzy+q9MxLy2eQQpN0Ty2ByTPI4NRYUFrCwMTACMQMQJKRAQSYIBgA)
+  last-modified (1562629866932)
+}
+train (t-vsbkzm65dieoj6k787rf9ca2v) {
+  utterance ("[g:GetQuiz] begin a game about (animals)[v:Category:animals] on (any difficulty)[v:Difficulty:'all difficulties']")
+  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
+  last-modified (1562628991865)
+}

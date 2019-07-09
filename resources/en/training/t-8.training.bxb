@@ -1,11 +1,5 @@
-train (t-87saokahe3wtba3lwn2pr1n99) {
-  utterance ("[g:GetDifficulties:prompt] (easy)[v:DifficultyInput]")
-  plan (Y2BmkMzKz8stSMzTKyzNrPIs0XPJTEvLTC7NKalkkEOTck8tgctmphZjyCO0euYVlJYwMDEwAjEDkGRkAAEoHwA=)
-  last-modified (1562615206546)
-}
-train (t-8rjh1mif119nssv9j1yd2nauk) {
-  utterance ("[g:StartQuiz] give me a (hard)[v:Difficulty] quiz")
-  plan (Y2BjEM7Kz8stSMzTKyzNrPIs0QsEUgwSaILBJYlFJWAZrMrF0ATdUyGKxdHEnRNLUtPziyoZJNEkXDLT0jKTS3NKKhlYGRgZmBiYGViALAYomxlIM4AxCDABWUA5AA==)
-  enabled (false)
-  last-modified (1562616716923)
+train (t-8pq4o9bqj2pkiqjjbyd929cjc) {
+  utterance ("[g:GetQuiz] start an (easy)[v:Difficulty:easy] trivia game about (video games)[v:Category:'video games']")
+  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
+  last-modified (1562628660113)
 }

@@ -1,5 +1,10 @@
-train (t-7qowc0nnf6d72vd7hevlurltu) {
-  utterance ("[g:UserAnswerString:prompt] (foo bar herp derp)[v:UserAnswerString]")
-  plan (Y2BikM/Kz8stSMzTKyzNrPIs0QstTi1yzCsuTy0KLinKzEsnrIARCBkYeICYCYiBbAA=)
-  last-modified (1562353238096)
+train (t-75m4y7u5i7n1e7rwt3xhuyrcb) {
+  utterance ([g:GetQuiz] start a new quiz)
+  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRACwCwA)
+  last-modified (1562617688870)
+}
+train (t-7gx8bm7fg8zqqhc3zzyb6o4x1) {
+  utterance ([g:ShowHelp] help)
+  plan (Y2BkEM/Kz8stSMzTKyzNrPIs0QvOyC/3SM0pYAABRhABAA==)
+  last-modified (1562629172662)
 }

@@ -1,16 +1,14 @@
-const { levenshteinQuestion, onlyNumbers, letterAliases } = require('./utils/index.js');
-var console = require('console');
-
+const { levenshteinQuestion, onlyNumbers, letterAliases, differenceInSeconds, calculateTimeBonus } = require('./utils/index.js');
 
 module.exports.function = function checkAnswer (quiz, userAnswerString) {
   let correctAnswer = '';
   let correctString = '';
   let bixbyResponse = '';
   let correct = false;
-  const currentQuestion = quiz.questions[quiz.currentQuestion]
-  console.log(currentQuestion);
-  console.log(userAnswerString);
-
+  const currentQuestion = quiz.questions[quiz.currentQuestion];
+  currentQuestion.userAnswerString = userAnswerString;
+  currentQuestion.userAnswerString = userAnswerString;
+  const now = new Date().toISOString()
   currentQuestion.answers.map(o=>{
     if(o.correct){
       correctString = o.text;
@@ -24,9 +22,9 @@ module.exports.function = function checkAnswer (quiz, userAnswerString) {
     if(userAnswerString == correctAnswer.letter.toString()){
       correct = true;
     }
+    currentQuestion.userAnswer = letterAliases[tempUserAnswer];
   } else {
     const uhh = levenshteinQuestion(userAnswerString.toString(), currentQuestion);
-    console.log(uhh);
     correct = uhh.correct;
     currentQuestion.userAnswer = uhh.answer;
   }
@@ -37,15 +35,13 @@ module.exports.function = function checkAnswer (quiz, userAnswerString) {
     currentQuestion.correct = true;
     quiz.template = 'Correct. The answer is ' + correctString;
     quiz.speech = 'Correct. The answer is ' + correctString;
-    delete quiz.youSaid;
-    quiz.youSaidSomething = false;
+    currentQuestion.timeBonus = calculateTimeBonus(now, currentQuestion.timeStarted);
   } else {
     quiz.template = 'Wrong. The answer is ' + correctString;
     quiz.speech = 'Wrong. The answer is ' + correctString;
-    delete quiz.youSaid;
-    quiz.youSaidSomething = false;
+    currentQuestion.timeBonus = 0;
   }
-  quiz.questions[quiz.currentQuestion].userAnswer = userAnswerString;
+  currentQuestion.timeSpent = differenceInSeconds(now, currentQuestion.timeStarted);
   quiz.status = 'answer';
   return quiz;
 }

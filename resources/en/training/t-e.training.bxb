@@ -1,0 +1,5 @@
+train (t-emolt7zck2u11a7zpgx67ykgp) {
+  utterance ("[g:GetQuiz] start a new game about (video games)[v:Category:'video games'] on (easy)[v:Difficulty:easy]")
+  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
+  last-modified (1562628948279)
+}

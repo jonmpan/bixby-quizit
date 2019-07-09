@@ -1,10 +1,5 @@
-train (t-02pg6i86us527s60qvzp9bjlw) {
-  utterance ("[g:GetDifficulties:prompt] (all difficulties)[v:DifficultyInput]")
-  plan (Y2BmkMzKz8stSMzTKyzNrPIs0XPJTEvLTC7NKalkkEOTck8tgctmphZjyCO0euYVlJYwMDEwAjEDkGRkAAEoHwA=)
-  last-modified (1562615259955)
-}
-train (t-0mkad3s3wow0s6dk65yvwqz2c) {
-  utterance ("[g:GetCategory:prompt] (herp derp foo bar)[v:CategoryInput]")
-  plan (Y2BmEM/Kz8stSMzTKyzNrPIs0XNOLElNzy+qZJBCk3BPLYHLyeDQ5JlXUFrCwMTACMQMQJKRAQSgfAA=)
-  last-modified (1562615615818)
+train (t-04e5grg9t1zcm9phuqfoa7hrw) {
+  utterance ("[g:GetQuiz] give me some (hard)[v:Difficulty:hard] questions about (music)[v:Category:music]")
+  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
+  last-modified (1562628758764)
 }
