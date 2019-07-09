@@ -1,10 +1,5 @@
-train (t-3at3tx8imzy96z05jo5p8u1m4) {
-  utterance ("[g:CheckAnswer:continue:RefreshQuestion] (herp)[v:UserAnswerString]")
-  plan (Y2BlEM7Kz8stSMzTKyzNrPIs0QsEUgxSaILOGanJ2Y55xeWpRQyKuOXqEiFKsJopjyYYWpxaBNEWXFKUmZfOwMLAyMDEwAykGYAsEJuRAQZAbKA4AA==)
-  last-modified (1562102629749)
-}
-train (t-3qgf7d6m0shv5jbew9px49rbx) {
-  utterance ("[g:CheckAnswer:continue:NextQuestion] (herp)[v:UserAnswerString]")
-  plan (Y2BlEM7Kz8stSMzTKyzNrPIs0QsEUgxSaILOGanJ2Y55xeWpRQyKuOXqEiFKsJopjyYYWpxaBNEWXFKUmZfOwMLAyMDEwAykGYAsEJuRAQZAbKA4AA==)
-  last-modified (1562102606778)
+train (t-3nl72n1x85ac7k9jobz3llc3b) {
+  utterance ("[g:GetQuiz] new game (anime)[v:Category:anime] (easy)[v:Difficulty:easy]")
+  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
+  last-modified (1562627532642)
 }

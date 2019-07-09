@@ -5,6 +5,24 @@ action (NextQuestion) {
     input (quiz) {
       type (Quiz)
       min (Required) max (One)
+      // validate {
+      //   if (quiz.status == 'completed') {
+      //     replan {
+      //       intent {
+      //         goal: FinishQuiz
+      //         value { $expr(quiz) }
+      //       }
+      //     }
+      //   }
+      //   else-if (quiz.status == 'transition') {
+      //     replan {
+      //       intent {
+      //         goal: CheckAnswer
+      //         value { $expr(quiz) }
+      //       }
+      //     }
+      //   }
+      // }
     }
   }
   output (Quiz)

@@ -1,10 +1,10 @@
-train (t-77d4v199ba4oay0t38w6xasqv) {
-  utterance ("[g:CheckAnswer:continue:RefreshQuestion] (A)[v:UserAnswer:A]")
-  plan (Y2BlEM7Kz8stSMzTKyzNrPIs0QsEUgxSaILOGanJ2Y55xeWpRQyKuOXqEiFKsJopiSYYWpxaBDWShYGRgYmBGUgzAFkgNiMDDIDYQHEA)
-  last-modified (1562102657007)
+train (t-75m4y7u5i7n1e7rwt3xhuyrcb) {
+  utterance ([g:GetQuiz] start a new quiz)
+  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRACwCwA)
+  last-modified (1562617688870)
 }
-train (t-7bzvxia8nyemcp6wpkkmfcvh5) {
-  utterance ("[g:CheckAnswer:continue:NextQuestion] (A)[v:UserAnswer:A]")
-  plan (Y2BlEM7Kz8stSMzTKyzNrPIs0QsEUgxSaILOGanJ2Y55xeWpRQyKuOXqEiFKsJopiSYYWpxaBDWShYGRgYmBGUgzAFkgNiMDDIDYQHEA)
-  last-modified (1562018444189)
+train (t-7gx8bm7fg8zqqhc3zzyb6o4x1) {
+  utterance ([g:ShowHelp] help)
+  plan (Y2BkEM/Kz8stSMzTKyzNrPIs0QvOyC/3SM0pYAABRhABAA==)
+  last-modified (1562629172662)
 }

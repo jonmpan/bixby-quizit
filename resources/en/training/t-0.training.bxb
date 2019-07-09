@@ -1,5 +1,5 @@
-train (t-02pg6i86us527s60qvzp9bjlw) {
-  utterance ("[g:Difficulty:prompt] (all difficulties)[v:Difficulty:'all difficulties']")
-  plan (Y2BikMzKz8stSMzTKyzNrPIs0XPJTEvLTC7NKanEJ8UIhAwMPEDMBMRANgA=)
-  last-modified (1562027222341)
+train (t-04e5grg9t1zcm9phuqfoa7hrw) {
+  utterance ("[g:GetQuiz] give me some (hard)[v:Difficulty:hard] questions about (music)[v:Category:music]")
+  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
+  last-modified (1562628758764)
 }

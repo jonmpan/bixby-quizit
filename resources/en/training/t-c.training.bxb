@@ -1,5 +1,5 @@
-train (t-cqxgzg6oacydsuxe7s5pt5b3r) {
-  utterance ("[g:GetQuiz] new game (video games)[v:Category:'video games'] (easy)[v:Difficulty:easy]")
+train (t-c15ki0cu3unaeetbflfl93xo4) {
+  utterance ("[g:GetQuiz] quiz (video games)[v:Category:'video games'] (medium)[v:Difficulty:medium]")
   plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
-  last-modified (1561491137314)
+  last-modified (1562629228247)
 }

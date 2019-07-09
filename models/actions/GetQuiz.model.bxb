@@ -7,7 +7,7 @@ action (GetQuiz) {
       min (Required) max (One)
       default-init {
         intent {
-          goal: GetCategories
+          goal: GetCategory
         }
       }
     }
@@ -16,15 +16,10 @@ action (GetQuiz) {
       min (Required) max (One)
       default-init {
         intent {
-          goal: GetDifficulties
+          goal: GetDifficulty
         }
       }
     }
-    input (skip) {
-      type (Skip)
-      min (Optional) max (One)
-    }
   }
-
   output (Quiz)
 }

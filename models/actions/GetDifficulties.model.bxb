@@ -1,4 +1,0 @@
-action (GetDifficulties) {
-  type (Search)
-  output (Difficulty)
-}

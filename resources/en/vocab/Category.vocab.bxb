@@ -22,7 +22,7 @@ vocab(Category){
   "celebrities" {"celebrities" "gossip" "hollywood"}
   "animals" {"animals"}
   "vehicles" {"vehicles" "cars"}
-  "comics" {"comics"}
+  "comics" {"comics" "comic books"}
   "gadgets" {"gadgets"}
   "anime" {"anime"}
   "manga" {"manga"}

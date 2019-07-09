@@ -29,173 +29,211 @@ const categories = {
   "animation":33,
 }
 
-const categoriesArray = ["all categories", "general knowledge", "music", "video games", "anime", "computers", "geography", "animals", "books", "sports", "science", "history", "film", "musicals", "theatre", "television", "board games", "nature", "mathematics", "mythology", "politics", "art", "celebrities", "vehicles", "comics", "gadgets", "cartoon"]
+const letterAliases = {
+  a:"A",
+  hey:"A",
+  b:"B",
+  bee:"B",
+  c:"C",
+  see:"C",
+  sea:"C",
+  d:"D",
+  tee:"D"
+}
 
+const categoriesArray = ["general knowledge", "music", "video games", "anime", "computers", "geography", "animals", "books", "sports", "science", "history", "film", "musicals", "theatre", "television", "board games", "nature", "mathematics", "mythology", "politics", "art", "celebrities", "vehicles", "comics", "gadgets", "cartoon", "all categories"]
 
 const categoriesInfo = [
   {
-    category: "any",
-    text: "Any Category",
-    description: "Questions from all the categories!",
-    // image: "/images/quizit-icon.png",
-  },
-  {
-    category: "general",
-    text: "General",
+    category: "general knowledge",
+    text: "General Knowledge",
     description: "Test your general knowledge!",
-    // image: "/images/quizit-icon.png",
+    image: "/icons/generalknowledge.png",
   },
   {
     category: "music",
     text: "Music",
     description: "How well do you know obscure bands?",
-    // image: "/images/quizit-icon.png",
+    image: "/icons/music.png",
   },
   {
-    category: "videoGames",
+    category: "video games",
     text: "Video Games",
     description: "1337",
-    // image: "/images/quizit-icon.png",
+    image: "/icons/videogames.png",
   },
   {
     category: "anime",
     text: "Anime",
     description: "I'm sorry this exists... in the best possible way.",
-    // image: "/images/quizit-icon.png",
+    image: "/icons/anime.png",
   },
   {
     category: "computers",
     text: "Computers",
     description: "0b10100111001",
-    // image: "/images/quizit-icon.png",
+    image: "/icons/computers.png",
   },
   {
     category: "geography",
     text: "Geography",
     description: "Do you know where Timbucktoo is?",
-    // image: "/images/quizit-icon.png",
+    image: "/icons/geography.png",
   },
   {
     category: "animals",
     text: "Animals",
     description: "Why are cats so cute?",
-    // image: "/images/quizit-icon.png",
+    image: "/icons/animals.png",
   },
   {
     category: "books",
     text: "Books",
     description: "I can't put this book on antigravity down!",
-    // image: "/images/quizit-icon.png",
+    image: "/icons/books.png",
   },
   {
     category: "sports",
     text: "Sports",
     description: "Go 49ers!",
-    // image: "/images/quizit-icon.png",
+    image: "/icons/sports.png",
   },
   {
     category: "science",
     text: "Science",
     description: "Is this category a hypothesis or a theory?",
-    // image: "/images/quizit-icon.png",
+    image: "/icons/science.png",
   },
   {
     category: "history",
     text: "History",
     description: "A category as old as human history.",
-    // image: "/images/quizit-icon.png",
+    image: "/icons/history.png",
   },
   {
     category: "film",
     text: "Film",
     description: "Are you a cinephile?",
-    // image: "/images/quizit-icon.png",
+    image: "/icons/film.png",
   },
   {
     category: "musicals",
     text: "Musicals",
     description: "Take me for who I am, who I was meant to be!",
-    // image: "/images/quizit-icon.png",
+    image: "/icons/musicals.png",
   },
   {
     category: "theatre",
     text: "Theatre",
     description: "We're actors. We're the opposite of people!",
-    // image: "/images/quizit-icon.png",
+    image: "/icons/theatre.png",
   },
   {
     category: "television",
     text: "Television",
     description: "Making potatoes out of humans since 1927.",
-    // image: "/images/quizit-icon.png",
+    image: "/icons/television.png",
   },
   {
-    category: "boardGames",
+    category: "board games",
     text: "Board Games",
     description: "Come here to roll your 13 sided dice.",
-    // image: "/images/quizit-icon.png",
+    image: "/icons/boardgames.png",
   },
   {
     category: "nature",
     text: "Nature",
     description: "Adopt the pace of nature: her secret is patience.",
-    // image: "/images/quizit-icon.png",
+    image: "/icons/nature.png",
   },
   {
     category: "mathematics",
     text: "Mathematics",
     description: "This one is as easy as 3.14.",
-    // image: "/images/quizit-icon.png",
+    image: "/icons/math.png",
   },
   {
     category: "mythology",
     text: "Mythology",
     description: "Mythology is a subjective truth.",
-    // image: "/images/quizit-icon.png",
+    image: "/icons/mythology.png",
   },
   {
     category: "politics",
     text: "Politics",
     description: "Do you know your Presidents?",
-    // image: "/images/quizit-icon.png",
+    image: "/icons/politics.png",
   },
   {
     category: "art",
     text: "Art",
     description: "Every artist was first an amateur.",
-    // image: "/images/quizit-icon.png",
+    image: "/icons/art.png",
   },
   {
     category: "celebrities",
     text: "Celebrities",
     description: "Are you famous? You might be in this quiz.",
-    // image: "/images/quizit-icon.png",
+    image: "/icons/celebrities.png",
   },
   {
     category: "vehicles",
     text: "Vehicles",
     description: "What has 4 wheels and transports humans? A stroller.",
-    // image: "/images/quizit-icon.png",
+    image: "/icons/vehicles.png",
   },
   {
     category: "comics",
     text: "Comics",
     description: "You can't hurry love or pizza. Especially pizza.",
-    // image: "/images/quizit-icon.png",
+    image: "/icons/comics.png",
   },
   {
     category: "gadgets",
     text: "Gadgets",
     description: "Someone call the inspector!",
-    // image: "/images/quizit-icon.png",
+    image: "/icons/gadgets.png",
   },
   {
     category: "cartoon",
     text: "Cartoons",
     description: "Non-Anime cartoons are here.",
-    // image: "/images/quizit-icon.png",
+    image: "/icons/cartoon.png",
+  },
+  {
+    category: "all categories",
+    text: "Any Category",
+    description: "Questions from all the categories!",
+    image: "/icons/allcategories.png",
   },
 ];
+
+const difficultiesInfo = [
+  {
+    difficulty: "easy",
+    text: "Easy",
+    description: "A nice and relaxing set of questions",
+    image: "/icons/easy.png",
+  },
+  {
+    difficulty: "medium",
+    text: "Medium",
+    description: "Honestly, most of these are pretty hard",
+    image: "/icons/medium.png",
+  },
+  {
+    difficulty: "hard",
+    text: "Hard",
+    description: "Not for the faint of heart... Good luck!",
+    image: "/icons/hard.png",
+  },
+  // {
+  //   difficulty: "all difficulties",
+  //   text: "All Difficulties!",
+  //   description: "Easy, medium, and hard questions",
+  //   image: "/icons/alldifficulties.png",
+  // }
+]
 
 function shuffle(a) {
   var j, x, i;
@@ -314,11 +352,12 @@ const foreignCharacters = {
   'beta':'β',
   'infin':'∞',
   '&hellip':'…',
-  '&shy;':'-'
+  '&shy;':'-',
+  '&micro;':'µ'
 }
 
 function removeHtmlStuff(encodedString) {
-  var translate_re = /&(nbsp|amp|quot|lt|gt|apos|Aacute|aacute|Agrave|Acirc|agrave|Acirc|acirc|Auml|auml|Atilde|atilde|Aring|aring|Aelig|aelig|Ccedil|ccedil|Eth|eth|Eacute|eacute|Egrave|egrave|Ecirc|ecirc|Euml|euml|Iacute|iacute|Igrave|igrave|Icirc|icirc|Iuml|iuml|Ntilde|ntilde|Oacute|oacute|Ograve|ograve|Ocirc|ocirc|Ouml|ouml|Otilde|otilde|Oslash|oslash|szlig|Thorn|thorn|Uacute|uacute|Ugrave|ugrave|Ucirc|ucirc|Uuml|uuml|Yacute|yacute|yuml|copy|reg|trade|lt|gt|euro|cent|pound|quot|lsquo|rsquo|ldquo|rdquo|laquo|raquo|mdash|ndash|deg|plusmn|frac14|frac12|frac34|times|divide|alpha|beta|infin|hellip|shy);/g;
+  var translate_re = /&(nbsp|amp|quot|lt|gt|apos|Aacute|aacute|Agrave|Acirc|agrave|Acirc|acirc|Auml|auml|Atilde|atilde|Aring|aring|Aelig|aelig|Ccedil|ccedil|Eth|eth|Eacute|eacute|Egrave|egrave|Ecirc|ecirc|Euml|euml|Iacute|iacute|Igrave|igrave|Icirc|icirc|Iuml|iuml|Ntilde|ntilde|Oacute|oacute|Ograve|ograve|Ocirc|ocirc|Ouml|ouml|Otilde|otilde|Oslash|oslash|szlig|Thorn|thorn|Uacute|uacute|Ugrave|ugrave|Ucirc|ucirc|Uuml|uuml|Yacute|yacute|yuml|copy|reg|trade|lt|gt|euro|cent|pound|quot|lsquo|rsquo|ldquo|rdquo|laquo|raquo|mdash|ndash|deg|plusmn|frac14|frac12|frac34|times|divide|alpha|beta|infin|hellip|shy|micro);/g;
   var translate = foreignCharacters;
   return encodedString.replace(translate_re, function(match, entity) {
     return translate[entity];
@@ -342,13 +381,15 @@ const formatQuestions = results => {
     const question = {
       question: removeHtmlStuff(questionFormatted),
       answers: [],
-      category: result.category,
+      category: result.category.replace("Entertainment: ", "").replace("Science: ", ""),
       difficulty: result.difficulty,
       correct: false,
     };
     result.incorrect_answers = result.incorrect_answers.filter(Boolean);
     result.correct_answer = removeA(result.correct_answer);
-      result.incorrect_answers = result.incorrect_answers.map(o => {
+
+    // result.correct_answer = removeA(result.correct_answer);
+    result.incorrect_answers = result.incorrect_answers.map(o => {
       return removeA(o);
     });
     for (var i = 0; i < result.incorrect_answers.length; i++) {
@@ -365,6 +406,12 @@ const formatQuestions = results => {
 
     for (var i = 0; i < question.answers.length; i++) {
       question.answers[i].letter = alphabet.charAt(i);
+      if(question.answers[i].correct){
+        question.acceptedAnswers = [
+          question.answers[i].letter,
+          question.answers[i].text,
+          question.answers[i].letter + " " + question.answers[i].text]
+      }
     }
     return question;
   });
@@ -445,7 +492,6 @@ const indexOfSmallest = a => {
 
 const levenshteinQuestion = (answer, question) => {
   const levNums = [];
-
   const answers = question.answers;
   const correctAnswer = answers.find(o=>{
     return o.correct === true;
@@ -478,11 +524,11 @@ const levenshteinQuestion = (answer, question) => {
       if (answer == o.text) {
         levNums.push(0);
       } else {
-        levNums.push(levDist(answer, o.text.toLowerCase()));
+        levNums.push(levDist(answer.toLowerCase(), o.text.toLowerCase()));
       }
     });
     const i = indexOfSmallest(levNums);
-    if(levNums[i] < correctAnswer.text.length / 2 && levNums[i] < 5 || correctAnswer.text.length === 1){
+    if(levNums[i] < correctAnswer.text.length / 2 && levNums[i] < 8 || correctAnswer.text.length === 1){
       const userAnswer = answers[i].text;
       if (answers[i].correct) {
         return {
@@ -510,11 +556,59 @@ const levenshteinQuestion = (answer, question) => {
   }
 };
 
+const differenceInSeconds = (t1, t2) => {
+  var t1 = new Date(t1);
+  var t2 = new Date(t2);
+  return (t1.getTime() - t2.getTime()) / 1000;
+};
+
+const calculateTimeBonus = (t1, t2) => {
+  var dif = Math.floor(differenceInSeconds(t1, t2));
+  var cutoff = 15;
+
+  if (dif < cutoff) {
+    return 10;
+  } else {
+    if (cutoff + 10 - dif > 0) {
+      return cutoff + 10 - dif;
+    } else {
+      return 0;
+    }
+  }
+};
+
+const calculateTotalTimeBonus = quiz => {
+  const questions = quiz.questions;
+  var timeBonus = 0;
+  questions.map(q=>{
+    timeBonus += parseInt(q.timeBonus);
+  });
+  return timeBonus;
+}
+
+const calculateTotalScore = quiz => {
+  const questions = quiz.questions;
+  var totalScore = 0;
+  questions.map(q=>{
+    if(q.correct){
+      totalScore += 10;
+      totalScore += parseInt(q.timeBonus);
+    }
+  })
+  return totalScore;
+}
+
 module.exports = {
   categories:categories,
   categoriesArray:categoriesArray,
   categoriesInfo:categoriesInfo,
+  difficultiesInfo:difficultiesInfo,
   formatQuestions:formatQuestions,
   levenshteinQuestion:levenshteinQuestion,
-  onlyNumbers:onlyNumbers
+  onlyNumbers:onlyNumbers,
+  letterAliases:letterAliases,
+  differenceInSeconds:differenceInSeconds,
+  calculateTimeBonus:calculateTimeBonus,
+  calculateTotalTimeBonus:calculateTotalTimeBonus,
+  calculateTotalScore:calculateTotalScore
 }

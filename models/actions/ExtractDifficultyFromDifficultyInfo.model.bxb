@@ -1,0 +1,11 @@
+action (ExtractDifficultyFromDifficultyInfo) {
+  type (Search)
+  description (__DESCRIPTION__)
+  collect {
+    input (difficultyInfo) {
+      type (DifficultyInfo)
+      min (Optional) max (One)
+    }
+  }
+  output (DifficultyInfo)
+}

@@ -33,6 +33,7 @@ layout-macro-def(question) {
                       category:$expr(quiz.category)
                       difficulty:$expr(quiz.difficulty)
                       currentUserAnswer:$expr(answer.letter)
+                      totalScore:$expr(quiz.totalScore)
                     }
                 }                
               }
@@ -88,12 +89,6 @@ layout-macro-def(question) {
           }
         }
         divider
-        if(quiz.questions[quiz.currentQuestion].refresher != null){
-          paragraph {
-            value("[This is here to remove the \"what would you like to do next?\" screen. Each emoji is worth 10 seconds! \n\n#{value(quiz.questions[quiz.currentQuestion].refresher)}]")
-            style(Detail_M_Soft)
-          }
-        }
       }
     }
   }

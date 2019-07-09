@@ -87,28 +87,59 @@ layout-macro-def(answer) {
           }
         }
         divider
-        if(quiz.youSaidSomething){
-          single-line{
-            text{
-              value("[You Said: #{value(quiz.youSaid)}]")
-              style(Detail_L)
-            }
-          }
-          divider
-          single-line{
-            text{
-              value("[Closest match was: #{value(quiz.questions[quiz.currentQuestion].userAnswer)}]")
-              style(Detail_L)
-            }
-          }
-        } else {
-          if(quiz.questions[quiz.currentQuestion].userAnswer != null){
-            single-line{
-              text{
-                value("You Chose: #{value(quiz.questions[quiz.currentQuestion].userAnswer)}")
-                style(Detail_L)
+        hbox {
+          content {
+            vbox {
+              content {
+                single-line {
+                  text {
+                    value ("Your Input:")
+                    style(Title_XS)
+                  }
+                }
               }
             }
+            vbox {
+              content {
+                single-line {
+                  text {
+                    value ("Answer Chosen:")
+                    style(Title_XS)
+                  }
+                }
+              }
+            }
+          }
+        }
+        hbox {
+          content {
+            vbox {
+              content {
+                single-line {
+                  text {
+                    value ("#{title(quiz.questions[quiz.currentQuestion].userAnswerString)}")
+                    style(Detail_M_Soft)
+                  }
+                }
+              }
+            }
+            vbox {
+              content {
+                single-line {
+                  text {
+                    value ("#{title(quiz.questions[quiz.currentQuestion].userAnswer)}")
+                    style(Detail_M_Soft)
+                  }
+                }
+              }
+            }
+          }
+        }
+        divider
+        single-line{
+          text{
+            value("[Time Spent: #{value(quiz.questions[quiz.currentQuestion].timeSpent)} seconds]")
+            style(Detail_L)
           }
         }
       }

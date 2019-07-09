@@ -37,11 +37,7 @@ layout-macro-def (help) {
               style (Detail_L_Soft)
             }
             paragraph{
-              value ("You can wake Bixby up to submit your answer.")
-              style (Detail_L_Soft)
-            }
-            paragraph{
-              value ("Bixby recognizes A B C D as valid answers")
+              value ("Bixby recognizes A B C D as valid answers.")
               style (Detail_L_Soft)
             }
             paragraph{
@@ -49,7 +45,11 @@ layout-macro-def (help) {
               style (Detail_L_Soft)
             }
             paragraph{
-              value ("You can also tap on the answer to select it")
+              value ("QuizIt may not interpret \"B 1998\" as selecting B as your answer. Say either the letter \"B\" or \"1998\".")
+              style (Detail_L_Soft)
+            }
+            paragraph{
+              value ("You can also tap on the answer to select it.")
               style (Detail_L_Soft)
             }
           }
@@ -73,6 +73,37 @@ layout-macro-def (help) {
             }
             paragraph{
               value ("\"Trivia books easy\"")
+              style (Detail_L_Soft)
+            }
+            paragraph{
+              value ("\"Give me some hard questions about music\"")
+              style (Detail_L_Soft)
+            }
+          }
+        }
+        cell-card {
+          slot2 {
+            content {
+              primary ("Scoring System:")
+            }
+          }
+        }
+        partitioned {
+          content {
+            paragraph{
+              value ("Every question you get right is worth 10 points")
+              style (Detail_L_Soft)
+            }
+            paragraph{
+              value ("Every second under 30 seconds is worth 1 time bonus point.")
+              style (Detail_L_Soft)
+            }
+            paragraph{
+              value ("You can get a maximum of 10 time bonus points per question.")
+              style (Detail_L_Soft)
+            }
+            paragraph{
+              value ("You can get a maximum of 100 points.")
               style (Detail_L_Soft)
             }
           }

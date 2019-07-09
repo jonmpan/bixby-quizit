@@ -1,0 +1,26 @@
+input-view {
+  match: UserAnswerString(this) {
+    to-input: CheckAnswer(action)
+  }
+
+  message {
+    template ("#{title(action.quiz.template)}"){
+      speech ("#{title(action.quiz.speech)}")
+    }
+  }
+  render {
+    selection-of (action.quiz.questions[action.quiz.currentQuestion].answers) {
+      where-each (answer) {
+        cell-card {
+          slot2 {
+            content {
+              primary {
+                template ("#{value(answer.letter)}. #{value(answer.text)}")
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

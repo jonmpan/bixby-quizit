@@ -15,9 +15,39 @@ layout-macro-def(completed) {
           aspect-ratio(21:9)
           object-fit (Contain)
         }
+        split-input-cell {
+          left {
+            input-cell {
+              label {
+                template ("Total Score")
+              }
+              value {
+                template ("[#{value(quiz.totalScore)}]")
+              }
+            }
+          }
+          right {
+            input-cell {
+              label {
+                template ("Time Bonus")
+              }
+              value {
+                template ("[#{value(quiz.timeBonus)}]")
+              }
+            }
+          }
+        }
         for-each (quiz.questions){
           as (question){
             divider
+            single-line{
+              spacer
+              text{
+                value(" ")
+                style(Title_XS)
+              }
+              spacer
+            }
             paragraph {
               value {
                 template ("#{value(question.question)}")
@@ -56,6 +86,12 @@ layout-macro-def(completed) {
             if(question.userAnswer != null && !question.correct){
               paragraph{
                 value("[Incorrect. Your answer: #{value(question.userAnswer)}]")
+                style(Detail_L_Soft)
+              }
+            }
+            if(exists(question.timeSpent)){
+              paragraph{
+                value("Time Spent: #{value(question.timeSpent)} seconds")
                 style(Detail_L_Soft)
               }
             }

@@ -1,0 +1,6 @@
+text (DifficultyInput) {
+  description (__DESCRIPTION__)
+  features{
+    transient
+  }
+}

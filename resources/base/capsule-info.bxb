@@ -16,9 +16,9 @@ capsule-info {
     keyword (games)
     keyword (music trivia)
   }
-  dispatch-name (Quiz it trivia)
+  dispatch-name (Quiz it)
   dispatch-aliases {
-    alias (Quiz it)
+    alias (Quiz it trivia)
     alias (QuizIt)
   }
   action-bg-color (#BF2519)

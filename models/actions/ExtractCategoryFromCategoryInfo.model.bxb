@@ -1,0 +1,11 @@
+action (ExtractCategoryFromCategoryInfo) {
+  description (C)
+  type (Constructor)
+  collect {
+    input (categoryInfo) {
+      type (CategoryInfo)
+      min (Required) max (One)
+    }
+  }
+  output (Category)
+}
