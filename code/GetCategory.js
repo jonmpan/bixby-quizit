@@ -1,5 +1,5 @@
-const { categoriesArray, categoriesInfo } = require('./utils/index.js');
-var console = require('console');
+const { categoriesArray, categoriesInfo } = require("./utils/index.js");
+var console = require("console");
 
 const categories = {
   all: "all categories",
@@ -21,7 +21,7 @@ const categories = {
   tv: "television",
   videogames: "video games",
   games: "video games",
-  "virtualgames": "video games",
+  virtualgames: "video games",
   boardgames: "board games",
   boringgames: "board games",
   boredgames: "board games",
@@ -33,6 +33,7 @@ const categories = {
   pc: "computers",
   pcs: "computers",
   personcomputers: "computers",
+  math: "mathematics",
   mathematics: "mathematics",
   mythology: "mythology",
   sports: "sports",
@@ -55,28 +56,22 @@ const categories = {
   animation: "animation",
 };
 
-const checkCategory = (categoryInput) => {
-  if(categoryInput){
-    var categoryInputParsed = categoryInput.toLowerCase().replace(" ", "")
-    if(categories[categoryInputParsed]){
-      console.log('first console ' +categories[categoryInputParsed]);
+const checkCategory = categoryInput => {
+  if (categoryInput) {
+    var categoryInputParsed = categoryInput.toLowerCase().replace(" ", "");
+    if (categories[categoryInputParsed]) {
       var categoryInfo = {};
-      categoriesInfo.map(o=>{
-        console.log('inside map '+ o.category + ' ' + categories[categoryInputParsed])
-        if(o.category == categories[categoryInputParsed]){
-          console.log('INSIDE IF')
+      categoriesInfo.map(o => {
+        if (o.category == categories[categoryInputParsed]) {
           categoryInfo = o;
         }
-      })
-      console.log(categoryInfo)
+      });
       return categoryInfo;
     }
   }
   return categoriesInfo;
-}
+};
 
 module.exports.function = function getCategory(categoryInput) {
-  console.log('hi');
-  console.log(categoryInput);
   return checkCategory(categoryInput);
 };

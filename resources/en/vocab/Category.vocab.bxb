@@ -12,7 +12,7 @@ vocab(Category){
   "science" {"science" "technology"}
   "nature" {"nature"}
   "computers" {"computers"}
-  "mathematics" {"mathematics"}
+  "mathematics" {"mathematics" "math"}
   "mythology" {"mythology"}
   "sports" {"sports"}
   "geography" {"geography"}

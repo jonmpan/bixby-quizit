@@ -1,0 +1,5 @@
+action (BuildAudioInfo) {
+  type (Search)
+  description ()
+  output (audioPlayer.AudioInfo)
+}

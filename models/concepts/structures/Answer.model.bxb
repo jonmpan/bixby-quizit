@@ -1,15 +1,17 @@
 structure (Answer) {
   description (__DESCRIPTION__)
   property (correct) {
-    type (Correct)
+    type (viv.core.Boolean)
     min (Required) max (One)
   }
   property (letter) {
-    type (AnswerLetter)
+    type (viv.core.Text)
     min (Required) max (One)
+    visibility (Private)
   }
   property (text) {
-    type (AnswerText)
+    type (viv.core.Text)
     min (Required) max (One)
+    visibility (Private)
   }
 }

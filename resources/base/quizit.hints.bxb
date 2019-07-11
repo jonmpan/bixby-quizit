@@ -2,8 +2,8 @@ hints {
   uncategorized {
     utterance (start a new game)
     utterance (start an easy trivia game about video games)
+    utterance (give me an easy math quiz)
     utterance (give me some hard questions about music)
-    utterance (new game about animals with any difficulty)
-    utterance (help)
+    utterance (start a new game about animals with any difficulty)
   }
 }

@@ -23,4 +23,18 @@ input-view {
       }
     }
   }
+  conversation-drivers{
+    conversation-driver{
+      template (A)   
+    }
+    conversation-driver{
+      template (B)   
+    }
+    conversation-driver{
+      template (C)   
+    }
+    conversation-driver{
+      template (D)
+    }
+  }
 }

@@ -4,7 +4,7 @@ action (SkipTutorialAction) {
   collect{
     input (skip){
       type (Skip)
-      max (One) min (Optional)
+      max (One) min (Required)
     }
   }
   output (Skip)

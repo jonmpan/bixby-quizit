@@ -35,10 +35,6 @@ endpoints {
       accepted-inputs(quiz)
       local-endpoint (RefreshQuestion.js)
     }
-    action-endpoint (StartQuiz) {
-      accepted-inputs(quiz)
-      local-endpoint (StartQuiz.js)
-    }
     action-endpoint (ContinueQuiz) {
       accepted-inputs(quiz)
       local-endpoint (ContinueQuiz.js)
@@ -46,6 +42,9 @@ endpoints {
     action-endpoint (ExtractAnswerFromModel) {
       accepted-inputs (answer)
       local-endpoint (ExtractAnswerFromModel.js)
+    }
+    action-endpoint (BuildAudioInfo) {
+      local-endpoint (BuildAudioInfo.js)
     }
   }
 }

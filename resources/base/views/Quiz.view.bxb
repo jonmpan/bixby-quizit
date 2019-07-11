@@ -5,7 +5,7 @@ result-view {
   refresh {
     if (this.status == 'tutorial') {
       spec {
-        delay-seconds (10)
+        delay-seconds (8)
         with-request {
           intent {
             goal { ContinueQuiz }
@@ -24,7 +24,6 @@ result-view {
               value: Quiz{
                 category:$expr(this.category)
                 currentQuestion:$expr(this.currentQuestion)
-                  currentUserAnswer:$expr(this.currentUserAnswer)
                   difficulty:$expr(this.difficulty)
                   questionCount:$expr(this.questionCount)
                   questions:$expr(this.questions)
@@ -46,7 +45,6 @@ result-view {
               value: Quiz{
                 category:$expr(this.category)
                 currentQuestion:$expr(this.currentQuestion)
-                  currentUserAnswer:$expr(this.currentUserAnswer)
                   difficulty:$expr(this.difficulty)
                   questionCount:$expr(this.questionCount)
                   questions:$expr(this.questions)
@@ -120,14 +118,14 @@ result-view {
     }
   }
   conversation-drivers{
-    // if(this.status == 'tutorial'){
-    //   conversation-driver{
-    //     template (Skip Tutorial) 
-    //   }
-    //   conversation-driver{
-    //     template (Help)
-    //   }
-    // }
+    if(this.status == 'tutorial'){
+      conversation-driver{
+        template (Skip Tutorial) 
+      }
+      conversation-driver{
+        template (Help)
+      }
+    }
     // if(this.status == 'question'){
     //   conversation-driver{
     //     template (A)   

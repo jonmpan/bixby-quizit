@@ -40,14 +40,7 @@ layout-macro-def(completed) {
         for-each (quiz.questions){
           as (question){
             divider
-            single-line{
-              spacer
-              text{
-                value(" ")
-                style(Title_XS)
-              }
-              spacer
-            }
+            single-line{spacer}
             paragraph {
               value {
                 template ("#{value(question.question)}")
@@ -78,15 +71,31 @@ layout-macro-def(completed) {
               }
             }
             if(question.userAnswer != null && question.correct){
-              paragraph{
-                value("Correct! You chose #{value(question.userAnswer)}")
-                style(Detail_L_Soft)
+              single-line{
+                image{
+                  shape (Circle)
+                  style (Detail_L)
+                  url ("icons/correct.png")
+                }
+                spacer
+                text{
+                  value("Correct! You chose #{value(question.userAnswer)}")
+                  style(Detail_L)
+                }
               }
             }
             if(question.userAnswer != null && !question.correct){
-              paragraph{
-                value("[Incorrect. Your answer: #{value(question.userAnswer)}]")
-                style(Detail_L_Soft)
+              single-line{
+                image{
+                  shape (Circle)
+                  style (Detail_L)
+                  url ("icons/incorrect.png")
+                }
+                spacer
+                text{
+                  value("Incorrect! Your answer: #{value(question.userAnswer)}")
+                  style(Detail_L)
+                }
               }
             }
             if(exists(question.timeSpent)){
