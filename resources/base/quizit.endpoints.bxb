@@ -43,8 +43,8 @@ endpoints {
       accepted-inputs (answer)
       local-endpoint (ExtractAnswerFromModel.js)
     }
-    action-endpoint (BuildAudioInfo) {
-      local-endpoint (BuildAudioInfo.js)
-    }
+    // action-endpoint (BuildAudioInfo) {
+    //   local-endpoint (BuildAudioInfo.js)
+    // }
   }
 }
