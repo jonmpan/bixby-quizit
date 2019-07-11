@@ -2,6 +2,27 @@ action (GetQuiz) {
   type (Search)
   description (__DESCRIPTION__)
   collect {
+    // input (audioInfo) {
+    //   type (audioPlayer.AudioInfo)
+    //   min (Required) max (One)
+    //   default-init {
+    //     intent {
+    //       goal: BuildAudioInfo
+    //     }
+    //   }
+    //   hidden
+    // }
+    // computed-input (test) {
+    //   description (By passing in the AudioInfo object to the PlayAudio action, we ask the client to play our sound.)
+    //   type (audioPlayer.Result)
+    //   compute {
+    //     intent {
+    //       goal: audioPlayer.PlayAudio
+    //       value: $expr(audioInfo)
+    //     }
+    //   }
+    //   hidden
+    // }
     input (category) {
       type (Category)
       min (Required) max (One)

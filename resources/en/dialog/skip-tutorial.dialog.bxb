@@ -1,4 +1,8 @@
 dialog (Storage) {
-  match: Skip
-  template("Say \"yes\" to skip the tutorial from now on!")
+  match: Skip(this)
+  if(this){
+    template("Say \"yes\" to skip the tutorial from now on")
+  } else {
+    template("Say \"yes\" to disable skipping the tutorial")    
+  }
 }

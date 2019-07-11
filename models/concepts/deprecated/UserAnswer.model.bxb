@@ -1,0 +1,12 @@
+// enum (UserAnswer) {
+//   description (__DESCRIPTION__)
+//   symbol ("A")
+//   symbol ("B")
+//   symbol ("C")
+//   symbol ("D")
+//   symbol ("Skip")
+//   symbol ("No match")
+//   features{
+//     transient
+//   }
+// }

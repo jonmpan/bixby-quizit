@@ -5,24 +5,28 @@ structure (Quiz) {
     min (Required) max (Many)
   }
   property (currentQuestion) {
-    type (CurrentQuestion)
+    type (viv.core.Integer)
     min (Required) max (One)
+    visibility (Private)
   }
   property (status){
     type (Status)
     min (Required) max (One)
   }
   property (template) {
-    type (Template)
+    type (viv.core.Text)
     min (Required) max (One)
+    visibility (Private)
   }
   property (speech) {
-    type (Speech)
+    type (viv.core.Text)
     min (Required) max (One)
+    visibility (Private)
   }
   property (score) {
-    type (Score)
+    type (viv.core.Integer)
     min (Required) max (One)
+    visibility (Private)
   }
   property (totalScore) {
     type (viv.core.Integer)
@@ -35,11 +39,7 @@ structure (Quiz) {
     visibility (Private)
   }
   property (questionCount) {
-    type (QuestionCount)
-    min (Required) max (One)
-  }
-  property (currentUserAnswer) {
-    type (UserAnswer)
+    type (viv.core.Integer)
     min (Required) max (One)
   }
   property (category) {

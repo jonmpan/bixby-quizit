@@ -1,9 +1,3 @@
-// text (Category) {
-//   description (The category)
-//   features{
-//     transient
-//   }
-// }
 enum (Category) {
   description (__DESCRIPTION__)
   symbol ("all categories")

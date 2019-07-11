@@ -1,3 +1,0 @@
-integer (CurrentQuestion) {
-  description (__DESCRIPTION__)
-}

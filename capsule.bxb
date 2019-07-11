@@ -6,6 +6,10 @@ capsule {
     target (bixby-mobile-en-US)
   }
   capsule-imports {
+    import (bixby.audioPlayer) {
+      version (0.3.3)
+      as (audioPlayer)
+    }
   }
   runtime-flags {
     concepts-inherit-super-type-features

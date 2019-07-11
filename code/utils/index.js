@@ -47,13 +47,13 @@ const categoriesInfo = [
   {
     category: "general knowledge",
     text: "General Knowledge",
-    description: "Test your general knowledge!",
+    description: "General Knowledge, reporting!",
     image: "/icons/generalknowledge.png",
   },
   {
     category: "music",
     text: "Music",
-    description: "How well do you know obscure bands?",
+    description: "Do you know obscure bands?",
     image: "/icons/music.png",
   },
   {
@@ -65,7 +65,7 @@ const categoriesInfo = [
   {
     category: "anime",
     text: "Anime",
-    description: "I'm sorry this exists... in the best possible way.",
+    description: "I'm sorry this exists, in the best possible way.",
     image: "/icons/anime.png",
   },
   {
@@ -77,7 +77,7 @@ const categoriesInfo = [
   {
     category: "geography",
     text: "Geography",
-    description: "Do you know where Timbucktoo is?",
+    description: "Do you know where Timbuktu is?",
     image: "/icons/geography.png",
   },
   {
@@ -125,7 +125,7 @@ const categoriesInfo = [
   {
     category: "theatre",
     text: "Theatre",
-    description: "We're actors. We're the opposite of people!",
+    description: "To be, or not to be.",
     image: "/icons/theatre.png",
   },
   {
@@ -137,7 +137,7 @@ const categoriesInfo = [
   {
     category: "board games",
     text: "Board Games",
-    description: "Come here to roll your 13 sided dice.",
+    description: "Time to roll your 13 sided dice.",
     image: "/icons/boardgames.png",
   },
   {
@@ -348,16 +348,51 @@ const foreignCharacters = {
   'frac34':'¾',
   'times':'×',
   'divide':'÷',
-  'alpha':'α',
-  'beta':'β',
   'infin':'∞',
-  '&hellip':'…',
-  '&shy;':'-',
-  '&micro;':'µ'
+  'hellip':'…',
+  'shy':'-',
+  'micro':'µ',
+  'Alpha':'Α',
+  'alpha':'α',
+  'Beta':'Β',
+  'beta':'β',
+  'Gamma':'Γ',
+  'gamma':'γ',
+  'Delta':'Δ',
+  'delta':'δ',
+  'Epsilon':'Ε',
+  'epsilon':'ε',
+  'Zeta':'Ζ',
+  'zeta':'ζ',  
+  'Eta':'Η',
+  'eta':'η',
+  'Theta':'Θ',
+  'theta':'θ',
+  'Iota':'Ι',
+  'iota':'ι',
+  'Kappa':'Κ',
+  'kappa':'κ',
+  'Lambda':'Λ',
+  'lambda':'λ',
+  'Mu':'Μ',
+  'mu':'μ',
+  'Nu':'Ν',
+  'nu':'ν',
+  'Xi':'Ξ',
+  'xi':'ξ',
+  'Omicron':'Ο',
+  'omicron':'',
+  'Pi':'Π',
+  'pi':'',
+  'Rho':'Ρ',
+  'rho':'',
+  'Sigma':'Σ',
+  'sigma':''
+  
 }
 
 function removeHtmlStuff(encodedString) {
-  var translate_re = /&(nbsp|amp|quot|lt|gt|apos|Aacute|aacute|Agrave|Acirc|agrave|Acirc|acirc|Auml|auml|Atilde|atilde|Aring|aring|Aelig|aelig|Ccedil|ccedil|Eth|eth|Eacute|eacute|Egrave|egrave|Ecirc|ecirc|Euml|euml|Iacute|iacute|Igrave|igrave|Icirc|icirc|Iuml|iuml|Ntilde|ntilde|Oacute|oacute|Ograve|ograve|Ocirc|ocirc|Ouml|ouml|Otilde|otilde|Oslash|oslash|szlig|Thorn|thorn|Uacute|uacute|Ugrave|ugrave|Ucirc|ucirc|Uuml|uuml|Yacute|yacute|yuml|copy|reg|trade|lt|gt|euro|cent|pound|quot|lsquo|rsquo|ldquo|rdquo|laquo|raquo|mdash|ndash|deg|plusmn|frac14|frac12|frac34|times|divide|alpha|beta|infin|hellip|shy|micro);/g;
+  var translate_re = /&(nbsp|amp|quot|lt|gt|apos|Aacute|aacute|Agrave|Acirc|agrave|Acirc|acirc|Auml|auml|Atilde|atilde|Aring|aring|Aelig|aelig|Ccedil|ccedil|Eth|eth|Eacute|eacute|Egrave|egrave|Ecirc|ecirc|Euml|euml|Iacute|iacute|Igrave|igrave|Icirc|icirc|Iuml|iuml|Ntilde|ntilde|Oacute|oacute|Ograve|ograve|Ocirc|ocirc|Ouml|ouml|Otilde|otilde|Oslash|oslash|szlig|Thorn|thorn|Uacute|uacute|Ugrave|ugrave|Ucirc|ucirc|Uuml|uuml|Yacute|yacute|yuml|copy|reg|trade|lt|gt|euro|cent|pound|quot|lsquo|rsquo|ldquo|rdquo|laquo|raquo|mdash|ndash|deg|plusmn|frac14|frac12|frac34|times|divide|infin|hellip|shy|micro|Alpha|alpha|Beta|beta|Gamma|gamme|Delta|delta|Epsilon|epsilon|Zeta|zeta|Eta|eta|Theta|theta|Iota|iota|Kappa|kappa|Lambda|lambda|Mu|mu|Nu|nu|Xi|xi);/g;
   var translate = foreignCharacters;
   return encodedString.replace(translate_re, function(match, entity) {
     return translate[entity];
@@ -564,7 +599,7 @@ const differenceInSeconds = (t1, t2) => {
 
 const calculateTimeBonus = (t1, t2) => {
   var dif = Math.floor(differenceInSeconds(t1, t2));
-  var cutoff = 15;
+  var cutoff = 20;
 
   if (dif < cutoff) {
     return 10;

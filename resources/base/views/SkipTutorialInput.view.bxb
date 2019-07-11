@@ -1,6 +1,17 @@
 input-view{
-  match:Skip(skip)
-  
+  match:Skip(skips)
   render{
+    selection-of (skips){
+      where-each (skip){
+        cell-area{
+          slot2{
+            content{
+              order (PrimarySecondary)
+              primary("#{value(skip)}")
+            }
+          }
+        }
+      }
+    }
   }
 }

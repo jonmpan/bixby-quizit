@@ -32,7 +32,6 @@ layout-macro-def(question) {
                       template:$expr(quiz.template)
                       category:$expr(quiz.category)
                       difficulty:$expr(quiz.difficulty)
-                      currentUserAnswer:$expr(answer.letter)
                       totalScore:$expr(quiz.totalScore)
                     }
                 }                

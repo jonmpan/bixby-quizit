@@ -1,6 +1,7 @@
 result-view{
-  match:Skip(skip)
 
+  match: Skip(skip)
+  
   message{
     if(skip){
       template ("Ok, I will skip the tutorial screen from now on. Please say \"new game\" to start a new game!")

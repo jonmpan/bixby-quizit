@@ -32,8 +32,8 @@ module.exports.function = function nextQuestion (quiz) {
     quiz.status = 'completed';
     quiz.totalScore = calculateTotalScore(quiz);
     quiz.timeBonus = calculateTotalTimeBonus(quiz);
-    quiz.template = "Congratulations! You got " +quiz.score+ " out of " +quiz.questionCount+ " questions right. Your score is " +quiz.totalScore + " out of " + parseInt(quiz.questions.length) * 20 +"!";
-    quiz.speech = "Congratulations! You got " +quiz.score+ " out of " +quiz.questionCount+ " questions right. Your score is " +quiz.totalScore + "!";
+    quiz.template = "Thank you for playing QuizIt! Congratulations! You got " +quiz.score+ " out of " +quiz.questionCount+ " questions right. Your score is " +quiz.totalScore + " out of " + parseInt(quiz.questions.length) * 20 +"!";
+    quiz.speech = "Thank you for playing QuizIt! Congratulations! You got " +quiz.score+ " out of " +quiz.questionCount+ " questions right. Your score is " +quiz.totalScore + " out of " + parseInt(quiz.questions.length) * 20 +"!";
     if(quiz.score == quiz.questionCount){
       quiz.template += " You're so smart. Have a cookie!"
       quiz.speech += " You're so smart. Have a cookie!"
