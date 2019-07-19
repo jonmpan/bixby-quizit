@@ -15,14 +15,16 @@ const difficulties = {
   hard: "hard",
   difficulty: "hard",
   reallyhard: "hard",
+  random: "random",
 };
 
 module.exports.function = function getDifficulty(difficultyInput) {
   if (difficultyInput) {
-    var difficultyInfo = {};
+    var difficultyInfo = null;
     const difficultyInputParsed = difficultyInput
-      .toLowerCase()
-      .replace(" ", "");
+    .toString()
+    .toLowerCase()
+    .replace(" ", "");
     if (difficulties[difficultyInputParsed]) {
       difficultiesInfo.map(o => {
         if (difficulties[difficultyInputParsed] == o.difficulty) {
@@ -30,7 +32,11 @@ module.exports.function = function getDifficulty(difficultyInput) {
         }
       });
     }
-    return difficultyInfo;
+    if(difficultyInfo){
+      return difficultyInfo;      
+    } else {
+      return difficultiesInfo
+    }
   }
   return difficultiesInfo;
 };

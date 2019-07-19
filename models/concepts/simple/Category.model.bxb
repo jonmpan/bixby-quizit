@@ -29,6 +29,7 @@ enum (Category) {
   symbol ("manga")
   symbol ("cartoon")
   symbol ("animation")
+  symbol ("random")
   features{
     transient
   }

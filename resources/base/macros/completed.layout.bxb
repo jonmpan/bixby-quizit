@@ -11,9 +11,10 @@ layout-macro-def(completed) {
     section {
       content {
         image{
-          url(/images/quizit-logo-white-min.png)
+          url(/images/quizit-logo.png)
           aspect-ratio(21:9)
           object-fit (Contain)
+          background-color (Transparent)
         }
         split-input-cell {
           left {
@@ -40,36 +41,15 @@ layout-macro-def(completed) {
         for-each (quiz.questions){
           as (question){
             divider
-            single-line{spacer}
+            spacer
             paragraph {
               value {
                 template ("#{value(question.question)}")
               }
               style (Title_XS)
             }
-            for-each (question.answers){
-              as (answer){
-                if(answer.correct == true){
-                  cell-card {
-                    slot2 {
-                      content {
-                        order (PrimarySecondary)
-                        primary ("#{value(answer.letter)}. #{value(answer.text)}")
-                      }
-                    }
-                  }
-                } else {
-                  cell-card {
-                    slot2 {
-                      content {
-                        order (PrimarySecondary)
-                        secondary ("#{value(answer.letter)}. #{value(answer.text)}")
-                      }
-                    }
-                  }
-                }
-              }
-            }
+
+            spacer
             if(question.userAnswer != null && question.correct){
               single-line{
                 image{
@@ -98,17 +78,45 @@ layout-macro-def(completed) {
                 }
               }
             }
+            spacer
+
+            for-each (question.answers){
+              as (answer){
+                if(answer.correct == true){
+                  cell-card {
+                    slot2 {
+                      content {
+                        order (PrimarySecondary)
+                        primary ("#{value(answer.letter)}. #{value(answer.text)}")
+                      }
+                    }
+                  }
+                } else {
+                  cell-card {
+                    slot2 {
+                      content {
+                        order (PrimarySecondary)
+                        secondary ("#{value(answer.letter)}. #{value(answer.text)}")
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            spacer
             if(exists(question.timeSpent)){
               paragraph{
                 value("Time Spent: #{value(question.timeSpent)} seconds")
                 style(Detail_L_Soft)
               }
             }
+            spacer
           }
         }
         divider
+        spacer
         paragraph{
-          value("Thank you for playing QuizIt! QuizIt is free and was made by some guy who needed something to do when driving home from work.\n\nIf you enjoyed this capsule, please rate it:\n🌟🌟🌟🌟🌟\n\nThe source code for QuizIt is available at:\ngithub.com/jonmpan/bixby-quizit.\n\nSincerely,\nJon P.")
+          value("Thank you for playing QuizIt! QuizIt is free and was made by some guy who needed something to do when driving home from work.\n\nIf you enjoyed this capsule, please rate it:\n🌟🌟🌟🌟🌟\n\nThe source code for QuizIt is available at:\ngithub.com/jonmpan/bixby-quizit\n\nSincerely,\nJon P.")
           style(Detail_L_Soft)
         }
       }

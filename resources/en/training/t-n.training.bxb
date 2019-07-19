@@ -1,3 +1,8 @@
+train (t-n2nnxqpi3vu3s385kuqfocs93) {
+  utterance ("[g:DifficultyInfo:prompt] (anything can go here)[v:DifficultyInput]")
+  plan (Y2BmkM3Kz8stSMzTKyzNrPIs0XPJTEvLTC7NKan0zEvLZ5BBk3ZPLUGoYJDDo7mgtISBiYERiBmAJCMDCDBBMAA=)
+  last-modified (1562957796353)
+}
 train (t-nxr2hece6w7qm7mtvlplsp5h1) {
   utterance ("[g:GetQuiz] new game about (animals)[v:Category:animals] with (any difficulty)[v:Difficulty:'all difficulties']")
   plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)

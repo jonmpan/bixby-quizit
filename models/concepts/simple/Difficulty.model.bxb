@@ -4,6 +4,7 @@ enum (Difficulty) {
   symbol ("easy")
   symbol ("medium")
   symbol ("hard")
+  symbol ("random")
   features{
     transient
   }

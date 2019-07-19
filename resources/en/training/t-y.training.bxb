@@ -1,3 +1,8 @@
+train (t-y6k6a0e2zxk1m8h9x99b6tup6) {
+  utterance ("[g:DifficultyInfo:prompt] (all difficulties)[v:DifficultyInput]")
+  plan (Y2BmkM3Kz8stSMzTKyzNrPIs0XPJTEvLTC7NKan0zEvLZ5BBk3ZPLUGoYJDDo7mgtISBiYERiBmAJCMDCDBBMAA=)
+  last-modified (1562957825580)
+}
 train (t-ycd6gzichhgw7m59zflad9uat) {
   utterance ([g:GetQuiz] start a new game)
   plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRACwCwA)

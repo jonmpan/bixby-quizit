@@ -14,7 +14,7 @@ const categories = {
   films: "film",
   movie: "film",
   movies: "film",
-  music: "film",
+  music: "music",
   musicals: "music",
   theatre: "theatre",
   television: "television",
@@ -54,6 +54,7 @@ const categories = {
   cartoon: "cartoon",
   cartoons: "cartoon",
   animation: "animation",
+  random: "random"
 };
 
 const checkCategory = categoryInput => {
