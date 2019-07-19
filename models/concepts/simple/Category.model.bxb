@@ -27,7 +27,7 @@ enum (Category) {
   symbol ("gadgets")
   symbol ("anime")
   symbol ("manga")
-  symbol ("cartoon")
+  symbol ("cartoons")
   symbol ("animation")
   symbol ("random")
   features{

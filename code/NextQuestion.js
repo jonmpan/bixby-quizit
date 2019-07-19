@@ -17,16 +17,6 @@ module.exports.function = function nextQuestion (quiz) {
     currentQuestion.answers.map(o=>{
       quiz.speech += "... " + o.letter + "... " + o.text      
     })
-    // quiz.template = currentQuestion.question;
-    // quiz.speech = currentQuestion.question+
-    //   "... A... "
-    //   +currentQuestion.answers[0].text+
-    //   "... B... "
-    //   +currentQuestion.answers[1].text+
-    //   "... C... "
-    //   +currentQuestion.answers[2].text+
-    //   "... D... "
-    //   +currentQuestion.answers[3].text;
   }
   else {
     quiz.status = 'completed';
@@ -42,10 +32,6 @@ module.exports.function = function nextQuestion (quiz) {
       quiz.template += " It's ok... It could be worse, right?"
       quiz.speech += " It's ok... It could be worse, right?"
     }
-    // else {
-    //   quiz.template += " You're so close to perfection! Try again!"
-    //   quiz.speech += " You're so close to perfection! Try again!"
-    // }
   }
   return quiz;
 }

@@ -3,4 +3,5 @@ vocab(Difficulty){
   "easy" {"easy"}
   "medium" {"medium"}
   "hard" {"hard" "difficult"}
+  "random" {"random"}
 }

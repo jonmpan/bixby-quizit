@@ -25,7 +25,7 @@ const categories = {
   "gadgets":30,
   "anime":31,
   "manga":31,
-  "cartoon":32,
+  "cartoons":32,
   "animation":33,
 }
 
@@ -41,7 +41,7 @@ const letterAliases = {
   tee:"D"
 }
 
-const categoriesArray = ["general knowledge", "music", "video games", "anime", "computers", "geography", "animals", "books", "sports", "science", "history", "film", "musicals", "television", "board games", "nature", "mathematics", "mythology", "politics", "art", "celebrities", "vehicles", "comics", "gadgets", "cartoon", "all categories"];
+const categoriesArray = ["general knowledge", "music", "video games", "anime", "computers", "geography", "animals", "books", "sports", "science", "history", "film", "musicals", "television", "board games", "nature", "mathematics", "mythology", "politics", "art", "celebrities", "vehicles", "comics", "gadgets", "cartoons", "all categories"];
 
 const difficultiesArray = ['easy', 'medium', 'all difficulties'];
 
@@ -197,10 +197,10 @@ const categoriesInfo = [
     image: "/icons/gadgets.png",
   },
   {
-    category: "cartoon",
+    category: "cartoons",
     text: "Cartoons",
     description: "Non-Anime cartoons are here.",
-    image: "/icons/cartoon.png",
+    image: "/icons/cartoons.png",
   },
   {
     category: "all categories",
@@ -237,13 +237,13 @@ const difficultiesInfo = [
   },
   {
     difficulty: "all difficulties",
-    text: "All Difficulties!",
+    text: "All Difficulties",
     description: "Easy, medium, and hard questions",
     image: "/icons/alldifficulties.png",
   },
   {
     difficulty: "random",
-    text: "Random",
+    text: "Random Difficulty",
     description: "So random! Wow. Much difficulty!",
     image: "/icons/random.png",
   }

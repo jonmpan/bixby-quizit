@@ -51,8 +51,8 @@ const categories = {
   gadgets: "gadgets",
   anime: "anime",
   manga: "manga",
-  cartoon: "cartoon",
-  cartoons: "cartoon",
+  cartoon: "cartoons",
+  cartoons: "cartoons",
   animation: "animation",
   random: "random"
 };

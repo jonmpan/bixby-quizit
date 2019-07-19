@@ -4,27 +4,82 @@ input-view {
   message ("Welcome to QuizIt! Let's start a quiz. Select a category.")
 
   render {
-    selection-of (categories) {
-      where-each (category) {
-        cell-card {
-          slot1 {
-            image{
-              shape (Square)
-              url ("[#{value(category.image)}]")
+    if ($handsFree) {
+      selection-of (categories) {
+        navigation-mode {
+          read-many {
+            list-summary {
+              template ("Welcome to QuizIt! Let's start a quiz.")
+            }
+            page-content (page) {
+              item-selection-question {
+                if (isLastNavPage(page)) {
+                  template  ("Which category would you like? Or say previous to hear the previous categories.")
+                } else {
+                  template ("Which category would you like? Or say next to hear more categories.") 
+                }
+              }
+              overflow-statement {
+                template ("That's all the categories I have.")
+              }
+              underflow-statement {
+                template ("This is the first list of categories.")
+              }
+              page-marker {
+                    template ("The categories on this page are") 
+              }
+            }
+            page-size (6)
+          }
+        }
+        where-each (category) {
+          spoken-summary {
+            template("#{value(category.text)}")
+          }
+          cell-card {
+            slot1 {
+              image{
+                shape (Square)
+                url ("[#{value(category.image)}]")
+              }
+            }
+            slot2 {
+              content {
+                primary {
+                  template ("#{title(category.text)}")
+                }
+                secondary {
+                  template ("[#{value(category.description)}]")
+                }
+              }
             }
           }
-          slot2 {
-            content {
-              primary {
-                template ("#{title(category.text)}")
+        }
+      }
+    } else {
+      selection-of (categories) {
+        where-each (category) {
+          cell-card {
+            slot1 {
+              image{
+                shape (Square)
+                url ("[#{value(category.image)}]")
               }
-              secondary {
-                template ("[#{value(category.description)}]")
+            }
+            slot2 {
+              content {
+                primary {
+                  template ("#{title(category.text)}")
+                }
+                secondary {
+                  template ("[#{value(category.description)}]")
+                }
               }
             }
           }
         }
       }
     }
+
   }
 }

@@ -4,22 +4,72 @@ input-view {
   message ("Select a difficulty.")
 
   render {
-    selection-of (difficulties) {
-      where-each (difficulty) {
-        cell-card {
-          slot1 {
-            image{
-              shape (Square)
-              url ("[#{value(difficulty.image)}]")
+    if ($handsFree) {
+      selection-of (difficulties) {
+        navigation-mode {
+          read-many {
+            list-summary {
+              template ("Select a difficulty.")
+            }
+            page-content (page) {
+              item-selection-question {
+                  template  ("Which difficulty would you like?")
+              }
+              overflow-statement {
+                template ("That's all the difficulties I have.")
+              }
+              underflow-statement {
+                template ("This is the first list of difficulties.")
+              }
+              page-marker {
+                template ("The difficulties are") 
+              }
+            }
+            page-size (6)
+          }
+        }
+        where-each (difficulty) {
+          spoken-summary {
+            template("#{value(difficulty.text)}")
+          }
+          cell-card {
+            slot1 {
+              image{
+                shape (Square)
+                url ("[#{value(difficulty.image)}]")
+              }
+            }
+            slot2 {
+              content {
+                primary {
+                  template ("#{title(difficulty.text)}")
+                }
+                secondary {
+                  template ("[#{value(difficulty.description)}]")
+                }
+              }
             }
           }
-          slot2 {
-            content {
-              primary {
-                template ("#{title(difficulty.text)}")
+        }
+      }
+    } else {
+      selection-of (difficulties) {
+        where-each (difficulty) {
+          cell-card {
+            slot1 {
+              image{
+                shape (Square)
+                url ("[#{value(difficulty.image)}]")
               }
-              secondary {
-                template ("[#{value(difficulty.description)}]")
+            }
+            slot2 {
+              content {
+                primary {
+                  template ("#{title(difficulty.text)}")
+                }
+                secondary {
+                  template ("[#{value(difficulty.description)}]")
+                }
               }
             }
           }
