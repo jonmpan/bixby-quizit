@@ -1,0 +1,5 @@
+action (GetRandomQuiz) {
+  type (Search)
+  description (__DESCRIPTION__)
+  output (Quiz)
+}

@@ -4,7 +4,7 @@ layout-macro-def (help) {
     section {
       content {
         image{
-          url(/images/quizit-logo-white-min.png)
+          url(/images/quizit-logo.png)
           object-fit (Contain)
           aspect-ratio(21:9)
         }
@@ -73,6 +73,11 @@ layout-macro-def (help) {
         }
         divider
         paragraph{
+          value ("\"Start a random quiz\"")
+          style (Detail_L_Soft)
+        }
+        divider
+        paragraph{
           value ("\"Give me some hard questions about music\"")
           style (Detail_L_Soft)
         }
@@ -83,19 +88,28 @@ layout-macro-def (help) {
             }
           }
         }
-
         paragraph{
           value ("Every question you get right is worth 10 points")
           style (Detail_L_Soft)
         }
         divider
         paragraph{
-          value ("Every second under 30 seconds is worth 1 time bonus point.")
+          value ("Each question starts with 10 time bonus points.")
           style (Detail_L_Soft)
         }
         divider
         paragraph{
-          value ("You can get a maximum of 10 time bonus points per question.")
+          value ("Every 2 seconds after 10 seconds from when a question starts removes 1 point from the time bonus.")
+          style (Detail_L_Soft)
+        }
+        divider
+        paragraph{
+          value ("Time bonus is only applied if you get the question right.")
+          style (Detail_L_Soft)
+        }
+        divider
+        paragraph{
+          value ("Each question is worth up to 20 points, 10 points for the correct answer, and up to 10 points for the time bonus.")
           style (Detail_L_Soft)
         }
         divider
@@ -103,7 +117,6 @@ layout-macro-def (help) {
           value ("You can get a maximum of 100 points.")
           style (Detail_L_Soft)
         }
-
         cell-card {
           slot2 {
             content {

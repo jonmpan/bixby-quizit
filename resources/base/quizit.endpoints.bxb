@@ -16,6 +16,9 @@ endpoints {
       accepted-inputs (difficultyInput)
       local-endpoint (GetDifficulty.js)
     }
+    action-endpoint (GetRandomQuiz) {
+      local-endpoint (GetRandomQuiz.js)
+    }
     action-endpoint (NextQuestion) {
       accepted-inputs (quiz)
       local-endpoint (NextQuestion.js)

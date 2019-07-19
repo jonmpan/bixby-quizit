@@ -11,9 +11,10 @@ layout-macro-def(tutorial) {
     section {
       content {
         image{
-          url(/images/quizit-logo-white-min.png)
+          url(/images/quizit-logo.png)
           object-fit (Contain)
           aspect-ratio(21:9)
+          background-color (Transparent)
         }
         hbox {
           content {

@@ -1,7 +1,7 @@
 input-view {
   match: CategoryInfo (categories)
 
-  message ("Welcome to QuizIt! Let's start a quiz! Select a category.")
+  message ("Welcome to QuizIt! Let's start a quiz. Select a category.")
 
   render {
     selection-of (categories) {

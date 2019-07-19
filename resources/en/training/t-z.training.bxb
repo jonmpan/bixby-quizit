@@ -1,0 +1,15 @@
+train (t-z4rmz337ur7ktmiilhml7lmzr) {
+  utterance ([g:GetRandomQuiz] start a randomly generated quiz)
+  plan (Y2BiEM7Kz8stSMzTKyzNrPIs0QsEUgwyaILuqSVBiXkp+blgWUYgZIBiIAkA)
+  last-modified (1563410087310)
+}
+train (t-zq18b39zacjwov5ahnz2vwf8k) {
+  utterance ([g:GetRandomQuiz] Give me a quiz on something random)
+  plan (Y2BiEM7Kz8stSMzTKyzNrPIs0QsEUgwyaILuqSVBiXkp+blgWUYgZIBiIAkA)
+  last-modified (1563402268762)
+}
+train (t-zqv7dmt4d2i5nmqoye99k9111) {
+  utterance ([g:GetRandomQuiz] random quiz)
+  plan (Y2BiEM7Kz8stSMzTKyzNrPIs0QsEUgwyaILuqSVBiXkp+blgWUYgZIBiIAkA)
+  last-modified (1563401953131)
+}

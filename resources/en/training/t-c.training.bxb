@@ -3,3 +3,8 @@ train (t-c15ki0cu3unaeetbflfl93xo4) {
   plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
   last-modified (1562629228247)
 }
+train (t-cihd0jhqag58qoi1lyk33rcd1) {
+  utterance ([g:GetRandomQuiz] give me a random quiz)
+  plan (Y2BiEM7Kz8stSMzTKyzNrPIs0QsEUgwyaILuqSVBiXkp+blgWUYgZIBiIAkA)
+  last-modified (1563401940586)
+}

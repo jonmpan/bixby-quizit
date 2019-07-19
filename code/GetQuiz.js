@@ -1,18 +1,15 @@
-var console = require("console");
 var http = require("http");
-const { categories, formatQuestions } = require("./utils/index.js");
+const { categories, formatQuestions, categoriesArray, difficultiesArray } = require("./utils/index.js");
 
 module.exports.function = function getQuiz(category, difficulty) {
   let url = "https://opentdb.com/api.php?amount=5&type=multiple";
+  category == 'random' ? category = categoriesArray[Math.floor(Math.random()*categoriesArray.length)] : null;
   if (category !== "all categories") {
     const formattedCategory = category.toLowerCase().replace(" ", "");
-    if (categories[formattedCategory]) {
-      url += "&category=" + categories[formattedCategory];
-    }
+    categories[formattedCategory] ? url += "&category=" + categories[formattedCategory] : null;
   }
-  if (difficulty.toString() !== "all difficulties") {
-    url += "&difficulty=" + difficulty;
-  }
+  difficulty == 'random' ? difficulty = difficultiesArray[Math.floor(Math.random()*difficultiesArray.length)] : null;
+  difficulty.toString() !== "all difficulties" ? url += "&difficulty=" + difficulty : null;
   var response = http.getUrl(url, { format: "json", cacheTime: 0 });
   const questions = formatQuestions(response.results);
   const quiz = {
@@ -24,12 +21,9 @@ module.exports.function = function getQuiz(category, difficulty) {
     questionCount: questions.length,
     status: "tutorial",
     template:
-      "QuizIt is a trivia game with thousands of questions! Your game will begin shortly.",
+      "QuizIt is a trivia game with thousands of questions! Your "+difficulty+" quiz on "+category+" will begin shortly.",
     speech:
-      "QuizIt is a trivia game with thousands of questions! Your game will begin shortly.",
+      "QuizIt is a trivia game with thousands of questions! Your "+difficulty+" quiz on "+category+" will begin shortly.",
   };
   return quiz;
 };
-
-// template: 'QuizIt is a trivia game with tons of questions! The questions are multiple choice. You must say A, B, C, or D, to select your answer.',
-// speech: 'QuizIt is a trivia game with crowdsourced questions. The questions are multiple choice. You must say A... B... C... or D... to select your answer.',

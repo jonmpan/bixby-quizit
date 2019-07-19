@@ -1,7 +1,7 @@
 capsule-info {
   display-name (QuizIt Trivia)
   developer-name (jonmpan)
-  icon-asset (/images/quizit-icon-2.png)
+  icon-asset (/images/quizit-icon.png)
   description (QuizIt is a free trivia game with thousands of questions and over 20 categories, Categories include; Video Games, Science, Anime, Music, Books, Geography, Computers, Science, Movies, and many more. Powered by Open Trivia DB.)
   website-url ()
   search-keywords {

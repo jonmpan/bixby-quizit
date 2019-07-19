@@ -41,7 +41,9 @@ const letterAliases = {
   tee:"D"
 }
 
-const categoriesArray = ["general knowledge", "music", "video games", "anime", "computers", "geography", "animals", "books", "sports", "science", "history", "film", "musicals", "theatre", "television", "board games", "nature", "mathematics", "mythology", "politics", "art", "celebrities", "vehicles", "comics", "gadgets", "cartoon", "all categories"]
+const categoriesArray = ["general knowledge", "music", "video games", "anime", "computers", "geography", "animals", "books", "sports", "science", "history", "film", "musicals", "television", "board games", "nature", "mathematics", "mythology", "politics", "art", "celebrities", "vehicles", "comics", "gadgets", "cartoon", "all categories"];
+
+const difficultiesArray = ['easy', 'medium', 'all difficulties'];
 
 const categoriesInfo = [
   {
@@ -122,12 +124,12 @@ const categoriesInfo = [
     description: "Take me for who I am, who I was meant to be!",
     image: "/icons/musicals.png",
   },
-  {
-    category: "theatre",
-    text: "Theatre",
-    description: "To be, or not to be.",
-    image: "/icons/theatre.png",
-  },
+  // {
+  //   category: "theatre",
+  //   text: "Theatre",
+  //   description: "To be, or not to be.",
+  //   image: "/icons/theatre.png",
+  // },
   {
     category: "television",
     text: "Television",
@@ -179,7 +181,7 @@ const categoriesInfo = [
   {
     category: "vehicles",
     text: "Vehicles",
-    description: "What has 4 wheels and transports humans? A stroller.",
+    description: "You can't drive this category away!",
     image: "/icons/vehicles.png",
   },
   {
@@ -206,6 +208,12 @@ const categoriesInfo = [
     description: "Questions from all the categories!",
     image: "/icons/allcategories.png",
   },
+  {
+    category: "random",
+    text: "Random Category",
+    description: "QuizIt will select a random category.",
+    image: "/icons/random.png",
+  },
 ];
 
 const difficultiesInfo = [
@@ -227,12 +235,18 @@ const difficultiesInfo = [
     description: "Not for the faint of heart... Good luck!",
     image: "/icons/hard.png",
   },
-  // {
-  //   difficulty: "all difficulties",
-  //   text: "All Difficulties!",
-  //   description: "Easy, medium, and hard questions",
-  //   image: "/icons/alldifficulties.png",
-  // }
+  {
+    difficulty: "all difficulties",
+    text: "All Difficulties!",
+    description: "Easy, medium, and hard questions",
+    image: "/icons/alldifficulties.png",
+  },
+  {
+    difficulty: "random",
+    text: "Random",
+    description: "So random! Wow. Much difficulty!",
+    image: "/icons/random.png",
+  }
 ]
 
 function shuffle(a) {
@@ -247,12 +261,6 @@ function shuffle(a) {
 }
 
 const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
-// const removeHtmlStuff = text => {
-//   // &oacute;
-//   // &ouml;
-//   return text.replace(/&quot;/g, '\"').replace(/&#039;/g, "\'").replace(/&amp;/g, "&");
-// }
 
 const foreignCharacters = {
   "nbsp":" ",
@@ -387,12 +395,27 @@ const foreignCharacters = {
   'Rho':'Ρ',
   'rho':'',
   'Sigma':'Σ',
-  'sigma':''
-  
+  'sigma':'σ',
+  'sigmaf':'ς',
+  'Tau':'Τ',
+  'tau':'τ',
+  'Upsilon':'Υ',
+  'upsilon':'υ',
+  'Phi':'Φ',
+  'phi':'φ',
+  'Chi':'Χ',
+  'chi':'χ',
+  'Psi':'Ψ',
+  'psi':'ψ',
+  'Omega':'Ω',
+  'omega':'ω',
+  'thetasym':'ϑ',
+  'upsih':'ϒ',
+  'piv':'ϖ'
 }
 
 function removeHtmlStuff(encodedString) {
-  var translate_re = /&(nbsp|amp|quot|lt|gt|apos|Aacute|aacute|Agrave|Acirc|agrave|Acirc|acirc|Auml|auml|Atilde|atilde|Aring|aring|Aelig|aelig|Ccedil|ccedil|Eth|eth|Eacute|eacute|Egrave|egrave|Ecirc|ecirc|Euml|euml|Iacute|iacute|Igrave|igrave|Icirc|icirc|Iuml|iuml|Ntilde|ntilde|Oacute|oacute|Ograve|ograve|Ocirc|ocirc|Ouml|ouml|Otilde|otilde|Oslash|oslash|szlig|Thorn|thorn|Uacute|uacute|Ugrave|ugrave|Ucirc|ucirc|Uuml|uuml|Yacute|yacute|yuml|copy|reg|trade|lt|gt|euro|cent|pound|quot|lsquo|rsquo|ldquo|rdquo|laquo|raquo|mdash|ndash|deg|plusmn|frac14|frac12|frac34|times|divide|infin|hellip|shy|micro|Alpha|alpha|Beta|beta|Gamma|gamme|Delta|delta|Epsilon|epsilon|Zeta|zeta|Eta|eta|Theta|theta|Iota|iota|Kappa|kappa|Lambda|lambda|Mu|mu|Nu|nu|Xi|xi);/g;
+  var translate_re = /&(nbsp|amp|quot|lt|gt|apos|Aacute|aacute|Agrave|Acirc|agrave|Acirc|acirc|Auml|auml|Atilde|atilde|Aring|aring|Aelig|aelig|Ccedil|ccedil|Eth|eth|Eacute|eacute|Egrave|egrave|Ecirc|ecirc|Euml|euml|Iacute|iacute|Igrave|igrave|Icirc|icirc|Iuml|iuml|Ntilde|ntilde|Oacute|oacute|Ograve|ograve|Ocirc|ocirc|Ouml|ouml|Otilde|otilde|Oslash|oslash|szlig|Thorn|thorn|Uacute|uacute|Ugrave|ugrave|Ucirc|ucirc|Uuml|uuml|Yacute|yacute|yuml|copy|reg|trade|lt|gt|euro|cent|pound|quot|lsquo|rsquo|ldquo|rdquo|laquo|raquo|mdash|ndash|deg|plusmn|frac14|frac12|frac34|times|divide|infin|hellip|shy|micro|Alpha|alpha|Beta|beta|Gamma|gamme|Delta|delta|Epsilon|epsilon|Zeta|zeta|Eta|eta|Theta|theta|Iota|iota|Kappa|kappa|Lambda|lambda|Mu|mu|Nu|nu|Xi|xi|Omicron|omicron|Pi|pi|Rho|rho|Sigma|sigma|sigmaf|Tau|tau|Upsilon|upsilon|Phi|phi|Chi|chi|Psi|psi|Omega|omega|thetasym|upsih|piv);/g;
   var translate = foreignCharacters;
   return encodedString.replace(translate_re, function(match, entity) {
     return translate[entity];
@@ -422,8 +445,6 @@ const formatQuestions = results => {
     };
     result.incorrect_answers = result.incorrect_answers.filter(Boolean);
     result.correct_answer = removeA(result.correct_answer);
-
-    // result.correct_answer = removeA(result.correct_answer);
     result.incorrect_answers = result.incorrect_answers.map(o => {
       return removeA(o);
     });
@@ -469,50 +490,38 @@ const onlyNumbers = str => {
 
 const levDist = (s, t) => {
   var d = []; //2d matrix
-
   // Step 1
   var n = s.length;
   var m = t.length;
-
   if (n == 0) return m;
   if (m == 0) return n;
-
   //Create an array of arrays in javascript (a descending loop is quicker)
   for (var i = n; i >= 0; i--) d[i] = [];
-
   // Step 2
   for (var i = n; i >= 0; i--) d[i][0] = i;
   for (var j = m; j >= 0; j--) d[0][j] = j;
-
   // Step 3
   for (var i = 1; i <= n; i++) {
     var s_i = s.charAt(i - 1);
-
     // Step 4
     for (var j = 1; j <= m; j++) {
       //Check the jagged ld total so far
       if (i == j && d[i][j] > 4) return n;
-
       var t_j = t.charAt(j - 1);
       var cost = s_i == t_j ? 0 : 1; // Step 5
-
       //Calculate the minimum
       var mi = d[i - 1][j] + 1;
       var b = d[i][j - 1] + 1;
       var c = d[i - 1][j - 1] + cost;
-
       if (b < mi) mi = b;
       if (c < mi) mi = c;
-
       d[i][j] = mi; // Step 6
-
       //Damerau transposition
       if (i > 1 && j > 1 && s_i == t.charAt(j - 2) && s.charAt(i - 2) == t_j) {
         d[i][j] = Math.min(d[i][j], d[i - 2][j - 2] + cost);
       }
     }
   }
-
   // Step 7
   return d[n][m];
 };
@@ -597,19 +606,31 @@ const differenceInSeconds = (t1, t2) => {
   return (t1.getTime() - t2.getTime()) / 1000;
 };
 
+// const calculateTimeBonus = (t1, t2) => {
+//   var dif = Math.floor(differenceInSeconds(t1, t2));
+//   var cutoff = 20;
+// 
+//   if (dif < cutoff) {
+//     return 10;
+//   } else {
+//     if (cutoff + 10 - dif > 0) {
+//       return cutoff + 10 - dif;
+//     } else {
+//       return 0;
+//     }
+//   }
+// };
+
 const calculateTimeBonus = (t1, t2) => {
   var dif = Math.floor(differenceInSeconds(t1, t2));
-  var cutoff = 20;
-
-  if (dif < cutoff) {
-    return 10;
-  } else {
-    if (cutoff + 10 - dif > 0) {
-      return cutoff + 10 - dif;
-    } else {
-      return 0;
+  var score = 10;
+  if ((dif - 10) / 2 > 0) {
+    if (10 - Math.floor((dif - 10) / 2) > 0) {
+      return 10 - Math.floor((dif - 10) / 2);
     }
+    return 0;
   }
+  return score;
 };
 
 const calculateTotalTimeBonus = quiz => {
@@ -637,6 +658,7 @@ module.exports = {
   categories:categories,
   categoriesArray:categoriesArray,
   categoriesInfo:categoriesInfo,
+  difficultiesArray:difficultiesArray,
   difficultiesInfo:difficultiesInfo,
   formatQuestions:formatQuestions,
   levenshteinQuestion:levenshteinQuestion,

@@ -30,8 +30,8 @@ result-view {
                   template:$expr(this.template)
                   speech:$expr(this.speech)
                   score:$expr(this.score)
-                  status:(completed)
                   totalScore:$expr(this.totalScore)
+                  status:(completed)
                 }
             }
           }
@@ -51,25 +51,14 @@ result-view {
                   template:$expr(this.template)
                   speech:$expr(this.speech)
                   score:$expr(this.score)
-                  status:(transition)
                   totalScore:$expr(this.totalScore)
+                  status:(transition)
                 }
             }
           }
         }
       }
     }
-    // if (this.status == 'question') {
-    //   spec {
-    //     delay-seconds (10)
-    //     with-request {
-    //       intent {
-    //         goal {RefreshQuestion}
-    //         value {$expr(this)}
-    //       }
-    //     }
-    //   }
-    // }
   }
   followup{
     prompt {
