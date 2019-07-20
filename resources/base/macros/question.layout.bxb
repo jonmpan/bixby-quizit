@@ -12,11 +12,18 @@ layout-macro-def(question) {
       content {
         for-each (quiz.questions[quiz.currentQuestion].answers){
           as (answer){
-            cell-card {
-              slot2 {
-                content {
-                  order (PrimarySecondary)
-                  primary ("#{value(answer.letter)}. #{value(answer.text)}")
+            compound-card {
+              content {
+                single-line {
+                  text {
+                    style (Detail_L_Soft)
+                    value ("#{value(answer.letter)}")
+                  }
+                  spacer
+                  text {
+                    style (Detail_L)
+                    value ("#{value(answer.text)}")
+                  }
                 }
               }
               on-click{
@@ -34,9 +41,34 @@ layout-macro-def(question) {
                       difficulty:$expr(quiz.difficulty)
                       totalScore:$expr(quiz.totalScore)
                     }
-                }                
+                }
               }
             }
+            // cell-card {
+            //   slot2 {
+            //     content {
+            //       order (PrimarySecondary)
+            //       primary ("#{value(answer.letter)}. #{value(answer.text)}")
+            //     }
+            //   }
+            //   on-click{
+            //     intent{
+            //       goal:CheckAnswer
+            //       value:Quiz{
+            //         currentQuestion:$expr(quiz.currentQuestion)
+            //         questionCount:$expr(quiz.questionCount)
+            //           questions:$expr(quiz.questions)
+            //           score:$expr(quiz.score)
+            //           speech:$expr(quiz.speech)
+            //           status:$expr(quiz.status)
+            //           template:$expr(quiz.template)
+            //           category:$expr(quiz.category)
+            //           difficulty:$expr(quiz.difficulty)
+            //           totalScore:$expr(quiz.totalScore)
+            //         }
+            //     }
+            //   }
+            // }
           }
         }
         hbox {

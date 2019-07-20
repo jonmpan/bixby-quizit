@@ -1,0 +1,25 @@
+action (T-DoQuiz) {
+  description (Keep prompting the user for answers until quiz is completed.)
+  type (Commit)
+  collect {
+    input (quiz) {
+      type (Quiz)
+      min (Required) max (One)
+      default-init {
+        intent {
+          goal: T-StartQuiz
+        }
+      }
+      validate {
+        if (quiz.status != 'completed') {
+          replan {
+            intent {
+              goal: T-UpdateQuiz
+            }
+          }
+        }
+      }
+    }
+  }
+  output (Quiz)
+}

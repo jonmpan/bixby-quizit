@@ -1,0 +1,21 @@
+action (T-UpdateQuiz) {
+  description (Evaluate user's answer and updates the quiz state.)
+  type (UpdateTransaction)
+  collect {
+    input (quiz) {
+      type (Quiz)
+      min (Required) max (One)
+      default-init{
+        intent{
+          goal:T-StartQuiz
+        }
+      }
+    }
+    input (userAnswerString) {
+      type (UserAnswerString)
+      min (Required) max (One)
+    }
+  }
+  
+  output (Quiz)
+}

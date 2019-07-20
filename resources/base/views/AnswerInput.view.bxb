@@ -1,6 +1,6 @@
 input-view {
   match: UserAnswerString(this) {
-    to-input: CheckAnswer(action)
+    to-input: T-UpdateQuiz(action)
   }
 
   message {
@@ -9,7 +9,7 @@ input-view {
     }
   }
   render {
-    selection-of (action.quiz.questions[action.quiz.currentQuestion].answers) {
+    selection-of (action.quiz.questions[action.quiz.currentQuestion+1].answers) {
       where-each (answer) {
         cell-card {
           slot2 {
@@ -20,6 +20,21 @@ input-view {
             }
           }
         }
+        // compound-card {
+        //   content {
+        //     single-line {
+        //       text {
+        //         style (Detail_L_Soft)
+        //         value ("#{value(answer.letter)}")
+        //       }
+        //       spacer
+        //       text {
+        //         style (Detail_L)
+        //         value ("#{value(answer.text)}")
+        //       }
+        //     }
+        //   }
+        // }
       }
     }
   }

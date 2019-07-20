@@ -1,4 +1,7 @@
 structure (Quiz) {
+  features{
+    transaction
+  }
   description (__DESCRIPTION__)
   property (questions) {
     type (FullQuestion)

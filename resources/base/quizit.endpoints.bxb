@@ -49,5 +49,17 @@ endpoints {
     // action-endpoint (BuildAudioInfo) {
     //   local-endpoint (BuildAudioInfo.js)
     // }
+    action-endpoint (T-DoQuiz) {
+      accepted-inputs (quiz)
+      local-endpoint (T-DoQuiz.js)
+    }
+    action-endpoint (T-StartQuiz) {
+      accepted-inputs (quiz)
+      local-endpoint (T-StartQuiz.js)
+    }
+    action-endpoint (T-UpdateQuiz) {
+      accepted-inputs (quiz, userAnswerString)
+      local-endpoint (T-UpdateQuiz.js)
+    }
   }
 }

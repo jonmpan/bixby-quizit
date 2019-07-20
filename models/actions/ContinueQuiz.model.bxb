@@ -14,10 +14,17 @@ action (ContinueQuiz) {
             }
           }
         }
-        if (quiz.status == 'tutorial'){
+        else-if (quiz.status == 'tutorial'){
           replan{
             intent{
               goal:CheckAnswer
+              value { $expr(quiz) }
+            }
+          }
+        } else-if (quiz.currentQuestion == quiz.questionCount - 1){
+          replan{
+            intent{
+              goal:NextQuestion
               value { $expr(quiz) }
             }
           }
