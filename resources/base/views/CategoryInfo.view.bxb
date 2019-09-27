@@ -1,7 +1,15 @@
 input-view {
-  match: CategoryInfo (categories)
+  match: CategoryInfo (categories){
+    from-output: GetCategory (action)
+  }
 
-  message ("Welcome to QuizIt! Let's start a quiz. Select a category.")
+  message {
+    if (exists(action.categoryInput)){
+      template ("#{title(action.categoryInput)} is not a valid category. Please select one of the following categories.")
+    } else {
+      template ("Welcome to QuizIt! Let's start a quiz. Select a category.")
+    }
+  }
 
   render {
     if ($handsFree) {
@@ -9,7 +17,11 @@ input-view {
         navigation-mode {
           read-many {
             list-summary {
-              template ("Welcome to QuizIt! Let's start a quiz.")
+              if (exists(action.categoryInput)){
+                template ("#{title(action.categoryInput)} is not a valid category.")
+              } else {
+                template ("Welcome to QuizIt! Let's start a quiz.")
+              }
             }
             page-content (page) {
               item-selection-question {
@@ -26,7 +38,7 @@ input-view {
                 template ("This is the first list of categories.")
               }
               page-marker {
-                    template ("The categories on this page are") 
+                template ("The categories on this page are") 
               }
             }
             page-size (6)

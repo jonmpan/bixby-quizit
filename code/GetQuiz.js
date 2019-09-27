@@ -1,7 +1,8 @@
 var http = require("http");
+var dashbot = require("./utils/dashbot.js");
 const { categories, formatQuestions, categoriesArray, difficultiesArray } = require("./utils/index.js");
 
-module.exports.function = function getQuiz(category, difficulty) {
+module.exports.function = function getQuiz(category, difficulty, $vivContext) {
   let url = "https://opentdb.com/api.php?amount=5&type=multiple";
   category == 'random' ? category = categoriesArray[Math.floor(Math.random()*categoriesArray.length)] : null;
   if (category !== "all categories") {
@@ -25,5 +26,7 @@ module.exports.function = function getQuiz(category, difficulty) {
     speech:
       "QuizIt is a trivia game with thousands of questions! Your "+difficulty+" quiz on "+category+" will begin shortly.",
   };
+  dashbot.logIncoming(difficulty + " " + category, "GetQuiz", $vivContext);
+  dashbot.logOutgoing("QuizIt is a trivia game with thousands of questions! Your "+difficulty+" quiz on "+category+" will begin shortly.", "GetQuiz", $vivContext);
   return quiz;
 };

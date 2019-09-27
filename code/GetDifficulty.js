@@ -1,4 +1,5 @@
 const { difficultiesInfo } = require("./utils/index.js");
+var dashbot = require("./utils/dashbot.js");
 
 const allDifficulties = ["easy", "medium", "hard", "all difficulties"];
 
@@ -18,7 +19,7 @@ const difficulties = {
   random: "random",
 };
 
-module.exports.function = function getDifficulty(difficultyInput) {
+module.exports.function = function getDifficulty(difficultyInput, $vivContext) {
   if (difficultyInput) {
     var difficultyInfo = null;
     const difficultyInputParsed = difficultyInput
@@ -38,5 +39,6 @@ module.exports.function = function getDifficulty(difficultyInput) {
       return difficultiesInfo
     }
   }
+  dashbot.logOutgoing("Select a difficulty.", "GetDifficulty", $vivContext);
   return difficultiesInfo;
 };

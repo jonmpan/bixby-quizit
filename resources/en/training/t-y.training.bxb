@@ -8,3 +8,8 @@ train (t-ycd6gzichhgw7m59zflad9uat) {
   plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRACwCwA)
   last-modified (1562627526747)
 }
+train (t-yu0wbrjhk6s131lylmwcyhxsa) {
+  utterance ("[g:GetQuiz] start a (random)[v:Difficulty:random] quiz on (science)[v:Category:science]")
+  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
+  last-modified (1564531185566)
+}

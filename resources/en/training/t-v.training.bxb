@@ -1,3 +1,8 @@
+train (t-v6b3hvahxn12tyto1x5jvzk9r) {
+  utterance ("[g:UserAnswerString:prompt] (random)[v:UserAnswerString]")
+  plan (Y2BikM/Kz8stSMzTKyzNrPIs0QstTi1yzCsuTy0KLinKzEsnrIARCBkYeICYCYiBbAA=)
+  last-modified (1564532484790)
+}
 train (t-vetr5b8ln94yqyv5hdro2ci3f) {
   utterance ("[g:CategoryInfo:prompt] (foo bar herp derp)[v:CategoryInput]")
   plan (Y2BmkM7Kz8stSMzTKyzNrPIs0XNOLElNzy+q9MxLy2eQQpN0Ty2ByTPI4NRYUFrCwMTACMQMQJKRAQSYIBgA)

@@ -1,8 +1,8 @@
 hints {
   uncategorized {
-    utterance (start a new game)
-    utterance (start a random quiz)
-    utterance (start an easy trivia game about video games)
-    utterance (give me some hard questions about music)
+    hint (ask quiz it to quiz me)
+    hint (ask quiz it to start a new game)
+    hint (ask quiz it to start a random quiz)
+    hint (ask quiz it to give me some hard questions about music)
   }
 }

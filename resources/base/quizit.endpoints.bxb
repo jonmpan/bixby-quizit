@@ -1,30 +1,31 @@
 endpoints {
   action-endpoints {
     action-endpoint (Help) {
-      accepted-inputs ()
+      accepted-inputs ($vivContext)
       local-endpoint (Help.js)
     }
     action-endpoint (GetQuiz) {
-      accepted-inputs (category, difficulty)
+      accepted-inputs (category, difficulty, $vivContext)
       local-endpoint (GetQuiz.js)
     }
     action-endpoint (GetCategory) {
-      accepted-inputs (categoryInput)
+      accepted-inputs (categoryInput, $vivContext)
       local-endpoint (GetCategory.js)
     }
     action-endpoint (GetDifficulty) {
-      accepted-inputs (difficultyInput)
+      accepted-inputs (difficultyInput, $vivContext)
       local-endpoint (GetDifficulty.js)
     }
     action-endpoint (GetRandomQuiz) {
+      accepted-inputs ($vivContext)
       local-endpoint (GetRandomQuiz.js)
     }
     action-endpoint (NextQuestion) {
-      accepted-inputs (quiz)
+      accepted-inputs (quiz, $vivContext)
       local-endpoint (NextQuestion.js)
     }
     action-endpoint (CheckAnswer) {
-      accepted-inputs (quiz, userAnswerString)
+      accepted-inputs (quiz, userAnswerString, $vivContext)
       local-endpoint (CheckAnswer.js)
     }
     action-endpoint (RepeatQuestion) {
@@ -32,6 +33,7 @@ endpoints {
       local-endpoint (RepeatQuestion.js)
     }
     action-endpoint (SkipTutorialAction) {
+      accepted-inputs (skip, $vivContext)
       local-endpoint (SkipTutorialAction.js)
     }
     action-endpoint (RefreshQuestion) {
@@ -39,7 +41,7 @@ endpoints {
       local-endpoint (RefreshQuestion.js)
     }
     action-endpoint (ContinueQuiz) {
-      accepted-inputs(quiz)
+      accepted-inputs(quiz, $vivContext)
       local-endpoint (ContinueQuiz.js)
     }
     action-endpoint (ExtractAnswerFromModel) {

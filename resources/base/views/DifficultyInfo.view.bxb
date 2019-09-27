@@ -1,7 +1,15 @@
 input-view {
-  match: DifficultyInfo (difficulties)
+  match: DifficultyInfo (difficulties){
+    from-output: GetDifficulty (action)
+  }
 
-  message ("Select a difficulty.")
+  message {
+    if(exists(action.difficultyInput)){
+      template ("#{title(action.difficultyInput)} is not a valid difficulty. Please select one of the following difficulties.")
+    } else {
+      template ("Select a difficulty.")
+    }
+  }
 
   render {
     if ($handsFree) {
@@ -13,7 +21,7 @@ input-view {
             }
             page-content (page) {
               item-selection-question {
-                  template  ("Which difficulty would you like?")
+                template  ("Which difficulty would you like?")
               }
               overflow-statement {
                 template ("That's all the difficulties I have.")

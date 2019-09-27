@@ -1,4 +1,5 @@
 const { categoriesArray, categoriesInfo } = require("./utils/index.js");
+var dashbot = require("./utils/dashbot.js");
 var console = require("console");
 
 const categories = {
@@ -73,6 +74,7 @@ const checkCategory = categoryInput => {
   return categoriesInfo;
 };
 
-module.exports.function = function getCategory(categoryInput) {
+module.exports.function = function getCategory(categoryInput, $vivContext) {
+  dashbot.logOutgoing("Select a category.", "GetCategory", $vivContext);
   return checkCategory(categoryInput);
 };

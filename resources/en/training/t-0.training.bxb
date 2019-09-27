@@ -3,3 +3,8 @@ train (t-04e5grg9t1zcm9phuqfoa7hrw) {
   plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
   last-modified (1562628758764)
 }
+train (t-083eufhx1g8fxpqe1ztsgj44p) {
+  utterance ("[g:GetQuiz] start a (random)[v:Difficulty:random] difficulty quiz about (computers)[v:Category:computers]")
+  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
+  last-modified (1564530746343)
+}

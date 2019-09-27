@@ -1,6 +1,7 @@
 const { levenshteinQuestion, onlyNumbers, letterAliases, differenceInSeconds, calculateTimeBonus } = require('./utils/index.js');
+var dashbot = require("./utils/dashbot.js");
 
-module.exports.function = function checkAnswer (quiz, userAnswerString) {
+module.exports.function = function checkAnswer (quiz, userAnswerString, $vivContext) {
   let correctAnswer = '';
   let correctString = '';
   let bixbyResponse = '';
@@ -43,5 +44,8 @@ module.exports.function = function checkAnswer (quiz, userAnswerString) {
   }
   currentQuestion.timeSpent = differenceInSeconds(now, currentQuestion.timeStarted);
   quiz.status = 'answer';
+
+  dashbot.logIncoming(userAnswerString + " ("+currentQuestion.userAnswer+")", "CheckAnswer", $vivContext);
+  dashbot.logOutgoing(quiz.template, "CheckAnswer", $vivContext);
   return quiz;
 }

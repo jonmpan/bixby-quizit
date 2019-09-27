@@ -60,49 +60,51 @@ result-view {
       }
     }
   }
-  followup{
-    prompt {
-      dialog{
-        template (" "){
-          speech (" ")
-        }
-      }
-      on-confirm{
-        message{
-          template ("#{title(this.template)}"){
-            speech ("#{title(this.speech)}")
-          }
-        }
-      }
-      on-deny{
-        message{
-          template ("#{title(this.template)}"){
-            speech ("#{title(this.speech)}")
-          }
-        }
-      }
-    }
-  }
+  // followup{
+  //   prompt {
+  //     dialog{
+  //       template (" "){
+  //         speech (" ")
+  //       }
+  //     }
+  //     on-confirm{
+  //       message{
+  //         template ("#{title(this.template)}"){
+  //           speech ("#{title(this.speech)}")
+  //         }
+  //       }
+  //     }
+  //     on-deny{
+  //       message{
+  //         template ("#{title(this.template)}"){
+  //           speech ("#{title(this.speech)}")
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
   render {
-    if (this.status == 'tutorial'){
-      layout-macro (tutorial) {
-        param (quiz) {expression (this)}
+    if(size(this) == 1){
+      if (this.status == 'tutorial'){
+        layout-macro (tutorial) {
+          param (quiz) {expression (this)}
+        }
       }
-    }
-    //    if (this.status == 'question'){
-    //      layout-macro (question) {
-    //       param (quiz) {expression (this)}
-    //   }
-    //}
-    if (this.status == 'answer'){
-      layout-macro (answer) {
-        param (quiz) {expression (this)}
+      //    if (this.status == 'question'){
+      //      layout-macro (question) {
+      //       param (quiz) {expression (this)}
+      //   }
+      //}
+      if (this.status == 'answer'){
+        layout-macro (answer) {
+          param (quiz) {expression (this)}
+        }
       }
-    }
-    if (this.status == 'completed'){
-      layout-macro (completed) {
-        param (quiz) {expression (this)}
+      if (this.status == 'completed'){
+        layout-macro (completed) {
+          param (quiz) {expression (this)}
+        }
       }
     }
   }

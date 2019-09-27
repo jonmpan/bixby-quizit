@@ -1,3 +1,8 @@
+train (t-708182vtx0lml945k1tcebo8u) {
+  utterance ("[g:GetQuiz] start a (science)[v:Category:science] quiz on (easy)[v:Difficulty:easy]")
+  plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRAC4KIA)
+  last-modified (1564531126217)
+}
 train (t-75m4y7u5i7n1e7rwt3xhuyrcb) {
   utterance ([g:GetQuiz] start a new quiz)
   plan (Y2BhEM7Kz8stSMzTKyzNrPIs0QsEUgxiaILuqSVgcXE0cefEktT0/KJKBkk0CZfMtLTM5NKckkoGZgZGBiYgyQCkQRACwCwA)
